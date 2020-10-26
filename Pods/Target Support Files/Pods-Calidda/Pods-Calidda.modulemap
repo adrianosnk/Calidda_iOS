@@ -1,0 +1,6 @@
+framework module Pods_Calidda {
+  umbrella header "Pods-Calidda-umbrella.h"
+
+  export *
+  module * { export * }
+}

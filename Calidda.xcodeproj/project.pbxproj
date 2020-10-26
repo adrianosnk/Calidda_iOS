@@ -1,0 +1,1039 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		415EFBE725432992003D57AE /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415EFBE625432991003D57AE /* SplashView.swift */; };
+		415EFBF0254329F3003D57AE /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415EFBE8254329EE003D57AE /* String.swift */; };
+		415EFBF1254329F3003D57AE /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415EFBE9254329EF003D57AE /* UIViewController.swift */; };
+		415EFBF2254329F3003D57AE /* UITextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415EFBEA254329EF003D57AE /* UITextFieldExtension.swift */; };
+		415EFBF3254329F3003D57AE /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415EFBEB254329F0003D57AE /* Date.swift */; };
+		415EFBF4254329F3003D57AE /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415EFBEC254329F1003D57AE /* UIButton.swift */; };
+		415EFBF5254329F3003D57AE /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415EFBED254329F1003D57AE /* Double.swift */; };
+		415EFBF6254329F3003D57AE /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415EFBEE254329F2003D57AE /* UIView.swift */; };
+		415EFBF7254329F3003D57AE /* UIDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415EFBEF254329F3003D57AE /* UIDevice.swift */; };
+		415EFBFC25432A77003D57AE /* CaliddaFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415EFBF825432A75003D57AE /* CaliddaFont.swift */; };
+		415EFBFD25432A77003D57AE /* CaliddaColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415EFBF925432A76003D57AE /* CaliddaColors.swift */; };
+		415EFBFE25432A77003D57AE /* CaliddaImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415EFBFA25432A76003D57AE /* CaliddaImage.swift */; };
+		415EFBFF25432A77003D57AE /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415EFBFB25432A77003D57AE /* Styles.swift */; };
+		415EFC0125432DF8003D57AE /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 415EFC0025432DF8003D57AE /* Splash.storyboard */; };
+		415EFC0325433428003D57AE /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 415EFC0225433428003D57AE /* Auth.storyboard */; };
+		415EFC0525433591003D57AE /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415EFC0425433591003D57AE /* Router.swift */; };
+		415EFC0925433878003D57AE /* ServicesTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415EFC0625433877003D57AE /* ServicesTableView.swift */; };
+		415EFC0A25433878003D57AE /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415EFC0725433877003D57AE /* HomePresenter.swift */; };
+		415EFC0B25433878003D57AE /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415EFC0825433878003D57AE /* HomeView.swift */; };
+		415EFC0E25433B33003D57AE /* LogInPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415EFC0C25433B32003D57AE /* LogInPresenter.swift */; };
+		415EFC0F25433B33003D57AE /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415EFC0D25433B33003D57AE /* LogInView.swift */; };
+		415EFC1125433CA4003D57AE /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415EFC1025433CA4003D57AE /* AuthenticationService.swift */; };
+		415EFC1325434502003D57AE /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415EFC1225434502003D57AE /* UserData.swift */; };
+		415EFC17254345D3003D57AE /* PopUpErrorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 415EFC15254345D3003D57AE /* PopUpErrorView.xib */; };
+		415EFC18254345D3003D57AE /* PopUpErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415EFC16254345D3003D57AE /* PopUpErrorView.swift */; };
+		415EFC1C2543462D003D57AE /* AlertComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415EFC1A2543462C003D57AE /* AlertComponent.swift */; };
+		415EFC1D2543462D003D57AE /* BaseAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415EFC1B2543462D003D57AE /* BaseAlert.swift */; };
+		415EFC2125434665003D57AE /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415EFC1F25434664003D57AE /* ErrorView.swift */; };
+		415EFC2225434665003D57AE /* ErrorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 415EFC2025434665003D57AE /* ErrorView.xib */; };
+		415EFC2B25434A37003D57AE /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415EFC2A25434A36003D57AE /* HomeService.swift */; };
+		415EFC2D25434C49003D57AE /* DoctorInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415EFC2C25434C49003D57AE /* DoctorInfo.swift */; };
+		415EFC2F25434CCD003D57AE /* PreferenceInfoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415EFC2E25434CCD003D57AE /* PreferenceInfoData.swift */; };
+		416C5D4B2542440800C1B012 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416C5D4A2542440800C1B012 /* AppDelegate.swift */; };
+		416C5D4D2542440800C1B012 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416C5D4C2542440800C1B012 /* SceneDelegate.swift */; };
+		416C5D4F2542440800C1B012 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416C5D4E2542440800C1B012 /* ViewController.swift */; };
+		416C5D522542440900C1B012 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 416C5D502542440900C1B012 /* Main.storyboard */; };
+		416C5D542542441400C1B012 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 416C5D532542441400C1B012 /* Assets.xcassets */; };
+		416C5D572542441400C1B012 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 416C5D552542441400C1B012 /* LaunchScreen.storyboard */; };
+		416C5D622542441400C1B012 /* CaliddaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416C5D612542441400C1B012 /* CaliddaTests.swift */; };
+		416C5D6D2542441500C1B012 /* CaliddaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416C5D6C2542441500C1B012 /* CaliddaUITests.swift */; };
+		7C6EA973678C9E3F955B2513 /* Pods_Calidda_CaliddaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A70504ED93619AF0B3C3D173 /* Pods_Calidda_CaliddaUITests.framework */; };
+		A736FC3BA2A985AFE1E7DAED /* Pods_CaliddaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EEAC0B53E79376256DC01E5 /* Pods_CaliddaTests.framework */; };
+		EDB684B99F75C2A4C5FC9AC6 /* Pods_Calidda.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F22F53D70DABDCB03937B4F4 /* Pods_Calidda.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		416C5D5E2542441400C1B012 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 416C5D3F2542440800C1B012 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 416C5D462542440800C1B012;
+			remoteInfo = Calidda;
+		};
+		416C5D692542441500C1B012 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 416C5D3F2542440800C1B012 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 416C5D462542440800C1B012;
+			remoteInfo = Calidda;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1A33E83D0A5FAD9289EB9B50 /* Pods-Calidda.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Calidda.release.xcconfig"; path = "Target Support Files/Pods-Calidda/Pods-Calidda.release.xcconfig"; sourceTree = "<group>"; };
+		415EFBE625432991003D57AE /* SplashView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		415EFBE8254329EE003D57AE /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		415EFBE9254329EF003D57AE /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		415EFBEA254329EF003D57AE /* UITextFieldExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextFieldExtension.swift; sourceTree = "<group>"; };
+		415EFBEB254329F0003D57AE /* Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		415EFBEC254329F1003D57AE /* UIButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
+		415EFBED254329F1003D57AE /* Double.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
+		415EFBEE254329F2003D57AE /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		415EFBEF254329F3003D57AE /* UIDevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIDevice.swift; sourceTree = "<group>"; };
+		415EFBF825432A75003D57AE /* CaliddaFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaliddaFont.swift; sourceTree = "<group>"; };
+		415EFBF925432A76003D57AE /* CaliddaColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaliddaColors.swift; sourceTree = "<group>"; };
+		415EFBFA25432A76003D57AE /* CaliddaImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaliddaImage.swift; sourceTree = "<group>"; };
+		415EFBFB25432A77003D57AE /* Styles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
+		415EFC0025432DF8003D57AE /* Splash.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Splash.storyboard; sourceTree = "<group>"; };
+		415EFC0225433428003D57AE /* Auth.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
+		415EFC0425433591003D57AE /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		415EFC0625433877003D57AE /* ServicesTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServicesTableView.swift; sourceTree = "<group>"; };
+		415EFC0725433877003D57AE /* HomePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		415EFC0825433878003D57AE /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		415EFC0C25433B32003D57AE /* LogInPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInPresenter.swift; sourceTree = "<group>"; };
+		415EFC0D25433B33003D57AE /* LogInView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
+		415EFC1025433CA4003D57AE /* AuthenticationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
+		415EFC1225434502003D57AE /* UserData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		415EFC15254345D3003D57AE /* PopUpErrorView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopUpErrorView.xib; sourceTree = "<group>"; };
+		415EFC16254345D3003D57AE /* PopUpErrorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopUpErrorView.swift; sourceTree = "<group>"; };
+		415EFC1A2543462C003D57AE /* AlertComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertComponent.swift; sourceTree = "<group>"; };
+		415EFC1B2543462D003D57AE /* BaseAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseAlert.swift; sourceTree = "<group>"; };
+		415EFC1F25434664003D57AE /* ErrorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		415EFC2025434665003D57AE /* ErrorView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ErrorView.xib; sourceTree = "<group>"; };
+		415EFC2A25434A36003D57AE /* HomeService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeService.swift; sourceTree = "<group>"; };
+		415EFC2C25434C49003D57AE /* DoctorInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoctorInfo.swift; sourceTree = "<group>"; };
+		415EFC2E25434CCD003D57AE /* PreferenceInfoData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferenceInfoData.swift; sourceTree = "<group>"; };
+		416C5D472542440800C1B012 /* Calidda.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calidda.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		416C5D4A2542440800C1B012 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		416C5D4C2542440800C1B012 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		416C5D4E2542440800C1B012 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		416C5D512542440900C1B012 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		416C5D532542441400C1B012 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		416C5D562542441400C1B012 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		416C5D582542441400C1B012 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		416C5D5D2542441400C1B012 /* CaliddaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CaliddaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		416C5D612542441400C1B012 /* CaliddaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaliddaTests.swift; sourceTree = "<group>"; };
+		416C5D632542441400C1B012 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		416C5D682542441500C1B012 /* CaliddaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CaliddaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		416C5D6C2542441500C1B012 /* CaliddaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaliddaUITests.swift; sourceTree = "<group>"; };
+		416C5D6E2542441500C1B012 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		46515BC0B6185B92E794E14B /* Pods-CaliddaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CaliddaTests.release.xcconfig"; path = "Target Support Files/Pods-CaliddaTests/Pods-CaliddaTests.release.xcconfig"; sourceTree = "<group>"; };
+		4EEAC0B53E79376256DC01E5 /* Pods_CaliddaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CaliddaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		59518178F3BFC7D5E1FFD9CC /* Pods-CaliddaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CaliddaTests.debug.xcconfig"; path = "Target Support Files/Pods-CaliddaTests/Pods-CaliddaTests.debug.xcconfig"; sourceTree = "<group>"; };
+		77F49B8790B74BB7BA072E97 /* Pods-Calidda-CaliddaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Calidda-CaliddaUITests.release.xcconfig"; path = "Target Support Files/Pods-Calidda-CaliddaUITests/Pods-Calidda-CaliddaUITests.release.xcconfig"; sourceTree = "<group>"; };
+		A70504ED93619AF0B3C3D173 /* Pods_Calidda_CaliddaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Calidda_CaliddaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC75B0846AA8CB584726E198 /* Pods-Calidda-CaliddaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Calidda-CaliddaUITests.debug.xcconfig"; path = "Target Support Files/Pods-Calidda-CaliddaUITests/Pods-Calidda-CaliddaUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		E63533CF6F74F2F234F445F9 /* Pods-Calidda.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Calidda.debug.xcconfig"; path = "Target Support Files/Pods-Calidda/Pods-Calidda.debug.xcconfig"; sourceTree = "<group>"; };
+		F22F53D70DABDCB03937B4F4 /* Pods_Calidda.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Calidda.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		416C5D442542440800C1B012 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDB684B99F75C2A4C5FC9AC6 /* Pods_Calidda.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		416C5D5A2542441400C1B012 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A736FC3BA2A985AFE1E7DAED /* Pods_CaliddaTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		416C5D652542441500C1B012 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7C6EA973678C9E3F955B2513 /* Pods_Calidda_CaliddaUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		415EFBD4254268EC003D57AE /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				415EFBDB25426D56003D57AE /* Feature */,
+				415EFBDA25426D48003D57AE /* Shared */,
+				415EFBD5254268F9003D57AE /* res */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		415EFBD5254268F9003D57AE /* res */ = {
+			isa = PBXGroup;
+			children = (
+				415EFBD9254269B8003D57AE /* values */,
+				415EFBD8254269B0003D57AE /* fonts */,
+				415EFBD7254269A7003D57AE /* Extensiones */,
+				415EFBD62542699B003D57AE /* Elements */,
+			);
+			path = res;
+			sourceTree = "<group>";
+		};
+		415EFBD62542699B003D57AE /* Elements */ = {
+			isa = PBXGroup;
+			children = (
+				415EFC2325434676003D57AE /* CalendarView */,
+				415EFC1E25434649003D57AE /* ErrorView */,
+				415EFC1925434612003D57AE /* AlertComponent */,
+				415EFC14254345AA003D57AE /* PopUpErrorView */,
+			);
+			path = Elements;
+			sourceTree = "<group>";
+		};
+		415EFBD7254269A7003D57AE /* Extensiones */ = {
+			isa = PBXGroup;
+			children = (
+				415EFBEB254329F0003D57AE /* Date.swift */,
+				415EFBED254329F1003D57AE /* Double.swift */,
+				415EFBE8254329EE003D57AE /* String.swift */,
+				415EFBEC254329F1003D57AE /* UIButton.swift */,
+				415EFBEF254329F3003D57AE /* UIDevice.swift */,
+				415EFBEA254329EF003D57AE /* UITextFieldExtension.swift */,
+				415EFBEE254329F2003D57AE /* UIView.swift */,
+				415EFBE9254329EF003D57AE /* UIViewController.swift */,
+			);
+			path = Extensiones;
+			sourceTree = "<group>";
+		};
+		415EFBD8254269B0003D57AE /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = fonts;
+			sourceTree = "<group>";
+		};
+		415EFBD9254269B8003D57AE /* values */ = {
+			isa = PBXGroup;
+			children = (
+				415EFBF925432A76003D57AE /* CaliddaColors.swift */,
+				415EFBF825432A75003D57AE /* CaliddaFont.swift */,
+				415EFBFA25432A76003D57AE /* CaliddaImage.swift */,
+				415EFBFB25432A77003D57AE /* Styles.swift */,
+			);
+			path = values;
+			sourceTree = "<group>";
+		};
+		415EFBDA25426D48003D57AE /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				415EFBDF25426DF5003D57AE /* Router */,
+				415EFBDE25426DED003D57AE /* DataSource */,
+				415EFBDD25426DE7003D57AE /* Model */,
+				415EFBDC25426DD9003D57AE /* CustomComponents */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		415EFBDB25426D56003D57AE /* Feature */ = {
+			isa = PBXGroup;
+			children = (
+				415EFBE5254328FE003D57AE /* Register */,
+				415EFBE4254328E7003D57AE /* Storyboards */,
+				415EFBE2254328BA003D57AE /* Home */,
+				415EFBE1254328B2003D57AE /* LogIn */,
+				415EFBE0254328A8003D57AE /* Splash */,
+			);
+			path = Feature;
+			sourceTree = "<group>";
+		};
+		415EFBDC25426DD9003D57AE /* CustomComponents */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CustomComponents;
+			sourceTree = "<group>";
+		};
+		415EFBDD25426DE7003D57AE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				415EFC2E25434CCD003D57AE /* PreferenceInfoData.swift */,
+				415EFC2C25434C49003D57AE /* DoctorInfo.swift */,
+				415EFC1225434502003D57AE /* UserData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		415EFBDE25426DED003D57AE /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				415EFC2A25434A36003D57AE /* HomeService.swift */,
+				415EFC1025433CA4003D57AE /* AuthenticationService.swift */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		415EFBDF25426DF5003D57AE /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				415EFC0425433591003D57AE /* Router.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		415EFBE0254328A8003D57AE /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				415EFBE625432991003D57AE /* SplashView.swift */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		415EFBE1254328B2003D57AE /* LogIn */ = {
+			isa = PBXGroup;
+			children = (
+				415EFC0C25433B32003D57AE /* LogInPresenter.swift */,
+				415EFC0D25433B33003D57AE /* LogInView.swift */,
+			);
+			path = LogIn;
+			sourceTree = "<group>";
+		};
+		415EFBE2254328BA003D57AE /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				415EFC0725433877003D57AE /* HomePresenter.swift */,
+				415EFC0825433878003D57AE /* HomeView.swift */,
+				415EFC0625433877003D57AE /* ServicesTableView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		415EFBE4254328E7003D57AE /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				415EFC0225433428003D57AE /* Auth.storyboard */,
+				415EFC0025432DF8003D57AE /* Splash.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		415EFBE5254328FE003D57AE /* Register */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		415EFC14254345AA003D57AE /* PopUpErrorView */ = {
+			isa = PBXGroup;
+			children = (
+				415EFC16254345D3003D57AE /* PopUpErrorView.swift */,
+				415EFC15254345D3003D57AE /* PopUpErrorView.xib */,
+			);
+			path = PopUpErrorView;
+			sourceTree = "<group>";
+		};
+		415EFC1925434612003D57AE /* AlertComponent */ = {
+			isa = PBXGroup;
+			children = (
+				415EFC1A2543462C003D57AE /* AlertComponent.swift */,
+				415EFC1B2543462D003D57AE /* BaseAlert.swift */,
+			);
+			path = AlertComponent;
+			sourceTree = "<group>";
+		};
+		415EFC1E25434649003D57AE /* ErrorView */ = {
+			isa = PBXGroup;
+			children = (
+				415EFC1F25434664003D57AE /* ErrorView.swift */,
+				415EFC2025434665003D57AE /* ErrorView.xib */,
+			);
+			path = ErrorView;
+			sourceTree = "<group>";
+		};
+		415EFC2325434676003D57AE /* CalendarView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CalendarView;
+			sourceTree = "<group>";
+		};
+		416C5D3E2542440800C1B012 = {
+			isa = PBXGroup;
+			children = (
+				416C5D492542440800C1B012 /* Calidda */,
+				416C5D602542441400C1B012 /* CaliddaTests */,
+				416C5D6B2542441500C1B012 /* CaliddaUITests */,
+				416C5D482542440800C1B012 /* Products */,
+				B04C34AE5831AF47D9C3A871 /* Pods */,
+				E99E268E497700B35B561102 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		416C5D482542440800C1B012 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				416C5D472542440800C1B012 /* Calidda.app */,
+				416C5D5D2542441400C1B012 /* CaliddaTests.xctest */,
+				416C5D682542441500C1B012 /* CaliddaUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		416C5D492542440800C1B012 /* Calidda */ = {
+			isa = PBXGroup;
+			children = (
+				415EFBD4254268EC003D57AE /* Source */,
+				416C5D4A2542440800C1B012 /* AppDelegate.swift */,
+				416C5D4C2542440800C1B012 /* SceneDelegate.swift */,
+				416C5D4E2542440800C1B012 /* ViewController.swift */,
+				416C5D502542440900C1B012 /* Main.storyboard */,
+				416C5D532542441400C1B012 /* Assets.xcassets */,
+				416C5D552542441400C1B012 /* LaunchScreen.storyboard */,
+				416C5D582542441400C1B012 /* Info.plist */,
+			);
+			path = Calidda;
+			sourceTree = "<group>";
+		};
+		416C5D602542441400C1B012 /* CaliddaTests */ = {
+			isa = PBXGroup;
+			children = (
+				416C5D612542441400C1B012 /* CaliddaTests.swift */,
+				416C5D632542441400C1B012 /* Info.plist */,
+			);
+			path = CaliddaTests;
+			sourceTree = "<group>";
+		};
+		416C5D6B2542441500C1B012 /* CaliddaUITests */ = {
+			isa = PBXGroup;
+			children = (
+				416C5D6C2542441500C1B012 /* CaliddaUITests.swift */,
+				416C5D6E2542441500C1B012 /* Info.plist */,
+			);
+			path = CaliddaUITests;
+			sourceTree = "<group>";
+		};
+		B04C34AE5831AF47D9C3A871 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E63533CF6F74F2F234F445F9 /* Pods-Calidda.debug.xcconfig */,
+				1A33E83D0A5FAD9289EB9B50 /* Pods-Calidda.release.xcconfig */,
+				AC75B0846AA8CB584726E198 /* Pods-Calidda-CaliddaUITests.debug.xcconfig */,
+				77F49B8790B74BB7BA072E97 /* Pods-Calidda-CaliddaUITests.release.xcconfig */,
+				59518178F3BFC7D5E1FFD9CC /* Pods-CaliddaTests.debug.xcconfig */,
+				46515BC0B6185B92E794E14B /* Pods-CaliddaTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		E99E268E497700B35B561102 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F22F53D70DABDCB03937B4F4 /* Pods_Calidda.framework */,
+				A70504ED93619AF0B3C3D173 /* Pods_Calidda_CaliddaUITests.framework */,
+				4EEAC0B53E79376256DC01E5 /* Pods_CaliddaTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		416C5D462542440800C1B012 /* Calidda */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 416C5D712542441500C1B012 /* Build configuration list for PBXNativeTarget "Calidda" */;
+			buildPhases = (
+				9A154DD078D4E490AF753887 /* [CP] Check Pods Manifest.lock */,
+				416C5D432542440800C1B012 /* Sources */,
+				416C5D442542440800C1B012 /* Frameworks */,
+				416C5D452542440800C1B012 /* Resources */,
+				7E3C535740845EDA10665319 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Calidda;
+			productName = Calidda;
+			productReference = 416C5D472542440800C1B012 /* Calidda.app */;
+			productType = "com.apple.product-type.application";
+		};
+		416C5D5C2542441400C1B012 /* CaliddaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 416C5D742542441500C1B012 /* Build configuration list for PBXNativeTarget "CaliddaTests" */;
+			buildPhases = (
+				A60A2FB384623717841AB5FA /* [CP] Check Pods Manifest.lock */,
+				416C5D592542441400C1B012 /* Sources */,
+				416C5D5A2542441400C1B012 /* Frameworks */,
+				416C5D5B2542441400C1B012 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				416C5D5F2542441400C1B012 /* PBXTargetDependency */,
+			);
+			name = CaliddaTests;
+			productName = CaliddaTests;
+			productReference = 416C5D5D2542441400C1B012 /* CaliddaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		416C5D672542441500C1B012 /* CaliddaUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 416C5D772542441500C1B012 /* Build configuration list for PBXNativeTarget "CaliddaUITests" */;
+			buildPhases = (
+				BADCA31FD88F77C353941D4C /* [CP] Check Pods Manifest.lock */,
+				416C5D642542441500C1B012 /* Sources */,
+				416C5D652542441500C1B012 /* Frameworks */,
+				416C5D662542441500C1B012 /* Resources */,
+				127BDF3600429E99FB2C81B9 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				416C5D6A2542441500C1B012 /* PBXTargetDependency */,
+			);
+			name = CaliddaUITests;
+			productName = CaliddaUITests;
+			productReference = 416C5D682542441500C1B012 /* CaliddaUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		416C5D3F2542440800C1B012 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1150;
+				LastUpgradeCheck = 1150;
+				ORGANIZATIONNAME = Calidda;
+				TargetAttributes = {
+					416C5D462542440800C1B012 = {
+						CreatedOnToolsVersion = 11.5;
+					};
+					416C5D5C2542441400C1B012 = {
+						CreatedOnToolsVersion = 11.5;
+						TestTargetID = 416C5D462542440800C1B012;
+					};
+					416C5D672542441500C1B012 = {
+						CreatedOnToolsVersion = 11.5;
+						TestTargetID = 416C5D462542440800C1B012;
+					};
+				};
+			};
+			buildConfigurationList = 416C5D422542440800C1B012 /* Build configuration list for PBXProject "Calidda" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 416C5D3E2542440800C1B012;
+			productRefGroup = 416C5D482542440800C1B012 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				416C5D462542440800C1B012 /* Calidda */,
+				416C5D5C2542441400C1B012 /* CaliddaTests */,
+				416C5D672542441500C1B012 /* CaliddaUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		416C5D452542440800C1B012 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				415EFC17254345D3003D57AE /* PopUpErrorView.xib in Resources */,
+				416C5D572542441400C1B012 /* LaunchScreen.storyboard in Resources */,
+				416C5D542542441400C1B012 /* Assets.xcassets in Resources */,
+				415EFC0325433428003D57AE /* Auth.storyboard in Resources */,
+				415EFC2225434665003D57AE /* ErrorView.xib in Resources */,
+				416C5D522542440900C1B012 /* Main.storyboard in Resources */,
+				415EFC0125432DF8003D57AE /* Splash.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		416C5D5B2542441400C1B012 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		416C5D662542441500C1B012 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		127BDF3600429E99FB2C81B9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Calidda-CaliddaUITests/Pods-Calidda-CaliddaUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Calidda-CaliddaUITests/Pods-Calidda-CaliddaUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Calidda-CaliddaUITests/Pods-Calidda-CaliddaUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7E3C535740845EDA10665319 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Calidda/Pods-Calidda-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Calidda/Pods-Calidda-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Calidda/Pods-Calidda-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9A154DD078D4E490AF753887 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Calidda-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A60A2FB384623717841AB5FA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CaliddaTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BADCA31FD88F77C353941D4C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Calidda-CaliddaUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		416C5D432542440800C1B012 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				415EFBFD25432A77003D57AE /* CaliddaColors.swift in Sources */,
+				416C5D4F2542440800C1B012 /* ViewController.swift in Sources */,
+				415EFBE725432992003D57AE /* SplashView.swift in Sources */,
+				415EFBF6254329F3003D57AE /* UIView.swift in Sources */,
+				415EFC2D25434C49003D57AE /* DoctorInfo.swift in Sources */,
+				415EFBF2254329F3003D57AE /* UITextFieldExtension.swift in Sources */,
+				415EFBF3254329F3003D57AE /* Date.swift in Sources */,
+				415EFBFC25432A77003D57AE /* CaliddaFont.swift in Sources */,
+				415EFBFE25432A77003D57AE /* CaliddaImage.swift in Sources */,
+				415EFC0F25433B33003D57AE /* LogInView.swift in Sources */,
+				415EFBF1254329F3003D57AE /* UIViewController.swift in Sources */,
+				415EFBF0254329F3003D57AE /* String.swift in Sources */,
+				415EFC2125434665003D57AE /* ErrorView.swift in Sources */,
+				415EFC2B25434A37003D57AE /* HomeService.swift in Sources */,
+				415EFC18254345D3003D57AE /* PopUpErrorView.swift in Sources */,
+				415EFC0525433591003D57AE /* Router.swift in Sources */,
+				415EFBF7254329F3003D57AE /* UIDevice.swift in Sources */,
+				415EFBFF25432A77003D57AE /* Styles.swift in Sources */,
+				415EFC0B25433878003D57AE /* HomeView.swift in Sources */,
+				415EFC0925433878003D57AE /* ServicesTableView.swift in Sources */,
+				415EFC0A25433878003D57AE /* HomePresenter.swift in Sources */,
+				415EFC1C2543462D003D57AE /* AlertComponent.swift in Sources */,
+				416C5D4B2542440800C1B012 /* AppDelegate.swift in Sources */,
+				415EFC1325434502003D57AE /* UserData.swift in Sources */,
+				415EFC2F25434CCD003D57AE /* PreferenceInfoData.swift in Sources */,
+				415EFC0E25433B33003D57AE /* LogInPresenter.swift in Sources */,
+				416C5D4D2542440800C1B012 /* SceneDelegate.swift in Sources */,
+				415EFBF5254329F3003D57AE /* Double.swift in Sources */,
+				415EFBF4254329F3003D57AE /* UIButton.swift in Sources */,
+				415EFC1D2543462D003D57AE /* BaseAlert.swift in Sources */,
+				415EFC1125433CA4003D57AE /* AuthenticationService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		416C5D592542441400C1B012 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				416C5D622542441400C1B012 /* CaliddaTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		416C5D642542441500C1B012 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				416C5D6D2542441500C1B012 /* CaliddaUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		416C5D5F2542441400C1B012 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 416C5D462542440800C1B012 /* Calidda */;
+			targetProxy = 416C5D5E2542441400C1B012 /* PBXContainerItemProxy */;
+		};
+		416C5D6A2542441500C1B012 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 416C5D462542440800C1B012 /* Calidda */;
+			targetProxy = 416C5D692542441500C1B012 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		416C5D502542440900C1B012 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				416C5D512542440900C1B012 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		416C5D552542441400C1B012 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				416C5D562542441400C1B012 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		416C5D6F2542441500C1B012 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		416C5D702542441500C1B012 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		416C5D722542441500C1B012 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E63533CF6F74F2F234F445F9 /* Pods-Calidda.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Calidda/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.avancesTecnologicos.Calidda;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		416C5D732542441500C1B012 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1A33E83D0A5FAD9289EB9B50 /* Pods-Calidda.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Calidda/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.avancesTecnologicos.Calidda;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		416C5D752542441500C1B012 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 59518178F3BFC7D5E1FFD9CC /* Pods-CaliddaTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CaliddaTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.avancesTecnologicos.CaliddaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Calidda.app/Calidda";
+			};
+			name = Debug;
+		};
+		416C5D762542441500C1B012 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 46515BC0B6185B92E794E14B /* Pods-CaliddaTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CaliddaTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.avancesTecnologicos.CaliddaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Calidda.app/Calidda";
+			};
+			name = Release;
+		};
+		416C5D782542441500C1B012 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AC75B0846AA8CB584726E198 /* Pods-Calidda-CaliddaUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CaliddaUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.avancesTecnologicos.CaliddaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Calidda;
+			};
+			name = Debug;
+		};
+		416C5D792542441500C1B012 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 77F49B8790B74BB7BA072E97 /* Pods-Calidda-CaliddaUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CaliddaUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.avancesTecnologicos.CaliddaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Calidda;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		416C5D422542440800C1B012 /* Build configuration list for PBXProject "Calidda" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				416C5D6F2542441500C1B012 /* Debug */,
+				416C5D702542441500C1B012 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		416C5D712542441500C1B012 /* Build configuration list for PBXNativeTarget "Calidda" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				416C5D722542441500C1B012 /* Debug */,
+				416C5D732542441500C1B012 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		416C5D742542441500C1B012 /* Build configuration list for PBXNativeTarget "CaliddaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				416C5D752542441500C1B012 /* Debug */,
+				416C5D762542441500C1B012 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		416C5D772542441500C1B012 /* Build configuration list for PBXNativeTarget "CaliddaUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				416C5D782542441500C1B012 /* Debug */,
+				416C5D792542441500C1B012 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 416C5D3F2542440800C1B012 /* Project object */;
+}
