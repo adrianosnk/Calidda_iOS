@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4109927A254744B700DF6527 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41099279254744B600DF6527 /* Home.storyboard */; };
 		415EFBE725432992003D57AE /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415EFBE625432991003D57AE /* SplashView.swift */; };
 		415EFBF0254329F3003D57AE /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415EFBE8254329EE003D57AE /* String.swift */; };
 		415EFBF1254329F3003D57AE /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415EFBE9254329EF003D57AE /* UIViewController.swift */; };
@@ -71,6 +72,7 @@
 
 /* Begin PBXFileReference section */
 		1A33E83D0A5FAD9289EB9B50 /* Pods-Calidda.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Calidda.release.xcconfig"; path = "Target Support Files/Pods-Calidda/Pods-Calidda.release.xcconfig"; sourceTree = "<group>"; };
+		41099279254744B600DF6527 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		415EFBE625432991003D57AE /* SplashView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		415EFBE8254329EE003D57AE /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		415EFBE9254329EF003D57AE /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
@@ -307,6 +309,7 @@
 		415EFBE4254328E7003D57AE /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				41099279254744B600DF6527 /* Home.storyboard */,
 				415EFC0225433428003D57AE /* Auth.storyboard */,
 				415EFC0025432DF8003D57AE /* Splash.storyboard */,
 			);
@@ -548,6 +551,7 @@
 				415EFC2225434665003D57AE /* ErrorView.xib in Resources */,
 				416C5D522542440900C1B012 /* Main.storyboard in Resources */,
 				415EFC0125432DF8003D57AE /* Splash.storyboard in Resources */,
+				4109927A254744B700DF6527 /* Home.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

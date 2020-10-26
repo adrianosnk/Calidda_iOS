@@ -43,7 +43,7 @@ class AuthenticationService {
                 return
             }
             let userData = try! JSONDecoder().decode(UserData.self, from: data)
-            self.authFirebase(email, password)
+           // self.authFirebase(email, password)
             
             let encodedData = NSKeyedArchiver.archivedData(withRootObject: data)
             UserDefaults.standard.set(encodedData, forKey: "users")

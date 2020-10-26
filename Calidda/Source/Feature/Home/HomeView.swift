@@ -19,7 +19,7 @@ protocol HomeViewDelegate: class {
 class HomeView: UIViewController {
 
     
-    var style: Style = Style.myApp
+   // var style: Style = Style.myApp
     var router:Router!
     let disposeBag = DisposeBag()
     private let presenter = HomePresenter(homeService: HomeService())
@@ -52,9 +52,9 @@ class HomeView: UIViewController {
         tableView.dataSource = self
               
         
-        style.apply(textStyle: .title, to: lblNameDoctor)
-        style.apply(textStyle: .subtitleDoctor, to: lblNameEspecialidate)
-        style.apply(textStyle: .subtitleDoctor, to: lblNameCMP)
+     //   style.apply(textStyle: .title, to: lblNameDoctor)
+     //   style.apply(textStyle: .subtitleDoctor, to: lblNameEspecialidate)
+     //   style.apply(textStyle: .subtitleDoctor, to: lblNameCMP)
 
         lblNameDoctor.textColor = CaliddaColors.white
         lblNameEspecialidate.textColor = CaliddaColors.white

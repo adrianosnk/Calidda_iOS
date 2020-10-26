@@ -10,7 +10,7 @@ import UIKit
 
 class SplashView: UIViewController {
     var router:Router!
-    var style: Style = Style.myApp
+ //   var style: Style = Style.myApp
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white

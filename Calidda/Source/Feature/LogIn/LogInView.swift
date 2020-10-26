@@ -12,7 +12,7 @@ import RxSwift
 import MaterialTextField
 import DLRadioButton
 class LogInView: UIViewController {
-    var style: Style = Style.myApp
+    //var style: Style = Style.myApp
     var router:Router!
     let disposebag = DisposeBag()
     private let presenter = LogInPresenter(loginService: AuthenticationService())
@@ -23,15 +23,15 @@ class LogInView: UIViewController {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-       // emailTexfield.text = "doctor@smartdoctor.pe"
-        emailTexfield.text = "usuario@calidda.pe"
+        emailTexfield.text = "doctor@smartdoctor.pe"
+        //emailTexfield.text = "usuario@calidda.pe"
         passwordTexfield.text = "123456"
         print("login")
         //setupUI()
     }
     func setupUI(){
-        style.apply(textStyle: .title, to: emailTexfield)
-        style.apply(textStyle: .title, to: passwordTexfield)
+       // style.apply(textStyle: .title, to: emailTexfield)
+       // style.apply(textStyle: .title, to: passwordTexfield)
     }
     // MARK: - Navigation
     @IBAction func logIn(_ sender:UIButton){

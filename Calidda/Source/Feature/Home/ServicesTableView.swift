@@ -9,7 +9,7 @@
 import UIKit
 
 class ServicesTableView: UITableViewCell {
-    private var style: Style = Style.myApp
+   // private var style: Style = Style.myApp
     @IBOutlet weak var titleServiceLabel:UILabel!
     @IBOutlet weak var descriptionServiceLabel:UILabel!
     @IBOutlet weak var imgIcon:UIImageView!
@@ -28,8 +28,8 @@ class ServicesTableView: UITableViewCell {
     
     func loadWith(services:HomeServices){
         self.selectionStyle = .none
-        style.apply(textStyle: .titleService, to: titleServiceLabel)
-        style.apply(textStyle: .subtitle, to: descriptionServiceLabel)
+       // style.apply(textStyle: .titleService, to: titleServiceLabel)
+        //style.apply(textStyle: .subtitle, to: descriptionServiceLabel)
         titleServiceLabel.textColor = CaliddaColors.blackDark
         descriptionServiceLabel.textColor = CaliddaColors.lightDark
         
