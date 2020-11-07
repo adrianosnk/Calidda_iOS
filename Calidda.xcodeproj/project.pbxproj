@@ -8,6 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		4109927A254744B700DF6527 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41099279254744B600DF6527 /* Home.storyboard */; };
+		4144517B2548D39100760038 /* OldPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414451792548D39100760038 /* OldPasswordView.swift */; };
+		4144517C2548D39100760038 /* OldPasswordPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4144517A2548D39100760038 /* OldPasswordPresenter.swift */; };
+		4144517F2548D4CB00760038 /* ChangePasswordPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4144517D2548D4CB00760038 /* ChangePasswordPresenter.swift */; };
+		414451802548D4CB00760038 /* ChangePasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4144517E2548D4CB00760038 /* ChangePasswordView.swift */; };
+		41445184254A0D7600760038 /* HomeInfoViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41445182254A0D7500760038 /* HomeInfoViewCell.swift */; };
+		41445185254A0D7600760038 /* HomeInfoViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41445183254A0D7500760038 /* HomeInfoViewCell.xib */; };
+		41445188254A19FA00760038 /* HomeListaViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41445186254A19F900760038 /* HomeListaViewCell.xib */; };
+		41445189254A19FA00760038 /* HomeListaViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41445187254A19FA00760038 /* HomeListaViewCell.swift */; };
+		41445196254B35A200760038 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4144518A254B359600760038 /* Roboto-Regular.ttf */; };
+		41445197254B35A300760038 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4144518B254B359700760038 /* Roboto-Light.ttf */; };
+		41445198254B35A300760038 /* Roboto-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4144518C254B359800760038 /* Roboto-Italic.ttf */; };
+		41445199254B35A300760038 /* Roboto-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4144518D254B359A00760038 /* Roboto-LightItalic.ttf */; };
+		4144519A254B35A300760038 /* Roboto-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4144518E254B359B00760038 /* Roboto-MediumItalic.ttf */; };
+		4144519B254B35A300760038 /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4144518F254B359C00760038 /* Roboto-Thin.ttf */; };
+		4144519C254B35A300760038 /* Roboto-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 41445190254B359D00760038 /* Roboto-BlackItalic.ttf */; };
+		4144519D254B35A300760038 /* Roboto-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 41445191254B359E00760038 /* Roboto-ThinItalic.ttf */; };
+		4144519E254B35A300760038 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 41445192254B35A000760038 /* Roboto-Bold.ttf */; };
+		4144519F254B35A300760038 /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 41445193254B35A000760038 /* Roboto-Black.ttf */; };
+		414451A0254B35A300760038 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 41445194254B35A100760038 /* Roboto-Medium.ttf */; };
+		414451A1254B35A300760038 /* Roboto-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 41445195254B35A100760038 /* Roboto-BoldItalic.ttf */; };
 		415EFBE725432992003D57AE /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415EFBE625432991003D57AE /* SplashView.swift */; };
 		415EFBF0254329F3003D57AE /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415EFBE8254329EE003D57AE /* String.swift */; };
 		415EFBF1254329F3003D57AE /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415EFBE9254329EF003D57AE /* UIViewController.swift */; };
@@ -48,6 +68,53 @@
 		416C5D572542441400C1B012 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 416C5D552542441400C1B012 /* LaunchScreen.storyboard */; };
 		416C5D622542441400C1B012 /* CaliddaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416C5D612542441400C1B012 /* CaliddaTests.swift */; };
 		416C5D6D2542441500C1B012 /* CaliddaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416C5D6C2542441500C1B012 /* CaliddaUITests.swift */; };
+		41950E182548BB8A00C6C196 /* OldPassword.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41950E172548BB8900C6C196 /* OldPassword.storyboard */; };
+		41950E1A2548C82C00C6C196 /* ChangePassword.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41950E192548C82B00C6C196 /* ChangePassword.storyboard */; };
+		41D423572554E060004FCC16 /* ResponseUserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D423562554E05C004FCC16 /* ResponseUserData.swift */; };
+		41D423592554F050004FCC16 /* loginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D423582554F04F004FCC16 /* loginService.swift */; };
+		41D4235B25556818004FCC16 /* ResponseResuData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D4235A25556815004FCC16 /* ResponseResuData.swift */; };
+		41F1247B254C8FCE0042877D /* Factura.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41F1247A254C8FCE0042877D /* Factura.storyboard */; };
+		41F1247E254C90040042877D /* FacturaPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F1247C254C90010042877D /* FacturaPresenter.swift */; };
+		41F1247F254C90040042877D /* FacturaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F1247D254C90040042877D /* FacturaView.swift */; };
+		41F12483254C91170042877D /* FacturaListaViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F12481254C91150042877D /* FacturaListaViewCell.swift */; };
+		41F12484254C91170042877D /* FacturaListaViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41F12482254C91170042877D /* FacturaListaViewCell.xib */; };
+		41F1248A254CA5E10042877D /* HHTabLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F12486254CA5DC0042877D /* HHTabLabel.swift */; };
+		41F1248B254CA5E10042877D /* HHTabButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F12487254CA5DE0042877D /* HHTabButton.swift */; };
+		41F1248C254CA5E10042877D /* HHButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F12488254CA5E00042877D /* HHButton+Extension.swift */; };
+		41F1248D254CA5E10042877D /* HHTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F12489254CA5E10042877D /* HHTabBarView.swift */; };
+		41F12491254CC4650042877D /* Analytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F1248F254CC4610042877D /* Analytics.swift */; };
+		41F12492254CC4650042877D /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F12490254CC4640042877D /* ProgressView.swift */; };
+		41F12497254CC4D00042877D /* CaliddaTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F12496254CC4CF0042877D /* CaliddaTabBarController.swift */; };
+		41F12499254CC9030042877D /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F12498254CC9020042877D /* UIImageExtension.swift */; };
+		41F1249B254CC9DB0042877D /* UINotificationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F1249A254CC9DB0042877D /* UINotificationExtension.swift */; };
+		41F1249D254CCA720042877D /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F1249C254CCA720042877D /* UIViewExtension.swift */; };
+		41F124A1254CDBC00042877D /* UIBorderlessNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F1249F254CDBB50042877D /* UIBorderlessNavigationBar.swift */; };
+		41F124A2254CDBC00042877D /* BaseDialogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F124A0254CDBC00042877D /* BaseDialogViewController.swift */; };
+		41F124A6254D341C0042877D /* FacturaDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F124A4254D34190042877D /* FacturaDetailPresenter.swift */; };
+		41F124A7254D341C0042877D /* FacturaDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F124A5254D341B0042877D /* FacturaDetailView.swift */; };
+		41F124AB254D34D40042877D /* FacturaDetailInfoViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41F124A9254D34D30042877D /* FacturaDetailInfoViewCell.xib */; };
+		41F124AC254D34D40042877D /* FacturaDetailInfoViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F124AA254D34D40042877D /* FacturaDetailInfoViewCell.swift */; };
+		41F124AF254D35120042877D /* FacturaListaDetailInfoViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F124AD254D35100042877D /* FacturaListaDetailInfoViewCell.swift */; };
+		41F124B0254D35120042877D /* FacturaListaDetailInfoViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41F124AE254D35120042877D /* FacturaListaDetailInfoViewCell.xib */; };
+		41F124B2255057810042877D /* DetailFactura.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41F124B1255057810042877D /* DetailFactura.storyboard */; };
+		41F124B525506F0D0042877D /* FacturaListaFirstDetailInfoViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F124B325506F090042877D /* FacturaListaFirstDetailInfoViewCell.swift */; };
+		41F124B625506F0D0042877D /* FacturaListaFirstDetailInfoViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41F124B425506F0C0042877D /* FacturaListaFirstDetailInfoViewCell.xib */; };
+		41F124BA2550AEAB0042877D /* FacturaDetailInfoViewCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F124B82550AEA30042877D /* FacturaDetailInfoViewCell2.swift */; };
+		41F124BB2550AEAB0042877D /* FacturaDetailInfoViewCell2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41F124B92550AEAA0042877D /* FacturaDetailInfoViewCell2.xib */; };
+		41F124BF2550BDE90042877D /* ConsumoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F124BD2550BDE60042877D /* ConsumoPresenter.swift */; };
+		41F124C02550BDE90042877D /* ConsumoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F124BE2550BDE90042877D /* ConsumoView.swift */; };
+		41F124C22550BE1E0042877D /* Consumo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41F124C12550BE1D0042877D /* Consumo.storyboard */; };
+		41F124C7255113E20042877D /* MantenimientoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F124C5255113DF0042877D /* MantenimientoPresenter.swift */; };
+		41F124C8255113E20042877D /* MantenimientoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F124C6255113E10042877D /* MantenimientoView.swift */; };
+		41F124CB255114360042877D /* GestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F124C9255114330042877D /* GestionView.swift */; };
+		41F124CC255114360042877D /* GestionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F124CA255114360042877D /* GestionPresenter.swift */; };
+		41F124CE255114930042877D /* Mantenimiento.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41F124CD255114930042877D /* Mantenimiento.storyboard */; };
+		41F124D02551162D0042877D /* Gestion.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41F124CF2551162C0042877D /* Gestion.storyboard */; };
+		41FD6535254B5B6200FDEF34 /* MenuFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FD6534254B5B6200FDEF34 /* MenuFooter.swift */; };
+		41FD6537254B5B7000FDEF34 /* MenuFooter.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41FD6536254B5B7000FDEF34 /* MenuFooter.xib */; };
+		41FD653B254BCECC00FDEF34 /* DetailNovedadesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FD6539254BCECB00FDEF34 /* DetailNovedadesPresenter.swift */; };
+		41FD653C254BCECC00FDEF34 /* DetailNovedadesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FD653A254BCECC00FDEF34 /* DetailNovedadesView.swift */; };
+		41FD653E254BCEE500FDEF34 /* DetailNovedades.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41FD653D254BCEE500FDEF34 /* DetailNovedades.storyboard */; };
 		7C6EA973678C9E3F955B2513 /* Pods_Calidda_CaliddaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A70504ED93619AF0B3C3D173 /* Pods_Calidda_CaliddaUITests.framework */; };
 		A736FC3BA2A985AFE1E7DAED /* Pods_CaliddaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EEAC0B53E79376256DC01E5 /* Pods_CaliddaTests.framework */; };
 		EDB684B99F75C2A4C5FC9AC6 /* Pods_Calidda.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F22F53D70DABDCB03937B4F4 /* Pods_Calidda.framework */; };
@@ -73,6 +140,26 @@
 /* Begin PBXFileReference section */
 		1A33E83D0A5FAD9289EB9B50 /* Pods-Calidda.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Calidda.release.xcconfig"; path = "Target Support Files/Pods-Calidda/Pods-Calidda.release.xcconfig"; sourceTree = "<group>"; };
 		41099279254744B600DF6527 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		414451792548D39100760038 /* OldPasswordView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OldPasswordView.swift; sourceTree = "<group>"; };
+		4144517A2548D39100760038 /* OldPasswordPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OldPasswordPresenter.swift; sourceTree = "<group>"; };
+		4144517D2548D4CB00760038 /* ChangePasswordPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePasswordPresenter.swift; sourceTree = "<group>"; };
+		4144517E2548D4CB00760038 /* ChangePasswordView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePasswordView.swift; sourceTree = "<group>"; };
+		41445182254A0D7500760038 /* HomeInfoViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeInfoViewCell.swift; sourceTree = "<group>"; };
+		41445183254A0D7500760038 /* HomeInfoViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeInfoViewCell.xib; sourceTree = "<group>"; };
+		41445186254A19F900760038 /* HomeListaViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeListaViewCell.xib; sourceTree = "<group>"; };
+		41445187254A19FA00760038 /* HomeListaViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeListaViewCell.swift; sourceTree = "<group>"; };
+		4144518A254B359600760038 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		4144518B254B359700760038 /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
+		4144518C254B359800760038 /* Roboto-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Italic.ttf"; sourceTree = "<group>"; };
+		4144518D254B359A00760038 /* Roboto-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-LightItalic.ttf"; sourceTree = "<group>"; };
+		4144518E254B359B00760038 /* Roboto-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-MediumItalic.ttf"; sourceTree = "<group>"; };
+		4144518F254B359C00760038 /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
+		41445190254B359D00760038 /* Roboto-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-BlackItalic.ttf"; sourceTree = "<group>"; };
+		41445191254B359E00760038 /* Roboto-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-ThinItalic.ttf"; sourceTree = "<group>"; };
+		41445192254B35A000760038 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		41445193254B35A000760038 /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
+		41445194254B35A100760038 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		41445195254B35A100760038 /* Roboto-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-BoldItalic.ttf"; sourceTree = "<group>"; };
 		415EFBE625432991003D57AE /* SplashView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		415EFBE8254329EE003D57AE /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		415EFBE9254329EF003D57AE /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
@@ -119,6 +206,53 @@
 		416C5D682542441500C1B012 /* CaliddaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CaliddaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		416C5D6C2542441500C1B012 /* CaliddaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaliddaUITests.swift; sourceTree = "<group>"; };
 		416C5D6E2542441500C1B012 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		41950E172548BB8900C6C196 /* OldPassword.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = OldPassword.storyboard; sourceTree = "<group>"; };
+		41950E192548C82B00C6C196 /* ChangePassword.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ChangePassword.storyboard; sourceTree = "<group>"; };
+		41D423562554E05C004FCC16 /* ResponseUserData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseUserData.swift; sourceTree = "<group>"; };
+		41D423582554F04F004FCC16 /* loginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginService.swift; sourceTree = "<group>"; };
+		41D4235A25556815004FCC16 /* ResponseResuData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseResuData.swift; sourceTree = "<group>"; };
+		41F1247A254C8FCE0042877D /* Factura.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Factura.storyboard; sourceTree = "<group>"; };
+		41F1247C254C90010042877D /* FacturaPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacturaPresenter.swift; sourceTree = "<group>"; };
+		41F1247D254C90040042877D /* FacturaView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacturaView.swift; sourceTree = "<group>"; };
+		41F12481254C91150042877D /* FacturaListaViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacturaListaViewCell.swift; sourceTree = "<group>"; };
+		41F12482254C91170042877D /* FacturaListaViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FacturaListaViewCell.xib; sourceTree = "<group>"; };
+		41F12486254CA5DC0042877D /* HHTabLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HHTabLabel.swift; sourceTree = "<group>"; };
+		41F12487254CA5DE0042877D /* HHTabButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HHTabButton.swift; sourceTree = "<group>"; };
+		41F12488254CA5E00042877D /* HHButton+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HHButton+Extension.swift"; sourceTree = "<group>"; };
+		41F12489254CA5E10042877D /* HHTabBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HHTabBarView.swift; sourceTree = "<group>"; };
+		41F1248F254CC4610042877D /* Analytics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Analytics.swift; sourceTree = "<group>"; };
+		41F12490254CC4640042877D /* ProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
+		41F12496254CC4CF0042877D /* CaliddaTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaliddaTabBarController.swift; sourceTree = "<group>"; };
+		41F12498254CC9020042877D /* UIImageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
+		41F1249A254CC9DB0042877D /* UINotificationExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UINotificationExtension.swift; sourceTree = "<group>"; };
+		41F1249C254CCA720042877D /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		41F1249F254CDBB50042877D /* UIBorderlessNavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIBorderlessNavigationBar.swift; path = "Calidda/Source/res/New Group/UIBorderlessNavigationBar.swift"; sourceTree = SOURCE_ROOT; };
+		41F124A0254CDBC00042877D /* BaseDialogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseDialogViewController.swift; sourceTree = "<group>"; };
+		41F124A4254D34190042877D /* FacturaDetailPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacturaDetailPresenter.swift; sourceTree = "<group>"; };
+		41F124A5254D341B0042877D /* FacturaDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacturaDetailView.swift; sourceTree = "<group>"; };
+		41F124A9254D34D30042877D /* FacturaDetailInfoViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FacturaDetailInfoViewCell.xib; sourceTree = "<group>"; };
+		41F124AA254D34D40042877D /* FacturaDetailInfoViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacturaDetailInfoViewCell.swift; sourceTree = "<group>"; };
+		41F124AD254D35100042877D /* FacturaListaDetailInfoViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacturaListaDetailInfoViewCell.swift; sourceTree = "<group>"; };
+		41F124AE254D35120042877D /* FacturaListaDetailInfoViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FacturaListaDetailInfoViewCell.xib; sourceTree = "<group>"; };
+		41F124B1255057810042877D /* DetailFactura.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DetailFactura.storyboard; sourceTree = "<group>"; };
+		41F124B325506F090042877D /* FacturaListaFirstDetailInfoViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacturaListaFirstDetailInfoViewCell.swift; sourceTree = "<group>"; };
+		41F124B425506F0C0042877D /* FacturaListaFirstDetailInfoViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FacturaListaFirstDetailInfoViewCell.xib; sourceTree = "<group>"; };
+		41F124B82550AEA30042877D /* FacturaDetailInfoViewCell2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacturaDetailInfoViewCell2.swift; sourceTree = "<group>"; };
+		41F124B92550AEAA0042877D /* FacturaDetailInfoViewCell2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FacturaDetailInfoViewCell2.xib; sourceTree = "<group>"; };
+		41F124BD2550BDE60042877D /* ConsumoPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsumoPresenter.swift; sourceTree = "<group>"; };
+		41F124BE2550BDE90042877D /* ConsumoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsumoView.swift; sourceTree = "<group>"; };
+		41F124C12550BE1D0042877D /* Consumo.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Consumo.storyboard; sourceTree = "<group>"; };
+		41F124C5255113DF0042877D /* MantenimientoPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MantenimientoPresenter.swift; sourceTree = "<group>"; };
+		41F124C6255113E10042877D /* MantenimientoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MantenimientoView.swift; sourceTree = "<group>"; };
+		41F124C9255114330042877D /* GestionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GestionView.swift; sourceTree = "<group>"; };
+		41F124CA255114360042877D /* GestionPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GestionPresenter.swift; sourceTree = "<group>"; };
+		41F124CD255114930042877D /* Mantenimiento.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Mantenimiento.storyboard; sourceTree = "<group>"; };
+		41F124CF2551162C0042877D /* Gestion.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Gestion.storyboard; sourceTree = "<group>"; };
+		41FD6534254B5B6200FDEF34 /* MenuFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuFooter.swift; sourceTree = "<group>"; };
+		41FD6536254B5B7000FDEF34 /* MenuFooter.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuFooter.xib; sourceTree = "<group>"; };
+		41FD6539254BCECB00FDEF34 /* DetailNovedadesPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailNovedadesPresenter.swift; sourceTree = "<group>"; };
+		41FD653A254BCECC00FDEF34 /* DetailNovedadesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailNovedadesView.swift; sourceTree = "<group>"; };
+		41FD653D254BCEE500FDEF34 /* DetailNovedades.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DetailNovedades.storyboard; sourceTree = "<group>"; };
 		46515BC0B6185B92E794E14B /* Pods-CaliddaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CaliddaTests.release.xcconfig"; path = "Target Support Files/Pods-CaliddaTests/Pods-CaliddaTests.release.xcconfig"; sourceTree = "<group>"; };
 		4EEAC0B53E79376256DC01E5 /* Pods_CaliddaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CaliddaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		59518178F3BFC7D5E1FFD9CC /* Pods-CaliddaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CaliddaTests.debug.xcconfig"; path = "Target Support Files/Pods-CaliddaTests/Pods-CaliddaTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -157,6 +291,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		414451772548D30A00760038 /* OldPassword */ = {
+			isa = PBXGroup;
+			children = (
+				4144517A2548D39100760038 /* OldPasswordPresenter.swift */,
+				414451792548D39100760038 /* OldPasswordView.swift */,
+			);
+			path = OldPassword;
+			sourceTree = "<group>";
+		};
+		414451782548D31400760038 /* ChangePassword */ = {
+			isa = PBXGroup;
+			children = (
+				4144517D2548D4CB00760038 /* ChangePasswordPresenter.swift */,
+				4144517E2548D4CB00760038 /* ChangePasswordView.swift */,
+			);
+			path = ChangePassword;
+			sourceTree = "<group>";
+		};
+		41445181254A0CD900760038 /* ViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				41445187254A19FA00760038 /* HomeListaViewCell.swift */,
+				41445186254A19F900760038 /* HomeListaViewCell.xib */,
+				41445182254A0D7500760038 /* HomeInfoViewCell.swift */,
+				41445183254A0D7500760038 /* HomeInfoViewCell.xib */,
+			);
+			path = ViewCell;
+			sourceTree = "<group>";
+		};
 		415EFBD4254268EC003D57AE /* Source */ = {
 			isa = PBXGroup;
 			children = (
@@ -170,6 +333,8 @@
 		415EFBD5254268F9003D57AE /* res */ = {
 			isa = PBXGroup;
 			children = (
+				41F1249E254CDB9C0042877D /* Custom */,
+				41F1248E254CC3760042877D /* Helpers */,
 				415EFBD9254269B8003D57AE /* values */,
 				415EFBD8254269B0003D57AE /* fonts */,
 				415EFBD7254269A7003D57AE /* Extensiones */,
@@ -192,6 +357,9 @@
 		415EFBD7254269A7003D57AE /* Extensiones */ = {
 			isa = PBXGroup;
 			children = (
+				41F1249C254CCA720042877D /* UIViewExtension.swift */,
+				41F1249A254CC9DB0042877D /* UINotificationExtension.swift */,
+				41F12498254CC9020042877D /* UIImageExtension.swift */,
 				415EFBEB254329F0003D57AE /* Date.swift */,
 				415EFBED254329F1003D57AE /* Double.swift */,
 				415EFBE8254329EE003D57AE /* String.swift */,
@@ -207,6 +375,18 @@
 		415EFBD8254269B0003D57AE /* fonts */ = {
 			isa = PBXGroup;
 			children = (
+				41445193254B35A000760038 /* Roboto-Black.ttf */,
+				41445190254B359D00760038 /* Roboto-BlackItalic.ttf */,
+				41445192254B35A000760038 /* Roboto-Bold.ttf */,
+				41445195254B35A100760038 /* Roboto-BoldItalic.ttf */,
+				4144518C254B359800760038 /* Roboto-Italic.ttf */,
+				4144518B254B359700760038 /* Roboto-Light.ttf */,
+				4144518D254B359A00760038 /* Roboto-LightItalic.ttf */,
+				41445194254B35A100760038 /* Roboto-Medium.ttf */,
+				4144518E254B359B00760038 /* Roboto-MediumItalic.ttf */,
+				4144518A254B359600760038 /* Roboto-Regular.ttf */,
+				4144518F254B359C00760038 /* Roboto-Thin.ttf */,
+				41445191254B359E00760038 /* Roboto-ThinItalic.ttf */,
 			);
 			path = fonts;
 			sourceTree = "<group>";
@@ -236,6 +416,14 @@
 		415EFBDB25426D56003D57AE /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				41F124C42551138C0042877D /* Gestion */,
+				41F124C3255113820042877D /* Mantenimiento */,
+				41F124BC2550B9FF0042877D /* Consumo */,
+				41F12479254C8F750042877D /* Factura */,
+				41F1247C254C90010042877D /* FacturaPresenter.swift */,
+				41F1247D254C90040042877D /* FacturaView.swift */,
+				414451782548D31400760038 /* ChangePassword */,
+				414451772548D30A00760038 /* OldPassword */,
 				415EFBE5254328FE003D57AE /* Register */,
 				415EFBE4254328E7003D57AE /* Storyboards */,
 				415EFBE2254328BA003D57AE /* Home */,
@@ -248,6 +436,10 @@
 		415EFBDC25426DD9003D57AE /* CustomComponents */ = {
 			isa = PBXGroup;
 			children = (
+				41F12493254CC49F0042877D /* Menu */,
+				41F12485254CA5C00042877D /* HTabBar */,
+				41FD6534254B5B6200FDEF34 /* MenuFooter.swift */,
+				41FD6536254B5B7000FDEF34 /* MenuFooter.xib */,
 			);
 			path = CustomComponents;
 			sourceTree = "<group>";
@@ -255,9 +447,12 @@
 		415EFBDD25426DE7003D57AE /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				41D4235A25556815004FCC16 /* ResponseResuData.swift */,
 				415EFC2E25434CCD003D57AE /* PreferenceInfoData.swift */,
 				415EFC2C25434C49003D57AE /* DoctorInfo.swift */,
 				415EFC1225434502003D57AE /* UserData.swift */,
+				41D423562554E05C004FCC16 /* ResponseUserData.swift */,
+				41D423582554F04F004FCC16 /* loginService.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -299,6 +494,8 @@
 		415EFBE2254328BA003D57AE /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				41FD6538254BCEBE00FDEF34 /* DetailNovedades */,
+				41445181254A0CD900760038 /* ViewCell */,
 				415EFC0725433877003D57AE /* HomePresenter.swift */,
 				415EFC0825433878003D57AE /* HomeView.swift */,
 				415EFC0625433877003D57AE /* ServicesTableView.swift */,
@@ -309,7 +506,15 @@
 		415EFBE4254328E7003D57AE /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				41F124CF2551162C0042877D /* Gestion.storyboard */,
+				41F124CD255114930042877D /* Mantenimiento.storyboard */,
+				41F124C12550BE1D0042877D /* Consumo.storyboard */,
+				41F124B1255057810042877D /* DetailFactura.storyboard */,
+				41F1247A254C8FCE0042877D /* Factura.storyboard */,
+				41950E192548C82B00C6C196 /* ChangePassword.storyboard */,
+				41950E172548BB8900C6C196 /* OldPassword.storyboard */,
 				41099279254744B600DF6527 /* Home.storyboard */,
+				41FD653D254BCEE500FDEF34 /* DetailNovedades.storyboard */,
 				415EFC0225433428003D57AE /* Auth.storyboard */,
 				415EFC0025432DF8003D57AE /* Splash.storyboard */,
 			);
@@ -410,6 +615,122 @@
 				416C5D6E2542441500C1B012 /* Info.plist */,
 			);
 			path = CaliddaUITests;
+			sourceTree = "<group>";
+		};
+		41F12479254C8F750042877D /* Factura */ = {
+			isa = PBXGroup;
+			children = (
+				41F124A3254D33910042877D /* FacturaDetail */,
+				41F12480254C904B0042877D /* ViewCellFactura */,
+			);
+			path = Factura;
+			sourceTree = "<group>";
+		};
+		41F12480254C904B0042877D /* ViewCellFactura */ = {
+			isa = PBXGroup;
+			children = (
+				41F12481254C91150042877D /* FacturaListaViewCell.swift */,
+				41F12482254C91170042877D /* FacturaListaViewCell.xib */,
+			);
+			path = ViewCellFactura;
+			sourceTree = "<group>";
+		};
+		41F12485254CA5C00042877D /* HTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				41F12488254CA5E00042877D /* HHButton+Extension.swift */,
+				41F12489254CA5E10042877D /* HHTabBarView.swift */,
+				41F12487254CA5DE0042877D /* HHTabButton.swift */,
+				41F12486254CA5DC0042877D /* HHTabLabel.swift */,
+			);
+			path = HTabBar;
+			sourceTree = "<group>";
+		};
+		41F1248E254CC3760042877D /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				41F1248F254CC4610042877D /* Analytics.swift */,
+				41F12490254CC4640042877D /* ProgressView.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		41F12493254CC49F0042877D /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				41F12496254CC4CF0042877D /* CaliddaTabBarController.swift */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		41F1249E254CDB9C0042877D /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				41F124A0254CDBC00042877D /* BaseDialogViewController.swift */,
+				41F1249F254CDBB50042877D /* UIBorderlessNavigationBar.swift */,
+			);
+			path = Custom;
+			sourceTree = "<group>";
+		};
+		41F124A3254D33910042877D /* FacturaDetail */ = {
+			isa = PBXGroup;
+			children = (
+				41F124A8254D34B80042877D /* FacturaDetailInfoViewCell */,
+				41F124A4254D34190042877D /* FacturaDetailPresenter.swift */,
+				41F124A5254D341B0042877D /* FacturaDetailView.swift */,
+			);
+			path = FacturaDetail;
+			sourceTree = "<group>";
+		};
+		41F124A8254D34B80042877D /* FacturaDetailInfoViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				41F124B325506F090042877D /* FacturaListaFirstDetailInfoViewCell.swift */,
+				41F124B425506F0C0042877D /* FacturaListaFirstDetailInfoViewCell.xib */,
+				41F124AD254D35100042877D /* FacturaListaDetailInfoViewCell.swift */,
+				41F124AE254D35120042877D /* FacturaListaDetailInfoViewCell.xib */,
+				41F124AA254D34D40042877D /* FacturaDetailInfoViewCell.swift */,
+				41F124A9254D34D30042877D /* FacturaDetailInfoViewCell.xib */,
+				41F124B82550AEA30042877D /* FacturaDetailInfoViewCell2.swift */,
+				41F124B92550AEAA0042877D /* FacturaDetailInfoViewCell2.xib */,
+			);
+			path = FacturaDetailInfoViewCell;
+			sourceTree = "<group>";
+		};
+		41F124BC2550B9FF0042877D /* Consumo */ = {
+			isa = PBXGroup;
+			children = (
+				41F124BD2550BDE60042877D /* ConsumoPresenter.swift */,
+				41F124BE2550BDE90042877D /* ConsumoView.swift */,
+			);
+			path = Consumo;
+			sourceTree = "<group>";
+		};
+		41F124C3255113820042877D /* Mantenimiento */ = {
+			isa = PBXGroup;
+			children = (
+				41F124C5255113DF0042877D /* MantenimientoPresenter.swift */,
+				41F124C6255113E10042877D /* MantenimientoView.swift */,
+			);
+			path = Mantenimiento;
+			sourceTree = "<group>";
+		};
+		41F124C42551138C0042877D /* Gestion */ = {
+			isa = PBXGroup;
+			children = (
+				41F124CA255114360042877D /* GestionPresenter.swift */,
+				41F124C9255114330042877D /* GestionView.swift */,
+			);
+			path = Gestion;
+			sourceTree = "<group>";
+		};
+		41FD6538254BCEBE00FDEF34 /* DetailNovedades */ = {
+			isa = PBXGroup;
+			children = (
+				41FD6539254BCECB00FDEF34 /* DetailNovedadesPresenter.swift */,
+				41FD653A254BCECC00FDEF34 /* DetailNovedadesView.swift */,
+			);
+			path = DetailNovedades;
 			sourceTree = "<group>";
 		};
 		B04C34AE5831AF47D9C3A871 /* Pods */ = {
@@ -544,14 +865,42 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4144519D254B35A300760038 /* Roboto-ThinItalic.ttf in Resources */,
+				4144519A254B35A300760038 /* Roboto-MediumItalic.ttf in Resources */,
 				415EFC17254345D3003D57AE /* PopUpErrorView.xib in Resources */,
+				41F124BB2550AEAB0042877D /* FacturaDetailInfoViewCell2.xib in Resources */,
 				416C5D572542441400C1B012 /* LaunchScreen.storyboard in Resources */,
+				41445199254B35A300760038 /* Roboto-LightItalic.ttf in Resources */,
+				4144519F254B35A300760038 /* Roboto-Black.ttf in Resources */,
+				41950E182548BB8A00C6C196 /* OldPassword.storyboard in Resources */,
+				41445185254A0D7600760038 /* HomeInfoViewCell.xib in Resources */,
+				41445197254B35A300760038 /* Roboto-Light.ttf in Resources */,
+				41F124AB254D34D40042877D /* FacturaDetailInfoViewCell.xib in Resources */,
+				41FD6537254B5B7000FDEF34 /* MenuFooter.xib in Resources */,
+				41950E1A2548C82C00C6C196 /* ChangePassword.storyboard in Resources */,
+				4144519C254B35A300760038 /* Roboto-BlackItalic.ttf in Resources */,
+				414451A0254B35A300760038 /* Roboto-Medium.ttf in Resources */,
+				4144519B254B35A300760038 /* Roboto-Thin.ttf in Resources */,
+				41F1247B254C8FCE0042877D /* Factura.storyboard in Resources */,
+				41F12484254C91170042877D /* FacturaListaViewCell.xib in Resources */,
 				416C5D542542441400C1B012 /* Assets.xcassets in Resources */,
+				41445198254B35A300760038 /* Roboto-Italic.ttf in Resources */,
 				415EFC0325433428003D57AE /* Auth.storyboard in Resources */,
+				4144519E254B35A300760038 /* Roboto-Bold.ttf in Resources */,
 				415EFC2225434665003D57AE /* ErrorView.xib in Resources */,
+				41F124CE255114930042877D /* Mantenimiento.storyboard in Resources */,
+				414451A1254B35A300760038 /* Roboto-BoldItalic.ttf in Resources */,
 				416C5D522542440900C1B012 /* Main.storyboard in Resources */,
+				41F124B2255057810042877D /* DetailFactura.storyboard in Resources */,
 				415EFC0125432DF8003D57AE /* Splash.storyboard in Resources */,
+				41F124C22550BE1E0042877D /* Consumo.storyboard in Resources */,
+				41445196254B35A200760038 /* Roboto-Regular.ttf in Resources */,
+				41F124D02551162D0042877D /* Gestion.storyboard in Resources */,
+				41F124B0254D35120042877D /* FacturaListaDetailInfoViewCell.xib in Resources */,
+				41FD653E254BCEE500FDEF34 /* DetailNovedades.storyboard in Resources */,
+				41F124B625506F0D0042877D /* FacturaListaFirstDetailInfoViewCell.xib in Resources */,
 				4109927A254744B700DF6527 /* Home.storyboard in Resources */,
+				41445188254A19FA00760038 /* HomeListaViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -681,26 +1030,58 @@
 			files = (
 				415EFBFD25432A77003D57AE /* CaliddaColors.swift in Sources */,
 				416C5D4F2542440800C1B012 /* ViewController.swift in Sources */,
+				41F12499254CC9030042877D /* UIImageExtension.swift in Sources */,
+				41F12491254CC4650042877D /* Analytics.swift in Sources */,
+				41445189254A19FA00760038 /* HomeListaViewCell.swift in Sources */,
+				41F12492254CC4650042877D /* ProgressView.swift in Sources */,
+				41FD653B254BCECC00FDEF34 /* DetailNovedadesPresenter.swift in Sources */,
+				41F124C7255113E20042877D /* MantenimientoPresenter.swift in Sources */,
 				415EFBE725432992003D57AE /* SplashView.swift in Sources */,
 				415EFBF6254329F3003D57AE /* UIView.swift in Sources */,
+				41F124B525506F0D0042877D /* FacturaListaFirstDetailInfoViewCell.swift in Sources */,
+				41F1248D254CA5E10042877D /* HHTabBarView.swift in Sources */,
 				415EFC2D25434C49003D57AE /* DoctorInfo.swift in Sources */,
+				4144517F2548D4CB00760038 /* ChangePasswordPresenter.swift in Sources */,
+				41F124AC254D34D40042877D /* FacturaDetailInfoViewCell.swift in Sources */,
+				41D4235B25556818004FCC16 /* ResponseResuData.swift in Sources */,
+				41F1248B254CA5E10042877D /* HHTabButton.swift in Sources */,
 				415EFBF2254329F3003D57AE /* UITextFieldExtension.swift in Sources */,
+				41D423592554F050004FCC16 /* loginService.swift in Sources */,
+				41F1249B254CC9DB0042877D /* UINotificationExtension.swift in Sources */,
 				415EFBF3254329F3003D57AE /* Date.swift in Sources */,
+				41F124BA2550AEAB0042877D /* FacturaDetailInfoViewCell2.swift in Sources */,
 				415EFBFC25432A77003D57AE /* CaliddaFont.swift in Sources */,
+				41FD653C254BCECC00FDEF34 /* DetailNovedadesView.swift in Sources */,
 				415EFBFE25432A77003D57AE /* CaliddaImage.swift in Sources */,
+				41F124AF254D35120042877D /* FacturaListaDetailInfoViewCell.swift in Sources */,
 				415EFC0F25433B33003D57AE /* LogInView.swift in Sources */,
+				41F1247E254C90040042877D /* FacturaPresenter.swift in Sources */,
 				415EFBF1254329F3003D57AE /* UIViewController.swift in Sources */,
+				41F1249D254CCA720042877D /* UIViewExtension.swift in Sources */,
+				41F124CB255114360042877D /* GestionView.swift in Sources */,
 				415EFBF0254329F3003D57AE /* String.swift in Sources */,
 				415EFC2125434665003D57AE /* ErrorView.swift in Sources */,
+				41F12497254CC4D00042877D /* CaliddaTabBarController.swift in Sources */,
+				41F124A1254CDBC00042877D /* UIBorderlessNavigationBar.swift in Sources */,
+				41F1248A254CA5E10042877D /* HHTabLabel.swift in Sources */,
 				415EFC2B25434A37003D57AE /* HomeService.swift in Sources */,
 				415EFC18254345D3003D57AE /* PopUpErrorView.swift in Sources */,
 				415EFC0525433591003D57AE /* Router.swift in Sources */,
+				41F124BF2550BDE90042877D /* ConsumoPresenter.swift in Sources */,
+				41D423572554E060004FCC16 /* ResponseUserData.swift in Sources */,
 				415EFBF7254329F3003D57AE /* UIDevice.swift in Sources */,
+				41F124A6254D341C0042877D /* FacturaDetailPresenter.swift in Sources */,
+				41F124CC255114360042877D /* GestionPresenter.swift in Sources */,
+				41F12483254C91170042877D /* FacturaListaViewCell.swift in Sources */,
 				415EFBFF25432A77003D57AE /* Styles.swift in Sources */,
 				415EFC0B25433878003D57AE /* HomeView.swift in Sources */,
+				41F124C8255113E20042877D /* MantenimientoView.swift in Sources */,
 				415EFC0925433878003D57AE /* ServicesTableView.swift in Sources */,
 				415EFC0A25433878003D57AE /* HomePresenter.swift in Sources */,
+				414451802548D4CB00760038 /* ChangePasswordView.swift in Sources */,
 				415EFC1C2543462D003D57AE /* AlertComponent.swift in Sources */,
+				41FD6535254B5B6200FDEF34 /* MenuFooter.swift in Sources */,
+				41F1247F254C90040042877D /* FacturaView.swift in Sources */,
 				416C5D4B2542440800C1B012 /* AppDelegate.swift in Sources */,
 				415EFC1325434502003D57AE /* UserData.swift in Sources */,
 				415EFC2F25434CCD003D57AE /* PreferenceInfoData.swift in Sources */,
@@ -708,8 +1089,15 @@
 				416C5D4D2542440800C1B012 /* SceneDelegate.swift in Sources */,
 				415EFBF5254329F3003D57AE /* Double.swift in Sources */,
 				415EFBF4254329F3003D57AE /* UIButton.swift in Sources */,
+				41F124A7254D341C0042877D /* FacturaDetailView.swift in Sources */,
+				4144517B2548D39100760038 /* OldPasswordView.swift in Sources */,
+				41F1248C254CA5E10042877D /* HHButton+Extension.swift in Sources */,
 				415EFC1D2543462D003D57AE /* BaseAlert.swift in Sources */,
+				41445184254A0D7600760038 /* HomeInfoViewCell.swift in Sources */,
 				415EFC1125433CA4003D57AE /* AuthenticationService.swift in Sources */,
+				4144517C2548D39100760038 /* OldPasswordPresenter.swift in Sources */,
+				41F124C02550BDE90042877D /* ConsumoView.swift in Sources */,
+				41F124A2254CDBC00042877D /* BaseDialogViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

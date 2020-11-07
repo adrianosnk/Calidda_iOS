@@ -25,7 +25,7 @@ class AlertComponent {
     private var isPresenting: Bool {
         return currentViewController != nil
     }
-    
+     
     private var alerts = [BaseAlert]()
     
     fileprivate var completionHandler: (() -> Void)?

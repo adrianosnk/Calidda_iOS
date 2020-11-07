@@ -9,14 +9,18 @@
 import UIKit
 
 class HomeService:AuthenticationService {
-    
-    func getUser() -> UserData {
+    //unarchivedObjectOfClass:fromData:error: instead
+  /*  func getUser() -> ResponseUserData {
         let userDefaults = UserDefaults.standard
         let decoded  = userDefaults.data(forKey: "users")
         let data = NSKeyedUnarchiver.unarchiveObject(with: decoded!) as! Data
-        let userData = try! JSONDecoder().decode(UserData.self, from: data)
+        //let userData = try! JSONDecoder().decode(UserData.self, from: data)
+        let userData = try! JSONDecoder().decode(ResponseUserData.self, from: data)
+       
         return userData
-    }
+         
+        
+    }*/
     func getDoctorInfo() -> DoctorInfo {
         let userDefaults = UserDefaults.standard
         let decoded  = userDefaults.data(forKey: "KeyDoctor")
@@ -25,9 +29,9 @@ class HomeService:AuthenticationService {
         return doctorInfo
     }
     
-    func getInfoDoctor(_ token:String,_ completionHandler: @escaping (_ result: DoctorInfo?, _ error: Error?) -> Void){
+    func getInfoDoctor(_ token:String,_ completionHandler: @escaping (_ result: ResponseResuData?, _ error: Error?) -> Void){
         
-        var request = createConnection(endPoint: "/pro/doctor")
+        var request = createConnection(endPoint: "/api/cliente/resumen?Id=IdCliente")
         request.addValue("token \(token)", forHTTPHeaderField: "Authorization")
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         request.httpMethod = "GET"
@@ -42,11 +46,20 @@ class HomeService:AuthenticationService {
             }
             let jsonString = String(data: data, encoding: String.Encoding.utf8)!
             print (jsonString)
-            let userData = try! JSONDecoder().decode(DoctorInfo.self, from: data)
+           // let userData = try! JSONDecoder().decode(DoctorInfo.self, from: data)
+            
+            typealias ResponseResuDatas = [ResponseResuData]
+                      let userDatas = try! JSONDecoder().decode(ResponseResuDatas.self, from: data)
+                      
+                      print("userData::>>",userDatas.first!)
+            
+            
+            
             
             let encodedData = NSKeyedArchiver.archivedData(withRootObject: data)
             UserDefaults.standard.set(encodedData, forKey: "KeyDoctor")
             UserDefaults.standard.synchronize()
+            let userData = userDatas.first!
             completionHandler(userData,nil)
             
             print(String(data: data, encoding: .utf8)!)

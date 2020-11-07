@@ -26,6 +26,10 @@ class CaliddaImage {
         case iconConnection = "ic_connection"
         case iconWarning = "ic_warning"
         case iconError = "ic_error"
+        
+        
+        case icon_ConsumoBlue = "icon_ConsumoBlue"
+        
     }
     
     

@@ -13,7 +13,7 @@ enum PopUpErrorType {
     case warning
     case connection
 }
-
+ 
 protocol PopUpErrorViewDelegate: class {
     func onClose(type: PopUpErrorType)
 }
@@ -45,7 +45,7 @@ class PopUpErrorView: BaseAlert {
         static let descriptionConnection = "Por favor, verifica tu conexión e intenta de nuevo en unos minutos."
         static let titleConnection = "Error de conexión"
         static let buttonTitleConnection = "Reintentar"
-    }
+    } 
     
     // MARK: - Init
     override init(frame: CGRect) {

@@ -14,16 +14,16 @@ struct HomePresenter {
     init(homeService:HomeService) {
         service = homeService
     }
-    func getMyUser() -> UserData {
+   /* func getMyUser() -> ResponseUserData {
         return service.getUser()
-    }
+    }*/
 
-    func getInfoDoctor(token:String) -> Observable<DoctorInfo>{
-        return Observable<DoctorInfo>.create { observer in
+    func getInfoDoctor(token:String) -> Observable<ResponseResuData>{
+        return Observable<ResponseResuData>.create { observer in
             //consumimos el servicio como tal
             self.service.getInfoDoctor(token){ DoctorInfo, error in
                 
-                guard let result:DoctorInfo = DoctorInfo else {
+                guard let result:ResponseResuData = DoctorInfo else {
                     observer.onError(error!)
                     return
                 }

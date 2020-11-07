@@ -43,6 +43,14 @@ class CaliddaColors {
     
     static let lightTwoGray = UIColor.init("8D8E90", alpha: 1)
     
+    //Colors Calidda
+    
+    static let blueBold = UIColor.init("141478", alpha: 1)
+    static let darkLight = UIColor.init("616365", alpha: 1)
+    static let dark = UIColor.init("444444", alpha: 1)
+    static let GreenBold = UIColor.init("00A85C", alpha: 1)
+    
+    
     // ----------------------------------------------------------------
     
     static let grayToChange = UIColor(red:0.55, green:0.56, blue:0.56, alpha:1)
@@ -54,6 +62,12 @@ class CaliddaColors {
     
     static let lead     = UIColor(red:0.94, green:0.94, blue:0.94, alpha:1)
     static let lightLead = UIColor(red:0.59, green:0.59, blue:0.59, alpha:1)
+    static let lightLeadLiner = UIColor(red:0.245, green:0.243, blue:0.242, alpha:1)
+    
+    
+    static let lightShadowDark = UIColor.init("88A5BF", alpha: 1)
+    static let lightShadowDarkLiner = UIColor.init("F5F3F2", alpha: 1)
+    
     
     static let whiteLigthToChange = UIColor(red:255/255, green:255/255, blue:255/255, alpha:0.12)
     

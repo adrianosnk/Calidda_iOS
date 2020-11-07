@@ -13,7 +13,7 @@ struct LogInPresenter {
     init(loginService:AuthenticationService) {
         service = loginService
     }
-    func auth(email:String,password:String) -> Observable<UserData>{
+  /*  func auth(email:String,password:String) -> Observable<UserData>{
         return Observable<UserData>.create { observer in
             //consumimos el servicio como tal
             self.service.auth(email, password){ userData, error in
@@ -27,7 +27,23 @@ struct LogInPresenter {
             }
             return Disposables.create()
         }
-        
+    }
+    */
+    func auth(email:String,password:String) -> Observable<ResponseUserData>{
+        return Observable<ResponseUserData>.create { observer in
+            //consumimos el servicio como tal
+            self.service.auth(email, password){ UsuarioData, error in
+                
+                guard let result:ResponseUserData = UsuarioData else {
+                    observer.onError(error!)
+                    return
+                }
+                print("result::=>>",result)
+                observer.onNext(result)
+                observer.onCompleted()
+            }
+            return Disposables.create()
+        }
     }
 }
 

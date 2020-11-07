@@ -25,6 +25,8 @@ target 'Calidda' do
   	pod 'Firebase/Auth'
   	pod 'Firebase/Database'
   	pod 'CodableFirebase'
+	pod 'MaterialComponents/BottomNavigation'
+	pod 'Charts'
 
   target 'CaliddaTests' do
     inherit! :search_paths

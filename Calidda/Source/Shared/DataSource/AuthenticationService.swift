@@ -10,25 +10,33 @@ import Foundation
 import Firebase
 
 class AuthenticationService {
-    let URL_BASE:String = "https://devapi.smartdoctor.pe/v1"
+  //  let URL_BASE:String = "https://devapi.smartdoctor.pe/v1"
+    let URL_BASE:String = "https://64ef6ff3-71e0-4823-9ef8-1635d2400e38.mock.pstmn.io"
     let OS:String = "iOS"
     func createConnection(endPoint:String) -> URLRequest {
         print("url:","\(URL_BASE)\(endPoint)")
         let request = URLRequest(url: URL.init(string: "\(URL_BASE)\(endPoint)")!)
         return request
     }
-    func auth(_ email:String,_ password:String,_ completionHandler: @escaping (_ result: UserData?, _ error: Error?) -> Void){
+    func auth(_ email:String,_ password:String,_ completionHandler: @escaping (_ result: ResponseUserData?, _ error: Error?) -> Void){
         
         //        let semaphore = DispatchSemaphore (value: 0)
-        let parameters = ["email": email,
-                          "password": password,
-                          "is_app_doctor": true,
-                          "is_doctor":true,
-                          "application":"sd",
-                          "platform":OS] as [String : Any]
+        let parameters = ["Cuenta": email,
+                          "Password": password] as [String : Any]
+        
+        /*
+
+         let parameters = ["email": email,
+                           "password": password,
+                           "is_app_doctor": true,
+                           "is_doctor":true,
+                           "application":"sd",
+                           "platform":OS] as [String : Any]
+         */
         let postData = parameters.toJsonData()!
         
-        var request = createConnection(endPoint: "/account/signin/")
+        //var request = createConnection(endPoint: "/account/signin/")
+        var request = createConnection(endPoint: "/api/login/clientes")
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         
         request.httpMethod = "POST"
@@ -42,12 +50,19 @@ class AuthenticationService {
                 
                 return
             }
-            let userData = try! JSONDecoder().decode(UserData.self, from: data)
+            print("data::>>",data)
+           // let userData = try! JSONDecoder().decode(UserData.self, from: data)
+            typealias ResponseUserDatas = [ResponseUserData]
+            let userDatas = try! JSONDecoder().decode(ResponseUserDatas.self, from: data)
+            
+            print("userData::>>",userDatas.first!)
            // self.authFirebase(email, password)
             
             let encodedData = NSKeyedArchiver.archivedData(withRootObject: data)
             UserDefaults.standard.set(encodedData, forKey: "users")
             UserDefaults.standard.synchronize()
+            let userData = userDatas.first!
+        
             completionHandler(userData,nil)
             
             print(String(data: data, encoding: .utf8)!)

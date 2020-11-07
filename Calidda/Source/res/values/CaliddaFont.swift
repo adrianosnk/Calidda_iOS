@@ -9,11 +9,11 @@
 import UIKit
 
 struct fontNames {
-    static let helveticaBold:String = "Graphik-Bold"
-    static let helveticaSemiBold = "Graphik-Semibold"
-    static let helveticaMedium = "Graphik-Medium"
-    static let helveticaLight = "Graphik-Light"
-    static let helveticaRegular = "Graphik-Regular"
+    static let helveticaBold:String = "Roboto-Bold"
+    static let helveticaSemiBold = "Roboto-Semibold"
+    static let helveticaMedium = "Roboto-Medium"
+    static let helveticaLight = "Roboto-Light"
+    static let helveticaRegular = "Roboto-Regular"
     
 }
 

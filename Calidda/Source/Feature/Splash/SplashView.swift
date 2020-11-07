@@ -15,6 +15,8 @@ class SplashView: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .white
         // Do any additional setup after loading the view.
+      //  let login = loginService()
+      //  login.callService()
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) { 
             // Code you want to be delayed
             self.goToLogIn()
