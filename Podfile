@@ -27,6 +27,8 @@ target 'Calidda' do
   	pod 'CodableFirebase'
 	pod 'MaterialComponents/BottomNavigation'
 	pod 'Charts'
+	pod 'MBProgressHUD'
+	pod 'JLActivityIndicator'
 
   target 'CaliddaTests' do
     inherit! :search_paths

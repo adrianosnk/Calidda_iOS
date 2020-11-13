@@ -168,7 +168,7 @@ class AlertComponent {
     }
     
     // MARK: - Steps
-    
+     
     private func presentAlert(_ alert: BaseAlert) {
         if let tempVC = currentViewController {
             alert.delegate = self

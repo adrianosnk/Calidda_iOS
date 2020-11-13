@@ -23,8 +23,9 @@ class FacturaDetailView: UIViewController {
    // var style: Style = Style.myApp
     var router:Router!
     let disposeBag = DisposeBag()
-    private let presenter = FacturaDetailPresenter(homeService: HomeService())
+    private let presenter = FacturaDetailPresenter(facturaDetailService: FacturaDetailService())
      
+    
     @IBOutlet var lblNameDoctor:UILabel!
     @IBOutlet var lblNameEspecialidate:UILabel!
     @IBOutlet var lblNameCMP:UILabel!
@@ -35,7 +36,48 @@ class FacturaDetailView: UIViewController {
     @IBOutlet var tableView:UITableView!
     weak var delegate: FacturaDetailViewDelegate?
     
+    
+    @IBOutlet var lblImporte:UILabel!
+    @IBOutlet var lblFecha:UILabel!
+    @IBOutlet var lblEstado:UILabel!
+    @IBOutlet var viewEstado:UIView!
+     
     fileprivate var doctorPropertiesModel: DoctorProperties?
+    
+    
+        var IdRecibo:String = ""
+        var Mes:Int = 0
+        var Anio:Int = 0
+        var ImporteTotal:Double = 0.0
+        
+        var FechaVencimiento:String = ""
+        var Estado:String = ""
+        var VolumenConsumoLectura:Double = 0.0
+        var FactorCorreccionVolumen:Double = 0.0
+        var VolumenFacturado:Double = 0.0
+        var CategoriaTarifaria:String = ""
+        
+        var PrecioMedioGasNatural:Double = 0.0
+        var CostoMedioTransporte:Double = 0.0
+        var CostoFijoComercializacion:Double = 0.0
+        var CostoFijoDistribucion:Double = 0.0
+        var CostoVariableDistribucion:Double = 0.0
+        var TotalConceptoGasNatural:Double = 0.0
+        var TotalServicioTransporte:Double = 0.0
+        var TotalCostoFijoDistribucion:Double = 0.0
+        var TotalCostoVariableDistribucion:Double = 0.0
+        var TotalCostoFijoComercializacion:Double = 0.0
+        
+    
+        var TotalIGV:Double = 0.0
+        var IdReciboPDF:String = ""
+    
+    
+        var Nombre:String = ""
+        var Total:Double = 0.0
+
+    
+    
     
 
     override func viewDidLoad() {
@@ -89,11 +131,12 @@ class FacturaDetailView: UIViewController {
        // let userProperties = presenter.getMyUser().TokenAcceso!
         
         let userProperties =  UserDefaults.standard.string(forKey: "KeyToken")!
-        presenter.getInfoDoctor(token: userProperties)
+        presenter.getInfoDetailFactura(token: userProperties)
             .subscribeOn(MainScheduler.asyncInstance)
             .subscribe(onNext: {result in
                 
                 //self.fillInfoTop(result.data)
+                self.fillInfoTop(result)
             },
                        onError: {error in
                         
@@ -121,16 +164,69 @@ class FacturaDetailView: UIViewController {
         let profileListaCellNib = UINib(nibName: FacturaListaDetailInfoViewCell.reuseIdentifier, bundle: nil)
         tableView.register(profileListaCellNib, forCellReuseIdentifier: FacturaListaDetailInfoViewCell.reuseIdentifier)
     }
-    func fillInfoTop(_ info:DoctorProperties){
-        
+   // func fillInfoTop(_ info:DoctorProperties){
+
+        func fillInfoTop(_ info:ResponseFacDetailData){
+            
         DispatchQueue.main.async {
-            self.doctorPropertiesModel = info
+            //self.doctorPropertiesModel = info
             print(" infoooo >>::", info)
             print(" self.doctorPropertiesModel >>", self.doctorPropertiesModel as Any)
            
-            let fileNamePerfil = info.first_name!
+            let fileNamePerfil = info.IdRecibo!
+            print(" fileNameTTPerfil >>::", fileNamePerfil)
             let fileArrayName = fileNamePerfil.components(separatedBy: " ")
             let firstFileNamePerfil = fileArrayName.first
+            
+          //  self.lblImporte.text = "S/ \(info.ImporteTotal ?? 0.0)"
+            self.lblImporte.text = info.ImporteTotal.convertToString(withSymbol: true)
+            
+            
+            
+            
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
+            let date = dateFormatter.date(from: info.FechaVencimiento)
+            // change to a readable time format and change to local time zone
+            dateFormatter.dateFormat = "dd / MM"
+            dateFormatter.timeZone = NSTimeZone.local
+            let timeStamp = dateFormatter.string(from: date!)
+            
+            
+            self.lblFecha.text = timeStamp
+            self.lblEstado.text = info.Estado
+            self.viewEstado.layer.cornerRadius = 5
+            self.viewEstado.backgroundColor = CaliddaColors.purple
+            
+            
+            self.IdRecibo = info.IdRecibo!
+            self.Mes = info.Mes
+            self.Anio = info.Anio
+            self.ImporteTotal = info.ImporteTotal
+            self.FechaVencimiento = info.FechaVencimiento
+            self.Estado = info.Estado
+            self.VolumenConsumoLectura = info.VolumenConsumoLectura
+            self.FactorCorreccionVolumen = info.FactorCorreccionVolumen
+            self.VolumenFacturado = info.VolumenFacturado
+            self.CategoriaTarifaria = info.CategoriaTarifaria
+            self.PrecioMedioGasNatural = info.PrecioMedioGasNatural
+            self.CostoMedioTransporte = info.CostoMedioTransporte
+            self.CostoFijoComercializacion = info.CostoFijoComercializacion
+            self.CostoFijoDistribucion = info.CostoFijoDistribucion
+            self.CostoVariableDistribucion = info.CostoVariableDistribucion
+            self.TotalConceptoGasNatural = info.TotalConceptoGasNatural
+            self.TotalServicioTransporte = info.TotalServicioTransporte
+            self.TotalCostoFijoDistribucion = info.TotalCostoFijoDistribucion
+            self.TotalCostoVariableDistribucion = info.TotalCostoVariableDistribucion
+            self.TotalCostoFijoComercializacion = info.TotalCostoFijoComercializacion
+                   
+               
+            self.TotalIGV = info.TotalIGV
+            self.IdReciboPDF = info.IdReciboPDF
+               
+            self.Nombre = info.OtrosConceptos[0].Nombre
+            self.Total = info.OtrosConceptos[0].Total
+
             
         //    self.lblNameDoctor.text = "Hola Dr(a) \(String(firstFileNamePerfil!))"
             //self.lblNameEspecialidate.text = info.speciality!.uppercased()
@@ -138,10 +234,10 @@ class FacturaDetailView: UIViewController {
             
             // First of all remove the old image (required for images in cells)
             
-            let fileName = info.photo!
-            let fileArray = fileName.components(separatedBy: "/")
-            let finalFileName = fileArray.last
-            print("finalFileName::",String(finalFileName!))
+            //let fileName = info.photo!
+            //let fileArray = fileName.components(separatedBy: "/")
+            //let finalFileName = fileArray.last
+           // print("finalFileName::",String(finalFileName!))
             
          //   self.imgIconPerfil.sd_setImage(with: URL(string: info.photo!), placeholderImage: UIImage(named: String(finalFileName!)))
         //    self.showServices(services: info.services)
@@ -230,33 +326,40 @@ extension FacturaDetailView: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-
-        return sectionOneCell(tableView, cellForRowAt: indexPath)
-         /*
-          switch indexPath.section {
-                       case 0:
-                           return sectionOneCell(tableView, cellForRowAt: indexPath)
-                       case 1:
-                           return sectionTwoCell(tableView, cellForRowAt: indexPath)
-                       default:
-                           return sectionTwoCell(tableView, cellForRowAt: indexPath)
-                 }*/
-     
+         
+                    return sectionOneCell(tableView, cellForRowAt: indexPath)
+          
     }
     // MARK: UITableViewDelegate
     
      func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
-        return 972.0
-        /*
-        switch indexPath.section {
-        case 0:
-            return 90.0
-        default:
-              return 412.0
-        }*/
+        
+       
+              return 1022.0
+        
     }
      
+    func sectionHeaderCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+               
+             /*
+              let cell = tableView.dequeueReusableCell(withIdentifier: HomeListaViewCell.reuseIdentifier, for: indexPath)
+               if let cell = cell as? HomeListaViewCell {
+                   //cell.loadWithData(info: presenter.getDoctorInfo())
+               }
+               return cell
+              */
+             
+             guard let tableViewCell = tableView.dequeueReusableCell(withIdentifier: "FacturaListaFirstDetailInfoViewCell", for: indexPath) as? FacturaListaFirstDetailInfoViewCell, let categoryValue = self.doctorPropertiesModel?.services[indexPath.row] else {
+                        return UITableViewCell()
+                    }
+                    tableViewCell.selectionStyle = .none
+                    tableViewCell.loadWith(services: categoryValue)
+                    
+             return tableViewCell
+             
+             
+           }
     
     // MARK: Cell
     /*  func sectionOneCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -275,6 +378,46 @@ extension FacturaDetailView: UITableViewDataSource {
              if let cell = cell as? FacturaDetailInfoViewCell {
                cell.selectionStyle = .none
                  //cell.loadWithData(info: presenter.getDoctorInfo())
+                
+              //  cell.idReciboLabel.text = self.IdRecibo
+             //   cell.mesLabel.text = "\(self.Mes)"
+             //   cell.anioLabel.text = "\(self.Anio)"
+             //   cell.importeTotalLabel.text = "\(self.ImporteTotal)"
+             //   cell.fechaVencimientoLabel.text = "\(self.FechaVencimiento)"
+             //   cell.estadoLabel.text = "\(self.Estado)"
+                cell.volumenConsumoLecturaLabel.text = "\(self.VolumenConsumoLectura)"
+                cell.factorCorreccionVolumenLabel.text = "\(self.FactorCorreccionVolumen)"
+                cell.volumenFacturadoLabel.text = "\(self.VolumenFacturado)"
+                
+                //cell.categoriaTarifariaLabel.text = "\(self.CategoriaTarifaria)"
+                
+                cell.precioMedioGasNaturalLabel.text = "\(self.PrecioMedioGasNatural)"
+                cell.costoMedioTransporteLabel.text = "\(self.CostoMedioTransporte)"
+                cell.costoFijoComercializacionLabel.text = "\(self.CostoFijoComercializacion)"
+                
+               // cell.costoFijoDistribucionLabel.text = "\(self.CostoFijoDistribucion)"
+                cell.costoVariableDistribucionLabel.text = "\(self.CostoVariableDistribucion)"
+                cell.totalConceptoGasNaturalLabel.text = "\(self.TotalConceptoGasNatural)"
+                
+                cell.totalServicioTransporteLabel.text = "\(self.TotalServicioTransporte)"
+                //cell.totalCostoFijoDistribucionLabel.text = "\(self.TotalCostoFijoDistribucion)"
+                cell.totalCostoVariableDistribucionLabel.text = "\(self.TotalCostoVariableDistribucion)"
+                //cell.totalCostoFijoComercializacionLabel.text = "\(self.TotalCostoFijoComercializacion)"
+                
+                
+                
+                cell.otrosConceptosNombreLabel.text = "\(self.Nombre)"
+                cell.otrosConceptosTotalLabel.text = "\(self.Total)"
+                
+                cell.totalIGVLabel.text = "\(self.TotalIGV)"
+               // cell.idReciboPDFLabel.text = "\(self.IdReciboPDF)"
+                   
+                            
+                        
+                        
+
+                
+                
              }
              
              return cell

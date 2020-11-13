@@ -25,7 +25,7 @@ class BaseAlert: UIView {
     func setIdentifier(identifier : Int) {
         self.identifier = identifier
     }
-    
+     
     func onClickButton(view : BaseAlert) {
         if delegate != nil {
             delegate!.didTapOnButton(forAlert: view)

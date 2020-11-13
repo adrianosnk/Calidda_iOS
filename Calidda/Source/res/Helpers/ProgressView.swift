@@ -43,6 +43,8 @@ open class ProgressView {
     open func hideProgressView() {
         activityIndicator.stopAnimating()
         containerView.removeFromSuperview()
+        activityIndicator.isHidden = true
+        activityIndicator.removeFromSuperview()
     }
 }
 

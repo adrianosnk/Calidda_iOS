@@ -11,6 +11,8 @@ import UIKit
 import RxSwift
 import MaterialTextField
 import DLRadioButton
+import JLActivityIndicator
+
 class LogInView: UIViewController {
     //var style: Style = Style.myApp
     var router:Router!
@@ -36,6 +38,18 @@ class LogInView: UIViewController {
         passwordTexfield.text = "123456"
         print("login")
         setupUI()
+        
+        
+        let spinner = JLActivityIndicator(on: view, mode: .image)
+              spinner.image = UIImage(named: "icon_ConsumoBlue")
+              spinner.start()
+              DispatchQueue.global(qos: .userInitiated).async {
+                  // time consuming task
+                  DispatchQueue.main.async {
+                    //  spinner.stop()
+                  }
+              }
+        
     }
     func setupUI(){
        // style.apply(textStyle: .title, to: emailTexfield)
@@ -57,24 +71,28 @@ class LogInView: UIViewController {
         self.buttonAccept.addTarget(self, action: #selector(oneTapped(_:)), for: .touchUpInside)
         
         
+      
+        
     }
     
         @objc func oneTapped(_ sender: Any?) {
             
-        }
+        } 
     // MARK: - Navigation
     @IBAction func logIn(_ sender:UIButton){
+         
+        //ProgressView.shared.showProgressView()
+        
         presenter.auth(email: emailTexfield.text!, password: passwordTexfield.text!)
             .subscribeOn(MainScheduler.asyncInstance)
             .subscribe(onNext: {result in
-                
+                 
 
-            
+                ProgressView.shared.hideProgressView()
 
                 UserDefaults.standard.set(result.TokenAcceso!, forKey: "KeyToken")
                 UserDefaults.standard.set(result.RazonSocial!, forKey: "KeyRazon")
                 UserDefaults.standard.set(result.CuentaContrato!, forKey: "KeyAcountCon") //setObject
-                
                 
                 /*
                  UserDefaults.standard.string(forKey: "KeyToken")
@@ -94,8 +112,7 @@ class LogInView: UIViewController {
                         let view = PopUpErrorView()
                         view.setupView(type: .warning)
                         AlertComponent.shared.setupAlert(controller: self, messasge: nil, externalView: view)
-                    }
-                        
+                    }          
             },
                        onCompleted: {},
                        onDisposed: {})
@@ -111,20 +128,17 @@ class LogInView: UIViewController {
     
     func goToHome(){
         //para ir al hilo principal
+        
+        ProgressView.shared.hideProgressView()
         DispatchQueue.main.async {
             self.router.show(view: .home, sender: self)
-            
-       
             //self.goToHomeTab()
             /*
             let storyboard = UIStoryboard(name: "Home", bundle: nil)
              let mainTabBarController = storyboard.instantiateViewController(identifier: "UIBorderlessNavigationBar")
                           mainTabBarController.modalPresentationStyle = .fullScreen
-
               self.present(mainTabBarController, animated: true, completion: nil)
-                     
             */
-            
         }
     }
     func goToHomeTab() {

@@ -10,20 +10,20 @@ import UIKit
 import RxSwift
 
 struct FacturaPresenter {
-    private var service:HomeService!
-    init(homeService:HomeService) {
-        service = homeService
+    private var service:FacturaService!
+    init(facturaService:FacturaService) {
+        service = facturaService
     }
    /* func getMyUser() -> ResponseUserData {
         return service.getUser()
     }
 */
-    func getInfoDoctor(token:String) -> Observable<ResponseResuData>{
-        return Observable<ResponseResuData>.create { observer in
+    func getInfoFactura(token:String) -> Observable<[ResponseFacturaData]>{
+        return Observable<[ResponseFacturaData]>.create { observer in
             //consumimos el servicio como tal
-            self.service.getInfoDoctor(token){ DoctorInfo, error in
+            self.service.getInfoFactura(token){ responseFacturaDatas, error in
                 
-                guard let result:ResponseResuData = DoctorInfo else {
+                guard let result:[ResponseFacturaData] = responseFacturaDatas else {
                     observer.onError(error!)
                     return
                 }
@@ -32,7 +32,8 @@ struct FacturaPresenter {
             }
             return Disposables.create()
         }
-    }
+ }
+    
     
 }
 

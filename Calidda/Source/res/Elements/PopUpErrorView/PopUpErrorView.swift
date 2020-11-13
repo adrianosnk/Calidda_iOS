@@ -28,7 +28,7 @@ class PopUpErrorView: BaseAlert {
     
     var delegateError: PopUpErrorViewDelegate?
     var type: PopUpErrorType = .warning
-    
+     
     @IBOutlet weak var viewClose: UIView!
     @IBOutlet var imageViewClose: UIImageView!
 

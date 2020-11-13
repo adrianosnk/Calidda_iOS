@@ -42,14 +42,16 @@ class HomeView: UIViewController {
     var mountAnt:Double = 0.0
     var mountDesp:Double = 0.0
     
+     var resultPorcen:Double = 0.0
+     var flechaIndicator:Int = 0
     
     var reciboAnio:Int = 0
-    var reciboMes:Int = 0
+    var reciboMes:String = ""
     var reciboVolumenFacturado:Double = 0.0
     var reciboVImporteTotal:Double = 0.0
     var reciboFechaVencimiento:String = ""
     var reciboEstado:String = ""
-    
+     
     var boletinNombre:String = ""
     var boletinFecha:String = ""
     var boletinArchivo:String = ""
@@ -57,13 +59,35 @@ class HomeView: UIViewController {
     var manteTipo:String = ""
     var manteFechaMant:String = ""
     
-     
+    var manteTipo2:String = ""
+    var manteFechaMant2:String = ""
+    
+    var manteTipo3:String = ""
+    var manteFechaMant3:String = ""
+    
+    var manteTipo4:String = ""
+    var manteFechaMant4:String = ""
+    
+    var resultPorcentage:String = ""
+    
+
+     @IBOutlet var lblRazonSocial:UILabel!
+     @IBOutlet var lblCuentaContrato:UILabel!
+    
+    var razonSocial:String = ""
+    var cuentaContrato:String = ""
+    
     fileprivate var doctorPropertiesModel: DoctorProperties?
     
     var delegateFooter: MenuFooterDelegate?
     
     let menuFooter = MenuFooter()
     //menuFooter.onClickConsumo ()
+    
+    var activityIndicator = UIActivityIndicatorView()
+    let loadingView = UIView()
+    let loadingLabel = UILabel()
+    var spinner = UIActivityIndicatorView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -110,33 +134,55 @@ class HomeView: UIViewController {
         viwBackHome.backgroundColor = CaliddaColors.lightBackDark
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+          super.viewWillDisappear(animated)
+          let alert = AlertComponent.shared
+          alert.closeAllAlters()
+    }
+    
     @IBAction func goToBack(){
-        router.pop(sender: self)
+       // router.pop(sender: self)
+        DispatchQueue.main.async {
+            let view = PopUpCloseErrorView()
+            view.setupView(type: .warning)
+            AlertComponent.shared.setupAlert(controller: self, messasge: nil, externalView: view)
+       }
     }
     func loadData(){
         
-       
-                                  
-        
-        //let userProperties = presenter.getMyUser().TokenAcceso!
-        let userProperties =  UserDefaults.standard.string(forKey: "KeyToken")!
          
-        presenter.getInfoDoctor(token: userProperties)
-            .subscribeOn(MainScheduler.asyncInstance)
-            .subscribe(onNext: {result in
+                setLoadingScreen(myMsg: "Loading...")
                 
-               // self.fillInfoTop(result.data)
-                self.fillInfoTop(result)
-            },
-                       onError: {error in
+       // ProgressView.shared.showProgressView()
+                //let userProperties = presenter.getMyUser().TokenAcceso!
+                let userProperties =  UserDefaults.standard.string(forKey: "KeyToken")!
+
+                
+        
+                self.presenter.getInfoDoctor(token: userProperties)
+                    .subscribeOn(MainScheduler.asyncInstance)
+                    .subscribe(onNext: {result in
+                       // self.fillInfoTop(result.data)
+                      //  ProgressView.shared.hideProgressView()
+                        self.fillInfoTop(result)
                         
-            },
-                       onCompleted: {},
-                       onDisposed: {})
-            .disposed(by: self.disposeBag)
-        
-        
-        registerCell()
+                       // self.spinner.stopAnimating()
+                       // self.activityIndicator.stopAnimating()
+                        
+                       // UIApplication.shared.endIgnoringInteractionEvents()
+                        //self.loadingLabel.isHidden = true
+                        
+                    },
+                               onError: {error in
+                    },
+                               onCompleted: {},
+                               onDisposed: {})
+                    .disposed(by: self.disposeBag)
+                self.registerCell()
+                
+                
+                
+         
     }
     // MARK: Helpers
     
@@ -145,12 +191,18 @@ class HomeView: UIViewController {
         let profileCellNib = UINib(nibName: HomeInfoViewCell.reuseIdentifier, bundle: nil)
         tableView.register(profileCellNib, forCellReuseIdentifier: HomeInfoViewCell.reuseIdentifier)
         
+        // Header Home Lista
+        let profileListaHeaderCellNib = UINib(nibName: HomeFirstDetailInfoViewCell.reuseIdentifier, bundle: nil)
+        tableView.register(profileListaHeaderCellNib, forCellReuseIdentifier: HomeFirstDetailInfoViewCell.reuseIdentifier)
+        
+        
         //Celda Home Lista
         let profileListaCellNib = UINib(nibName: HomeListaViewCell.reuseIdentifier, bundle: nil)
         tableView.register(profileListaCellNib, forCellReuseIdentifier: HomeListaViewCell.reuseIdentifier)
     }
    // func fillInfoTop(_ info:DoctorProperties){
         func fillInfoTop(_ info:ResponseResuData){
+            ProgressView.shared.hideProgressView()
         
         DispatchQueue.main.async {
            // self.doctorPropertiesModel = info
@@ -164,15 +216,113 @@ class HomeView: UIViewController {
             let fileArrayName = fileNamePerfil.components(separatedBy: " ")
             let firstFileNamePerfil = fileArrayName.first
             
+            
             self.mountAnt = info.DemandaMesAnterior
             self.mountDesp = info.DemandaActual
             
+            self.resultPorcen = ((self.mountDesp/self.mountAnt) - 1)*100
+            
+            if self.resultPorcen > 0 {
+                print("positivo")
+                self.flechaIndicator = 1
+            }else{
+                print("negativo")
+                self.flechaIndicator = 0
+                
+            }
+           
+            //let aString = "This is my string"
+             //let newString = aString.replacingOccurrences(of: " ", with: "+")
+           
+            print("resultPorcen::>>","\(self.resultPorcen)")
+            print("resultfirstName::>>","\(String(format: "%.f", self.resultPorcen))")
+            
+            let aString = "\(String(format: "%.f", self.resultPorcen))"
+            self.resultPorcentage = aString.replacingOccurrences(of: "-", with: "")
+            
+            print("resultPorcen::>>","\(self.resultPorcen)")
+            
+            
+            
+            
+            
+            
+            
             self.reciboAnio = info.Recibos[0].Anio
-            self.reciboMes = info.Recibos[0].Mes
+            self.reciboMes = "\(info.Recibos[0].Mes ?? 0)"
+            
+            if self.reciboMes == "1" {
+                self.reciboMes = "Enero"
+            }
+            
+            if self.reciboMes == "2" {
+                self.reciboMes = "Febrero"
+            }
+            
+            if self.reciboMes == "3" {
+                self.reciboMes = "Marzo"
+            }
+            
+            if self.reciboMes == "4" {
+                self.reciboMes = "Abril"
+            }
+            
+            if self.reciboMes == "5" {
+                self.reciboMes = "Mayo"
+            }
+            
+            if self.reciboMes == "6" {
+                self.reciboMes = "Junio"
+            }
+            
+            if self.reciboMes == "7" {
+                self.reciboMes = "Julio"
+            }
+            
+            if self.reciboMes == "8" {
+                self.reciboMes = "Agosto"
+            }
+            
+            if self.reciboMes == "9" {
+                self.reciboMes = "Setiembre"
+            }
+            
+            if self.reciboMes == "10" {
+                self.reciboMes = "Octubre"
+            }
+            
+            if self.reciboMes == "11" {
+                self.reciboMes = "Noviembre"
+            }
+            
+            if self.reciboMes == "12" {
+                self.reciboMes = "Diciembre"
+            }
+             
             self.reciboVolumenFacturado = info.Recibos[0].VolumenFacturado
             self.reciboVImporteTotal = info.Recibos[0].ImporteTotal
             self.reciboFechaVencimiento = info.Recibos[0].FechaVencimiento
             self.reciboEstado = info.Recibos[0].Estado
+            
+            
+            self.razonSocial  = info.RazonSocial
+            self.cuentaContrato = "Nro. Cliente: \(info.CuentaContrato ?? "")"
+
+            //self.lblRazonSocial.text = info.RazonSocial
+            //self.lblCuentaContrato.text = "Nro. Cliente: \(info.CuentaContrato ?? "")"
+            
+            
+            self.boletinNombre = info.Boletines[0].Nombre
+            self.boletinFecha = info.Boletines[0].Fecha
+             
+            self.manteTipo = info.Mantenimientos[0].Nombre
+            self.manteFechaMant = info.Mantenimientos[0].FechaMantenimiento
+            
+            self.manteTipo2 = info.Mantenimientos[1].Nombre
+            self.manteFechaMant2 = info.Mantenimientos[1].FechaMantenimiento
+            
+            self.manteTipo3 = info.Mantenimientos[2].Nombre
+            self.manteFechaMant3 = info.Mantenimientos[2].FechaMantenimiento
             
             
             print(" self.reciboAnio >>::", self.reciboAnio)
@@ -199,6 +349,28 @@ class HomeView: UIViewController {
  
         }
     }
+    
+    func setLoadingScreen(myMsg : String) {
+        let width: CGFloat = 120
+        let height: CGFloat = 30
+        let x = (self.view.frame.width / 2) - (width / 2)
+        let y = (169 / 2) - (height / 2) + 60
+        loadingView.frame = CGRect(x: x, y: y, width: width, height: height)
+        self.loadingLabel.textColor = UIColor.white
+        self.loadingLabel.textAlignment = NSTextAlignment.center
+        self.loadingLabel.text = myMsg
+        self.loadingLabel.frame = CGRect(x: 0, y: 0, width: 160, height: 30)
+        self.loadingLabel.isHidden = false
+        self.activityIndicator.style = UIActivityIndicatorView.Style.white
+        self.activityIndicator.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
+        self.activityIndicator.startAnimating()
+        loadingView.addSubview(self.spinner)
+        loadingView.addSubview(self.activityIndicator)
+        loadingView.addSubview(self.loadingLabel)
+        self.view.addSubview(loadingView)
+    }
+    
+    
     func showServices(services:[HomeServices]){
         
         let items = Observable.just( services )
@@ -364,7 +536,7 @@ class HomeView: UIViewController {
 extension HomeView: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return 3
     }
      
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -373,9 +545,9 @@ extension HomeView: UITableViewDataSource {
              case 0:
                  return 1
              case 1:
-                 return self.doctorPropertiesModel?.services.count ?? 0
-            default:
                  return 1
+            default:
+                return self.doctorPropertiesModel?.services.count ?? 0
         }
     }
     
@@ -385,9 +557,9 @@ extension HomeView: UITableViewDataSource {
         
         switch indexPath.section {
               case 0:
-                  return sectionOneCell(tableView, cellForRowAt: indexPath)
+                  return sectionHeaderCell(tableView, cellForRowAt: indexPath)
               case 1:
-                  return sectionTwoCell(tableView, cellForRowAt: indexPath)
+                  return sectionOneCell(tableView, cellForRowAt: indexPath)
               default:
                   return sectionTwoCell(tableView, cellForRowAt: indexPath)
         }
@@ -406,12 +578,28 @@ extension HomeView: UITableViewDataSource {
      func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch indexPath.section {
         case 0:
-            return 450.0
+            return 65.0
+        case 1:
+            return 600.0
         default:
-              return 112.0
+             return 112.0
         }
     }
      
+    
+    func sectionHeaderCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+                    
+           guard let tableViewCell = tableView.dequeueReusableCell(withIdentifier: "HomeFirstDetailInfoViewCell", for: indexPath) as? HomeFirstDetailInfoViewCell, let categoryValue = self.doctorPropertiesModel?.services[indexPath.row] else {
+                             return UITableViewCell()
+                         }
+                         tableViewCell.selectionStyle = .none
+                         //tableViewCell.loadWith(services: categoryValue)
+        
+
+        tableViewCell.lblRazonSocial.text = self.razonSocial
+        tableViewCell.lblCuentaContrato.text = self.cuentaContrato
+            return tableViewCell
+    }
     
     // MARK: Cell
       func sectionOneCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -423,13 +611,86 @@ extension HomeView: UITableViewDataSource {
             cell.mountDespLabel.text = "\(self.mountDesp) m3"
             
             
-
+            
             
             
             cell.facturaYearLabel.text = "\(self.reciboAnio)"
-            cell.facturaMountStringLabel.text = "\(self.reciboVImporteTotal)"
-            cell.facturaVolLabel.text = "\(self.reciboVolumenFacturado)"
-            cell.facturaImpoLabel.text = "\(self.reciboVImporteTotal)"
+            cell.facturaMountStringLabel.text = "\(self.reciboMes)"
+            cell.facturaVolLabel.text = "\(self.reciboVolumenFacturado) sm3"
+            cell.facturaImpoLabel.text = "S/ \(self.reciboVImporteTotal)"
+            
+            cell.CalLabel.text = "\(self.resultPorcentage)%"
+            
+            
+            if self.flechaIndicator == 1{
+                cell.iconImage.image = UIImage(named: "icon_FlechaUpLoadGreen")
+            }else{
+                cell.iconImage.image = UIImage(named: "icon_FlechaDownLoadGreen")
+                
+            }
+            
+            /*
+            cell.viwBackContentSubDeman.isHidden = true
+            cell.viwBackContentSubFac.isHidden = true
+            cell.viwBackContentSubInd.isHidden = true
+            cell.viwBackContentSubMant.isHidden = true
+            */
+            
+            
+            
+            if self.boletinFecha != "" {
+                // create dateFormatter with UTC time format
+                let dateFormatter = DateFormatter()
+                dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
+                let date = dateFormatter.date(from: self.boletinFecha)
+                
+                print("self.boletinFecha>>>",self.boletinFecha)
+                //let date = dateFormatter.date(from: "2020-12-30T05:00:00.000Z")
+
+                // change to a readable time format and change to local time zone
+                dateFormatter.dateFormat = "yyyy"
+                dateFormatter.timeZone = NSTimeZone.local
+                let timeStamp = dateFormatter.string(from: date!)
+                
+                
+                cell.boletinFechaLabel.text  = timeStamp
+            }
+            cell.boletinNombreLabel.text  = self.boletinNombre
+           // cell.boletinFechaLabel.text  = self.boletinFecha
+            
+            
+            
+            cell.manteTipoLabel.text  = self.manteTipo
+            cell.manteTipoLabel2.text  = self.manteTipo2
+            cell.manteTipoLabel3.text  = self.manteTipo3
+            
+             
+            if self.manteFechaMant != "" {
+                         // create dateFormatter with UTC time format
+                         let dateFormatter = DateFormatter()
+                         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
+                         let date = dateFormatter.date(from: self.manteFechaMant)
+                         let date2 = dateFormatter.date(from: self.manteFechaMant2)
+                         let date3 = dateFormatter.date(from: self.manteFechaMant3)
+                         let date4 = dateFormatter.date(from: self.manteFechaMant4)
+                         
+                         print("self.boletinFecha>>>",self.boletinFecha)
+                         //let date = dateFormatter.date(from: "2020-12-30T05:00:00.000Z")
+
+                         // change to a readable time format and change to local time zone
+                         dateFormatter.dateFormat = "dd / MMMM"
+                         dateFormatter.timeZone = NSTimeZone.local
+                         let timeStamp = dateFormatter.string(from: date!)
+                         let timeStamp2 = dateFormatter.string(from: date2!)
+                         let timeStamp3 = dateFormatter.string(from: date3!)
+                       
+                         
+                         
+                       //cell.manteFechaLabel.text = self.manteFechaMant
+                cell.manteFechaLabel.text = timeStamp
+                cell.manteFechaLabel2.text = timeStamp2
+                cell.manteFechaLabel3.text = timeStamp3
+             }
             
           }
           
@@ -474,9 +735,18 @@ extension HomeView: UITableViewDelegate {
         print("category::",category as Any)
 
       
-        DispatchQueue.main.async {
-            self.router.show(view: .detailNovedades, sender: self)
-         }
+        switch indexPath.section {
+              case 1:
+                 DispatchQueue.main.async {
+                       self.router.show(view: .detailNovedades, sender: self)
+                 }
+              default:
+                 DispatchQueue.main.async {
+                     //self.router.show(view: .detailNovedades, sender: self)
+                 }
+              }
+        
+      
         /*
         if category == "001" {
             //Chat
@@ -520,16 +790,6 @@ extension HomeView: UITableViewDelegate {
     
 }
 
-/*
-// MARK: - PopUpErrorView Delegate
-extension HomeView: PopUpErrorViewDelegate {
-    func onClose(type: PopUpErrorType) {
-        if type == .connection {
-            self.goToHome()
-        }
-    }
-}
- */
 
 
 // MARK: - PopUpErrorView Delegate
@@ -567,3 +827,22 @@ extension HomeView: MenuFooterDelegate {
     
   
 }
+
+
+// MARK: - PopUpErrorView Delegate
+extension HomeView: PopUpCloseErrorViewDelegate {
+    func onClose(type: PopUpCloseErrorType) {
+       // if type == .connection {
+           // self.goToHome()
+            router.pop(sender: self)
+       // }
+    }
+    func onAceppt(type: PopUpCloseErrorType) {
+          if type == .connection {
+             // self.goToHome()
+              router.pop(sender: self)
+          }
+      }
+   
+}
+

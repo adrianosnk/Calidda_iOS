@@ -23,7 +23,7 @@ class FacturaView: UIViewController {
    // var style: Style = Style.myApp
     var router:Router!
     let disposeBag = DisposeBag()
-    private let presenter = FacturaPresenter(homeService: HomeService())
+    private let presenter = FacturaPresenter(facturaService: FacturaService())
      
     @IBOutlet var lblNameDoctor:UILabel!
     @IBOutlet var lblNameEspecialidate:UILabel!
@@ -35,7 +35,13 @@ class FacturaView: UIViewController {
     @IBOutlet var tableView:UITableView!
     weak var delegate: FacturaViewDelegate?
     
+      var newGroupSections = [ResponseFacturaData]()
+    
     fileprivate var doctorPropertiesModel: DoctorProperties?
+    
+    var myArray:[String] = []
+    
+    fileprivate var reponseFacturaModel: ResponseFacturaData?
     
 
     override func viewDidLoad() {
@@ -89,11 +95,12 @@ class FacturaView: UIViewController {
         //let userProperties = presenter.getMyUser().TokenAcceso!
         
         let userProperties =  UserDefaults.standard.string(forKey: "KeyToken")!
-        presenter.getInfoDoctor(token: userProperties)
+        presenter.getInfoFactura(token: userProperties)
             .subscribeOn(MainScheduler.asyncInstance)
             .subscribe(onNext: {result in
                 
                 //self.fillInfoTop(result.data)
+                self.fillInfoTop(result)
             },
                        onError: {error in
                         
@@ -113,34 +120,31 @@ class FacturaView: UIViewController {
         tableView.register(profileCellNib, forCellReuseIdentifier: HomeInfoViewCell.reuseIdentifier)
         
         //Celda Home Lista
+           let profileListaFirstCellNib = UINib(nibName: FacturaListaFirstDetailInfoViewCell.reuseIdentifier, bundle: nil)
+           tableView.register(profileListaFirstCellNib, forCellReuseIdentifier: FacturaListaFirstDetailInfoViewCell.reuseIdentifier)
+        
+        //Celda Home Lista
         let profileListaCellNib = UINib(nibName: FacturaListaViewCell.reuseIdentifier, bundle: nil)
         tableView.register(profileListaCellNib, forCellReuseIdentifier: FacturaListaViewCell.reuseIdentifier)
-    }
-    func fillInfoTop(_ info:DoctorProperties){
-        
+    } 
+    func fillInfoTop(_ info:[ResponseFacturaData]){
+     
         DispatchQueue.main.async {
-            self.doctorPropertiesModel = info
-            print(" infoooo >>::", info)
-            print(" self.doctorPropertiesModel >>", self.doctorPropertiesModel as Any)
+            //self.reponseFacturaModel = info
+            
+             self.newGroupSections = info
+            
+            print(" infooooFac >>::", info)
+            print(" self.reponseFacturaModelFac >>", self.reponseFacturaModel as Any)
            
-            let fileNamePerfil = info.first_name!
-            let fileArrayName = fileNamePerfil.components(separatedBy: " ")
-            let firstFileNamePerfil = fileArrayName.first
-            
-        //    self.lblNameDoctor.text = "Hola Dr(a) \(String(firstFileNamePerfil!))"
-            //self.lblNameEspecialidate.text = info.speciality!.uppercased()
-         //   self.lblNameCMP.text = info.number_record!
-            
-            // First of all remove the old image (required for images in cells)
-            
+            //  self.reciboAnio = info.Recibos[0].Anio
+          /*
             let fileName = info.photo!
             let fileArray = fileName.components(separatedBy: "/")
             let finalFileName = fileArray.last
             print("finalFileName::",String(finalFileName!))
-            
-         //   self.imgIconPerfil.sd_setImage(with: URL(string: info.photo!), placeholderImage: UIImage(named: String(finalFileName!)))
-        //    self.showServices(services: info.services)
-
+            */
+    //myArray
             self.tableView.reloadData()
  
         }
@@ -154,28 +158,7 @@ class FacturaView: UIViewController {
         }.disposed(by: self.disposeBag)
     }
     
-    /*
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-       return 1
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-         // create a new cell if needed or reuse an old one
-        let cell:ServicesTableView = (self.tableView.dequeueReusableCell(withIdentifier: "ServicesTableView") as! ServicesTableView?)!
-
-               // set the text from the data model
-               cell.titleServiceLabel.text = "name"
-
-               return cell
-    }
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-         // Do here
-        DispatchQueue.main.async {
-                   self.router.show(view: .scheduled, sender: self)
-        }
-       }
-    
-    */
+   
     @IBAction func btnSettings(_ sender:UIButton){
         
         self.goToSettings()
@@ -237,39 +220,38 @@ class FacturaView: UIViewController {
 extension FacturaView: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    
+        return 2
+    } 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print("num:::",self.doctorPropertiesModel?.services.count as Any)
-      
-                 return self.doctorPropertiesModel?.services.count ?? 0
-          
+        print("num:::", self.newGroupSections.count as Any)
+        switch section {
+                case 0:
+                     return 1
+                default:
+                     return self.newGroupSections.count
+          }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
          //let tableViewCell = tableView.dequeueReusableCell(withIdentifier: "ServicesTableView", for: indexPath) as? ServicesTableView
-        
-       
-                  return sectionOneCell(tableView, cellForRowAt: indexPath)
-          
-                  
-        /*
-        guard let tableViewCell = tableView.dequeueReusableCell(withIdentifier: "ServicesTableView", for: indexPath) as? ServicesTableView, let categoryValue = self.doctorPropertiesModel?.services[indexPath.row] else {
-                   return UITableViewCell()
-               }
-               tableViewCell.loadWith(services: categoryValue)
-               
-        return tableViewCell
-         */
+        switch indexPath.section {
+                  case 0:
+                      return sectionHeaderCell(tableView, cellForRowAt: indexPath)
+                  default:
+                      return sectionOneCell(tableView, cellForRowAt: indexPath)
+            }
     }
     // MARK: UITableViewDelegate
     
      func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
-         return 95.0
-        
+        switch indexPath.section {
+              case 0:
+                  return 60.0
+              default:
+                    return 95.0
+              }
         /*switch indexPath.section {
         case 0:
             return 450.0
@@ -278,18 +260,83 @@ extension FacturaView: UITableViewDataSource {
         }*/
     }
      
-    
+    func sectionHeaderCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+                 
+               /*
+                let cell = tableView.dequeueReusableCell(withIdentifier: HomeListaViewCell.reuseIdentifier, for: indexPath)
+                 if let cell = cell as? HomeListaViewCell {
+                     //cell.loadWithData(info: presenter.getDoctorInfo())
+                 }
+                 return cell
+                */
+               
+               guard let tableViewCell = tableView.dequeueReusableCell(withIdentifier: "FacturaListaFirstDetailInfoViewCell", for: indexPath) as? FacturaListaFirstDetailInfoViewCell, let categoryValue = self.doctorPropertiesModel?.services[indexPath.row] else {
+                          return UITableViewCell()
+                      }
+                      tableViewCell.selectionStyle = .none
+                      tableViewCell.loadWith(services: categoryValue)
+                      
+               return tableViewCell
+               
+               
+             }
     // MARK: Cell
       func sectionOneCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
          
         
-        guard let tableViewCell = tableView.dequeueReusableCell(withIdentifier: "FacturaListaViewCell", for: indexPath) as? FacturaListaViewCell, let categoryValue = self.doctorPropertiesModel?.services[indexPath.row] else {
-                         return UITableViewCell()
-                     }
-            tableViewCell.selectionStyle = .none
-            tableViewCell.loadWith(services: categoryValue)
-                     
-            return tableViewCell
+        let tableViewCell = tableView.dequeueReusableCell(withIdentifier: "FacturaListaViewCell", for: indexPath) as? FacturaListaViewCell
+        
+        let categoryValue = self.newGroupSections[indexPath.row]
+        
+        tableViewCell!.selectionStyle = .none
+        //tableViewCell!.loadWith(services: categoryValue)
+        print("categoryValue.FechaVencimiento::>>",categoryValue.FechaVencimiento)
+        tableViewCell!.titleServiceLabel.text = categoryValue.FechaVencimiento
+        tableViewCell!.importeLabel.text = "S/ \(categoryValue.ImporteTotal ?? 0.0)"
+        tableViewCell!.anioLabel.text = "\(categoryValue.Anio ?? 0)"
+        var reciboMes:String = ""
+        reciboMes = "\(categoryValue.Mes ?? 0)"
+        
+        if reciboMes == "1" {
+            reciboMes = "Enero"
+        }
+        if reciboMes == "2" {
+            reciboMes = "Febrero"
+        }
+        if reciboMes == "3" {
+            reciboMes = "Marzo"
+        }
+        if reciboMes == "4" {
+            reciboMes = "Abril"
+        }
+        if reciboMes == "5" {
+            reciboMes = "Mayo"
+        }
+        if reciboMes == "6" {
+            reciboMes = "Junio"
+        }
+        if reciboMes == "7" {
+            reciboMes = "Julio"
+        }
+        if reciboMes == "8" {
+            reciboMes = "Agosto"
+        }
+        if reciboMes == "9" {
+            reciboMes = "Setiembre"
+        }
+        if reciboMes == "10" {
+            reciboMes = "Octubre"
+        }
+        if reciboMes == "11" {
+            reciboMes = "Noviembre"
+        }
+        if reciboMes == "12" {
+            reciboMes = "Diciembre"
+        }
+        
+        tableViewCell!.mesLabel.text = reciboMes
+        
+        return tableViewCell!
         
       }
 }
@@ -305,44 +352,16 @@ extension FacturaView: UITableViewDelegate {
                        }
             return
         }*/
-         let categories = self.doctorPropertiesModel?.services[indexPath.row]
-        let category = categories?.service_code
+         let categories = self.newGroupSections[indexPath.row]
+      //  let category = categories?.service_code
       //  if !category.isExpensesEmpty {
-        print("category::",category as Any)
+      //  print("category::",category as Any)
 
         DispatchQueue.main.async {
             self.router.show(view: .facturaDetail, sender: self)
         }
         
-        if category == "001" {
-            //Chat
-        }
-        
-        if category == "002" {
-            //Chat
-            
-            DispatchQueue.main.async {
-              //  self.router.show(view: .detailNovedades, sender: self)
-            }
-        }
-        if category == "003" {
-            //Atenciones agendadas
-            DispatchQueue.main.async {
-              // self.router.show(view: .scheduled, sender: self)
-            }
-        }
-        if category == "004" {
-            //Registro de Atenciones
-            DispatchQueue.main.async {
-              // self.router.show(view: .SubDetailAttentionRegister, sender: self)
-            }
-        }
-        if category == "005" {
-            //Atenciones agendadas
-            DispatchQueue.main.async {
-              // self.router.show(view: .dateScheduled, sender: self)
-            }
-        }
+      
       //  self.delegate?.onClickCategory(categoryId: category!)
         
            

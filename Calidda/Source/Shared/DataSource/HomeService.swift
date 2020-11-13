@@ -31,7 +31,8 @@ class HomeService:AuthenticationService {
     
     func getInfoDoctor(_ token:String,_ completionHandler: @escaping (_ result: ResponseResuData?, _ error: Error?) -> Void){
         
-        var request = createConnection(endPoint: "/api/cliente/resumen?Id=IdCliente")
+     //   var request = createConnection(endPoint: "/api/cliente/resumen?Id=IdCliente")
+        var request = createConnection(endPoint: "/api/clientes/resumen?Id=IdCliente")
         request.addValue("token \(token)", forHTTPHeaderField: "Authorization")
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         request.httpMethod = "GET"

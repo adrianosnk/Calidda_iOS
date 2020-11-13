@@ -37,6 +37,6 @@ struct BoletinesProperties:Codable {
 }
 
 struct MantenimientosProperties:Codable {
-    var Tipo:String!
+    var Nombre:String!
     var FechaMantenimiento:String!
 }

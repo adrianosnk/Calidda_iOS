@@ -21,6 +21,11 @@ final class HomeInfoViewCell: UITableViewCell {
     @IBOutlet var viwBackContentMant:UIView!
     
     
+    @IBOutlet var viwBackContentSubDeman:UIView!
+    @IBOutlet var viwBackContentSubFac:UIView!
+    @IBOutlet var viwBackContentSubInd:UIView!
+    @IBOutlet var viwBackContentSubMant:UIView!
+    
     @IBOutlet weak var mountAnteLabel:UILabel!
     @IBOutlet weak var mountDespLabel:UILabel!
     @IBOutlet weak var CalLabel:UILabel!
@@ -29,14 +34,28 @@ final class HomeInfoViewCell: UITableViewCell {
     @IBOutlet weak var facturaMountStringLabel:UILabel!
     @IBOutlet weak var facturaVolLabel:UILabel!
     @IBOutlet weak var facturaImpoLabel:UILabel!
+    @IBOutlet weak var facturaFechaVencimiento:UILabel!
+    @IBOutlet weak var facturaEstado:UILabel!
     
     
-    @IBOutlet weak var boletinIndYearLabel:UILabel!
-    @IBOutlet weak var boletinIndMountStringLabel:UILabel!
     
-    @IBOutlet weak var boletinStringQuinStringLabel:UILabel!
-    @IBOutlet weak var boletinDate:UILabel!
-
+    @IBOutlet weak var boletinNombreLabel:UILabel!
+    @IBOutlet weak var boletinFechaLabel:UILabel!
+    @IBOutlet weak var boletinIdArchivo:UILabel!
+    
+    @IBOutlet var viewIcon:UIView!
+    @IBOutlet weak var manteTipoLabel:UILabel!
+    @IBOutlet weak var manteFechaLabel:UILabel!
+    
+    
+    @IBOutlet var viewIcon2:UIView!
+    @IBOutlet weak var manteTipoLabel2:UILabel!
+    @IBOutlet weak var manteFechaLabel2:UILabel!
+    
+    @IBOutlet var viewIcon3:UIView!
+    @IBOutlet weak var manteTipoLabel3:UILabel!
+    @IBOutlet weak var manteFechaLabel3:UILabel!
+    
     
     override func awakeFromNib() {
        
@@ -69,6 +88,11 @@ final class HomeInfoViewCell: UITableViewCell {
         self.viwBackContentMant.layer.shadowOpacity = 8
         self.viwBackContentMant.layer.shadowOffset = .zero
         self.viwBackContentMant.layer.shadowRadius = 4
+        
+        
+        self.viewIcon.layer.cornerRadius = 5
+        self.viewIcon2.layer.cornerRadius = 5
+        self.viewIcon3.layer.cornerRadius = 5
         
         
     }

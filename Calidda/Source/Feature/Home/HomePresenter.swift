@@ -19,11 +19,15 @@ struct HomePresenter {
     }*/
 
     func getInfoDoctor(token:String) -> Observable<ResponseResuData>{
+        
+
+      
         return Observable<ResponseResuData>.create { observer in
             //consumimos el servicio como tal
-            self.service.getInfoDoctor(token){ DoctorInfo, error in
+            self.service.getInfoDoctor(token){ ResponseResuData, error in
                 
-                guard let result:ResponseResuData = DoctorInfo else {
+             
+                guard let result:ResponseResuData = ResponseResuData else {
                     observer.onError(error!)
                     return
                 }

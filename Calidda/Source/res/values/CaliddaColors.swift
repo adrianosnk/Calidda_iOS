@@ -13,7 +13,7 @@ class CaliddaColors {
     // PRIMARY
     static let green = UIColor.init("009B3A", alpha: 1)
     static let blue = UIColor.init("0C3E90", alpha: 1)
-    static let purple = UIColor.init("6C48EF", alpha: 1)
+    static let purple = UIColor.init("9B51E0", alpha: 1)
     static let purpleDark = UIColor.init("5237B5", alpha: 1)
     static let darkTitle = UIColor.init("223254", alpha: 1)
     

@@ -47,19 +47,54 @@ class ConsumoView: UIViewController , ChartViewDelegate{
     let disposebag = DisposeBag()
     
     var barChart = BarChartView()
+    var days:[String]!
     var barChartRef = BarChartView()
     
-    private let presenter = ConsumoPresenter(loginService: AuthenticationService())
+    
+    private let presenter = ConsumoPresenter(consumoService: ConsumoRefHoraService(),consumoRefDiarService:ConsumoRefDiarioService(), consumoRefMesService: ConsumoRefMesService())
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         barChart.delegate = self
         
+        days = ["Lunes","Martes","Miercoles","Jueves","Viernes","Sábado","Domingo"]
+        let tasks = [1.0,2.0,4.5,6.0,8.0,10.0,12.0]
+        
+        //setChart(days, values:tasks)
+        
         setupUI()
         setupRef()
         //Refe Defaul
-        
+        setChart(dataPoints:days, values:tasks)
         self.menuFooter.onClickConsumoView()
+    }
+    
+    func setChart(dataPoints:[String], values:[Double]){
+        
+        barChartRef.frame = CGRect(x:0 , y:0, width: self.viwBackChart.frame.size.width,
+                                        height: self.viwBackChart.frame.size.height)
+               
+        viwBackChart.addSubview(barChartRef)
+        
+        barChartRef.noDataText = "You need to provide data for the chart."
+        
+        var dataEntries:[BarChartDataEntry] = []
+        var counter = 0.0
+        
+        for i in 0..<dataPoints.count{
+            counter += 1.0
+            let dataEntry = BarChartDataEntry(x: values[i],y:counter)
+            dataEntries.append(dataEntry)
+        }
+        let charDataSet = BarChartDataSet(entries:dataEntries,label: "Time")
+        let charData = BarChartData()
+        charData.addDataSet(charDataSet)
+        barChartRef.data = charData
+   //     charDataSet.colors = ChartColorTemplates.colorful()
+    //    BarChartView.animate(xAxisDuration:2.0, yAxisDuration:2.0)
+        
+
     }
     func setupRef(){
         self.viwBackContentRef.isHidden = false
@@ -83,35 +118,25 @@ class ConsumoView: UIViewController , ChartViewDelegate{
     }
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        
+        /*
         barChart.frame = CGRect(x:0 , y:0, width: self.viwBackChart.frame.size.width,
                                  height: self.viwBackChart.frame.size.height)
-        
-        
         barChartRef.frame = CGRect(x:0 , y:0, width: self.viwBackChartRef.frame.size.width,
                                  height: self.viwBackChartRef.frame.size.height)
-        
-        //barChart.center = view.center
-        
         viwBackChart.addSubview(barChart)
         viwBackChartRef.addSubview(barChartRef)
-        
-        //let set = BarChartDataSet(entries: [BarChartDataEntry(x:1,y:1), BarChartDataEntry(x:1,y:1),
-          //  ])
-        
+       
         var entries = [BarChartDataEntry]()
-        
             for x in 0..<10{
               entries.append(BarChartDataEntry(x:Double(x),y:Double(x)))
             }
-        
         let set = BarChartDataSet(entries: entries)
        // set.colors = ChartColorTemplates.joyful()
         
         let data = BarChartData(dataSet: set)
         barChart.data = data
         barChartRef.data = data
-        
+        */
     }
     @IBAction func goToBack(){
         router.pop(sender: self)

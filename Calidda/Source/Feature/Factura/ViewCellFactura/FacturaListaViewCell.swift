@@ -21,6 +21,10 @@ final class FacturaListaViewCell: UITableViewCell {
     @IBOutlet weak var viwBack:UIView!
     
     
+    @IBOutlet weak var anioLabel:UILabel!
+    @IBOutlet weak var mesLabel:UILabel!
+    @IBOutlet weak var importeLabel:UILabel!
+    @IBOutlet weak var fechVenLabel:UILabel!
     @IBOutlet var viwBackContent:UIView!
     
     override func awakeFromNib() {
@@ -43,8 +47,8 @@ final class FacturaListaViewCell: UITableViewCell {
         titleDataLabel.text = title
         valueDataLabel.text = speciality
         iconImage.image = image
-    }*/
-    func loadWith(services:HomeServices){
+    }*/ 
+    func loadWith(services:[ResponseFacturaData],index:Int){
            self.selectionStyle = .none
           // style.apply(textStyle: .titleService, to: titleServiceLabel)
            //style.apply(textStyle: .subtitle, to: descriptionServiceLabel)
@@ -55,22 +59,10 @@ final class FacturaListaViewCell: UITableViewCell {
           // viwBack.layer.cornerRadius = 8;
           // viwBack.layer.masksToBounds = true;
            
-           titleServiceLabel.text = services.service_name!
+           titleServiceLabel.text = services[index].FechaVencimiento
            
+     
            
-           if services.service_code! == "001" {
-           //    imgIcon.image =  CaliddaImage.getImage(named: .img_chat_home)
-           }else if services.service_code! == "002" {
-           //    imgIcon.image =  CaliddaImage.getImage(named: .img_videocall_home)
-           }else if services.service_code! == "003" {
-            //   imgIcon.image =  CaliddaImage.getImage(named: .img_calendar_home)
-           }else if services.service_code! == "004" {
-            //   imgIcon.image =  CaliddaImage.getImage(named: .img_atention_home)
-           }else if services.service_code! == "005" {
-             //  imgIcon.image =  CaliddaImage.getImage(named: .img_schedule_home)
-           }
-           
-           descriptionServiceLabel.text = services.service_description!
        }
     
 }
