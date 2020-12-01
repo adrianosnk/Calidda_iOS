@@ -40,11 +40,11 @@ class ServicesTableView: UITableViewCell {
         
         
         if services.service_code! == "001" {
-            imgIcon.image =  CaliddaImage.getImage(named: .img_chat_home)
+            //imgIcon.image =  CaliddaImage.getImage(named: .img_chat_home)
         }else if services.service_code! == "002" {
-            imgIcon.image =  CaliddaImage.getImage(named: .img_videocall_home)
+            //imgIcon.image =  CaliddaImage.getImage(named: .img_videocall_home)
         }else if services.service_code! == "003" {
-            imgIcon.image =  CaliddaImage.getImage(named: .img_calendar_home)
+            //imgIcon.image =  CaliddaImage.getImage(named: .img_calendar_home)
         }else if services.service_code! == "004" {
             imgIcon.image =  CaliddaImage.getImage(named: .img_atention_home)
         }else if services.service_code! == "005" {

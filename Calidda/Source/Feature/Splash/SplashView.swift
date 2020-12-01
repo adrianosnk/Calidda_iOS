@@ -19,7 +19,22 @@ class SplashView: UIViewController {
       //  login.callService()
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) { 
             // Code you want to be delayed
-            self.goToLogIn()
+
+            if let userProperties =  UserDefaults.standard.string(forKey: "KeyLogin"){
+                print(userProperties)
+                print("userProperties:>>",userProperties)
+                         if userProperties == "1"{
+                             self.goTohome()
+                         }else{
+                             self.goToLogIn()
+                         }
+            }else{
+                self.goToLogIn()
+            }
+            
+            //let userProperties =  UserDefaults.standard.string(forKey: "KeyLogin")!
+         
+            
         }
     }
     

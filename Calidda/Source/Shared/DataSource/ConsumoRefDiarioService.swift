@@ -12,13 +12,23 @@ import Foundation
 class ConsumoRefDiarioService:AuthenticationService {
     //unarchivedObjectOfClass:fromData:error: instead
 
-    func getConsumoRefDiario(_ token:String,_ completionHandler: @escaping (_ result: [ResponseReferencialDiario]?, _ error: Error?) -> Void){
+    func getConsumoRefDiario(_ token:String,_ codEmp:String,_ mes:Int,_ anio:Int,_ completionHandler: @escaping (_ result: [ResponseReferencialDiario]?, _ error: Error?) -> Void){
         
-       
-        var request = createConnection(endPoint: "/api/clientes/consumo/referencial/diario?Id=IdCliente")
-        request.addValue("token \(token)", forHTTPHeaderField: "Authorization")
+        
+            
+     
+             
+        //let criptUser = RequestDia.init(CodigoEmr:codEmp, Mes:mes, Anio:anio)
+        let criptUser = RequestDia.init(codigoEmr: codEmp, mes: mes, anio: anio)
+
+        let jsonEncoder = JSONEncoder()
+        let postData = try! jsonEncoder.encode([criptUser])
+        
+        var request = createConnection(endPoint: "/api/clientes/consumo/referencial/diario")
+        request.addValue("\(token)", forHTTPHeaderField: "Authorization")
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.httpMethod = "GET"
+        request.httpMethod = "POST"
+        request.httpBody = postData
         
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
             guard let data = data else {
@@ -27,7 +37,7 @@ class ConsumoRefDiarioService:AuthenticationService {
                 completionHandler(nil,error!)
                 
                 return
-            }
+            } 
             print(">>ZZ>>:",String(data: data, encoding: .utf8)!)
             //semaphore.signal()
             
@@ -54,4 +64,18 @@ class ConsumoRefDiarioService:AuthenticationService {
     }
     
    
+}
+
+
+struct RequestDia : Codable{
+    var CodigoEmr: String
+    var Mes: Int
+    var Anio: Int
+    init(codigoEmr:String,
+         mes:Int,
+         anio:Int) {
+        self.CodigoEmr = codigoEmr
+        self.Mes = mes
+        self.Anio = anio
+    }
 }

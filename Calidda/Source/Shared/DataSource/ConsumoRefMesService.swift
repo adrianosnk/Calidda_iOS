@@ -10,11 +10,11 @@ import UIKit
 import Foundation
 
 class ConsumoRefMesService:AuthenticationService {
-  
-    func getConsumoRefMes(_ token:String,_ completionHandler: @escaping (_ result: [ResponseReferencialMensual]?, _ error: Error?) -> Void){
+   
+    func getConsumoRefMes(_ token:String,_ codEmp:String,_ completionHandler: @escaping (_ result: [ResponseReferencialMensual]?, _ error: Error?) -> Void){
         
-        var request = createConnection(endPoint: "/api/clientes/consumo/referencial/mensual?Id=IdCliente")
-        request.addValue("token \(token)", forHTTPHeaderField: "Authorization")
+        var request = createConnection(endPoint: "/api/clientes/consumo/referencial/mensual?CodigoEmr=\(codEmp)")
+        request.addValue("\(token)", forHTTPHeaderField: "Authorization")
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         request.httpMethod = "GET"
         

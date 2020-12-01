@@ -13,30 +13,60 @@ struct ResponseResuData: Codable {
        var Id:String!
        var RazonSocial:String!
        var CuentaContrato:String!
+       var CodigoEmr:String!
        var DemandaMesAnterior:Double!
        var DemandaActual:Double!
     
-      var Recibos:[RecibosProperties]!
-      var Boletines:[BoletinesProperties]!
-      var Mantenimientos:[MantenimientosProperties]!
+      var Recibos:[RecibosProperties]?
+      var Boletines:[BoletinesProperties]?
+      var Mantenimientos:[MantenimientosProperties]?
 }
 
 struct RecibosProperties:Codable {
-    var Anio:Int!
-    var Mes:Int!
-    var VolumenFacturado:Double!
-    var ImporteTotal:Double!
-    var FechaVencimiento:String!
-    var Estado:String!
+    var Anio:Int?
+    var Mes:Int?
+    var VolumenFacturado:Double?
+    var ImporteTotal:Double?
+    var FechaVencimiento:String?
+    var Estado:String?
 }
 
 struct BoletinesProperties:Codable {
-    var Nombre:String!
-    var Fecha:String!
-    var IdArchivo:String!
+    var Nombre:String?
+    var Fecha:String?
+    var Id:String?
+    /*
+    init(Nombre:String,
+           Fecha:String,
+           Id:String) {
+          self.Nombre = Nombre
+          self.Fecha = Fecha
+          self.Id = Id
+      }*/
 }
 
+
+
+
+
+
+
 struct MantenimientosProperties:Codable {
-    var Nombre:String!
-    var FechaMantenimiento:String!
+    var Id:String?
+    var Nombre:String?
+    var IdTipo:String?
+    var Tipo:String?
+    var FechaMantenimiento:String?
+    /*
+    init(Id:String,
+           Nombre:String,
+           IdTipo:String,
+           Tipo:String,
+           FechaMantenimiento:String) {
+          self.Id = Id
+          self.Nombre = Nombre
+          self.IdTipo = IdTipo
+          self.Tipo = Tipo
+          self.FechaMantenimiento = FechaMantenimiento
+      }*/
 }

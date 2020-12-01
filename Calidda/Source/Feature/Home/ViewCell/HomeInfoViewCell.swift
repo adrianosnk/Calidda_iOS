@@ -91,8 +91,8 @@ final class HomeInfoViewCell: UITableViewCell {
         
         
         self.viewIcon.layer.cornerRadius = 5
-        self.viewIcon2.layer.cornerRadius = 5
-        self.viewIcon3.layer.cornerRadius = 5
+       // self.viewIcon2.layer.cornerRadius = 5
+       // self.viewIcon3.layer.cornerRadius = 5
         
         
     }

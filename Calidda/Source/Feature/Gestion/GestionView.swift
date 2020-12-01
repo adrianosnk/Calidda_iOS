@@ -15,7 +15,13 @@ class GestionView: UIViewController , ChartViewDelegate{
     var router:Router!
     
     @IBOutlet var viwBackContent:UIView!
-    @IBOutlet var viwBackUser:UIView!
+    @IBOutlet var viwBackFirst:UIView!
+    @IBOutlet var viwBackSecond:UIView!
+    @IBOutlet var viwBackThere:UIView!
+    @IBOutlet var viwBackFour:UIView!
+    @IBOutlet var viwBackFive:UIView!
+    @IBOutlet var viwBackSix:UIView!
+    @IBOutlet var viwBackSeven:UIView!
     @IBOutlet var emailTexfield:UITextField!
     
     
@@ -33,6 +39,29 @@ class GestionView: UIViewController , ChartViewDelegate{
     }
     func setupUI(){
         
+
+        self.viwBackFirst.layer.cornerRadius = 10
+        self.viwBackFirst.layer.borderWidth = 2
+        self.viwBackFirst.backgroundColor = .white
+        self.viwBackFirst.layer.borderColor = CaliddaColors.lightLead.cgColor
+        
+        
+        self.viwBackSecond.layer.cornerRadius = 10
+        self.viwBackSecond.layer.borderWidth = 2
+        self.viwBackSecond.backgroundColor = .white
+        self.viwBackSecond.layer.borderColor = CaliddaColors.lightLead.cgColor
+        
+        self.viwBackThere.layer.cornerRadius = 10
+        self.viwBackThere.layer.borderWidth = 2
+        self.viwBackThere.backgroundColor = .white
+        self.viwBackThere.layer.borderColor = CaliddaColors.lightLead.cgColor
+        
+        self.viwBackFour.layer.cornerRadius = 10
+        self.viwBackFour.layer.borderWidth = 2
+        self.viwBackFour.backgroundColor = .white
+        self.viwBackFour.layer.borderColor = CaliddaColors.lightLead.cgColor
+        
+   
       
     }
     override func viewDidLayoutSubviews() {
@@ -45,6 +74,12 @@ class GestionView: UIViewController , ChartViewDelegate{
         router.pop(sender: self)
     }
 
+    @IBAction func btnChangePasssword(_ sender:UIButton){
+            DispatchQueue.main.async {
+                self.router.show(view: .changePassword, sender: self)
+            }
+        }
+    
     @IBAction func btnConsumo(_ sender:UIButton){
            DispatchQueue.main.async {
                self.router.show(view: .consumo, sender: self)

@@ -22,6 +22,7 @@ class Router {
 
     lazy private var oldPasswordStoryboard = UIStoryboard(name: "OldPassword", bundle: nil)
     
+    lazy private var changePasswordStoryboard = UIStoryboard(name: "ChangePassword", bundle: nil)
     
     lazy private var detailNovedadesStoryboard = UIStoryboard(name: "DetailNovedades", bundle: nil)
     lazy private var facturaStoryboard = UIStoryboard(name: "Factura", bundle: nil)
@@ -31,7 +32,10 @@ class Router {
    
     lazy private var mantenimientoStoryboard = UIStoryboard(name: "Mantenimiento", bundle: nil)
     lazy private var gestionStoryboard = UIStoryboard(name: "Gestion", bundle: nil)
-   
+    lazy private var detailPdfStoryboard = UIStoryboard(name: "DetailHomePdf", bundle: nil)
+
+   lazy private var detailConsumoExcelStoryboard = UIStoryboard(name: "DetailConsumoPdf", bundle: nil)
+    
     
     //OldPasswordView
     //AttentionManagementView
@@ -51,6 +55,10 @@ class Router {
         case consumo
         case mantenimiento
         case gestion
+        case detailPdf
+        case detailConsumoExcel
+        case changePassword
+        
     }
     // MARK: - invoke a single view
     func show(view: Scene, sender: UIViewController) {
@@ -130,7 +138,26 @@ class Router {
                 gestionView.router = self
                 self.showMenu(target: gestionView, sender: sender)
                     break
-                
+
+         case .detailPdf:
+                 let detailPdfView:DetailPdfView = detailPdfStoryboard.instantiateViewController(withIdentifier:"DetailPdfView") as! DetailPdfView
+                 detailPdfView.router = self
+                self.showMenu(target: detailPdfView, sender: sender)
+                    break
+
+
+          case .detailConsumoExcel:
+                let detailConsumoPdfView:DetailConsumoPdfView = detailConsumoExcelStoryboard.instantiateViewController(withIdentifier:"DetailConsumoPdfView") as! DetailConsumoPdfView
+                         detailConsumoPdfView.router = self
+                self.showMenu(target: detailConsumoPdfView, sender: sender)
+                break
+
+
+            case .changePassword:
+                let changePasswordView:ChangePasswordView = changePasswordStoryboard.instantiateViewController(withIdentifier:"ChangePasswordView") as! ChangePasswordView
+                               changePasswordView.router = self
+                self.showMenu(target: changePasswordView, sender: sender)
+                break
             
                 
             

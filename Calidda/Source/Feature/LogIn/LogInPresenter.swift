@@ -30,23 +30,19 @@ struct LogInPresenter {
     }
     */
     func auth(email:String,password:String) -> Observable<ResponseUserData>{
-        
+       
      //ProgressView.shared.showProgressView()
-        
+        CustomLoader.instance.showLoaderView()
         return Observable<ResponseUserData>.create { observer in
             //consumimos el servicio como tal
+            CustomLoader.instance.hideLoaderView()
             self.service.auth(email, password){ usuarioData, error in
-                
                 
                 guard let result:ResponseUserData = usuarioData else {
                   //  ProgressView.shared.hideProgressView()
-                     
                     observer.onError(error!)
                     return
                 }
-
-                
-                
                 print("result::=>>",result)
                 observer.onNext(result)
                 observer.onCompleted()

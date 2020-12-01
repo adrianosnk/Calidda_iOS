@@ -29,6 +29,14 @@ target 'Calidda' do
 	pod 'Charts'
 	pod 'MBProgressHUD'
 	pod 'JLActivityIndicator'
+	pod 'Alamofire'
+	pod 'ImageSlideshow'
+	pod 'Kingfisher'
+	pod 'ImageSlideshow/SDWebImage'
+	pod 'ImageSlideshow/Alamofire'
+        pod 'CryptoSwift'
+
+
 
   target 'CaliddaTests' do
     inherit! :search_paths

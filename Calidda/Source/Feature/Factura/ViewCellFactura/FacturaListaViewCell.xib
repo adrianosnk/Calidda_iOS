@@ -52,7 +52,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="25/10" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ad3-SS-cDv">
                                 <rect key="frame" x="310" y="35" width="48" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="13"/>
+                                <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="13"/>
                                 <color key="textColor" red="0.086515538389999994" green="0.113932468" blue="0.47075933219999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -60,6 +60,20 @@
                                 <rect key="frame" x="370" y="27" width="11" height="15"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TyN-w3-5Dz">
+                                <rect key="frame" x="321" y="37" width="46" height="19"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="25/10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XkI-R7-4j0">
+                                        <rect key="frame" x="0.0" y="1" width="46" height="17"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="13"/>
+                                        <color key="textColor" red="0.086515538389999994" green="0.113932468" blue="0.47075933219999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                     </view>
@@ -90,10 +104,13 @@
             <connections>
                 <outlet property="anioLabel" destination="q3I-Ad-1cw" id="9IB-Ss-9jl"/>
                 <outlet property="descriptionServiceLabel" destination="gT7-xB-kxD" id="5eK-I4-8wm"/>
+                <outlet property="fechVenLabel" destination="Ad3-SS-cDv" id="RYR-7N-psX"/>
+                <outlet property="fechVenLabel2" destination="XkI-R7-4j0" id="M9L-tk-0OA"/>
                 <outlet property="importeLabel" destination="TgP-wh-nMg" id="3Nl-VS-wkG"/>
                 <outlet property="mesLabel" destination="NRb-56-zKO" id="fan-jJ-uua"/>
                 <outlet property="titleServiceLabel" destination="3jj-7b-Ect" id="mTh-Qs-DVf"/>
                 <outlet property="viwBackContent" destination="uIT-Ea-NFE" id="XPA-MZ-83L"/>
+                <outlet property="viwContentFecha" destination="TyN-w3-5Dz" id="bPD-4e-GiP"/>
             </connections>
             <point key="canvasLocation" x="177.536231884058" y="178.45982142857142"/>
         </tableViewCell>

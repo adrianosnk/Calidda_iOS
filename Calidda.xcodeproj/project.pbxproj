@@ -7,7 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		41004853256C1D980041D7BC /* ResponseEventDetailData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41004852256C1D980041D7BC /* ResponseEventDetailData.swift */; };
 		4109927A254744B700DF6527 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41099279254744B600DF6527 /* Home.storyboard */; };
+		410F42B2256438D300FD3797 /* ResponseFacturadoMes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410F42B1256438D200FD3797 /* ResponseFacturadoMes.swift */; };
+		410F42B425643A0400FD3797 /* ConsumoFacMesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410F42B325643A0400FD3797 /* ConsumoFacMesService.swift */; };
+		410F42B725659E2400FD3797 /* Gif+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410F42B625659E2300FD3797 /* Gif+Image.swift */; };
+		410F42B925659E5200FD3797 /* CustomLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410F42B825659E4E00FD3797 /* CustomLoader.swift */; };
+		410F42BB25659E8800FD3797 /* demo.gif in Resources */ = {isa = PBXBuildFile; fileRef = 410F42BA25659E8700FD3797 /* demo.gif */; };
+		410F42BD2565B3D000FD3797 /* DetailHomePdf.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 410F42BC2565B3CE00FD3797 /* DetailHomePdf.storyboard */; };
+		410F42C12565B54600FD3797 /* DetailPdfPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410F42BF2565B54400FD3797 /* DetailPdfPresenter.swift */; };
+		410F42C22565B54600FD3797 /* DetailPdfView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410F42C02565B54600FD3797 /* DetailPdfView.swift */; };
+		410F42C42566CFDA00FD3797 /* DetailConsumoPdf.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 410F42C32566CFD900FD3797 /* DetailConsumoPdf.storyboard */; };
+		410F42C82566D06200FD3797 /* DetailConsumoPdfView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410F42C62566D03F00FD3797 /* DetailConsumoPdfView.swift */; };
+		410F42C92566D06200FD3797 /* DetailConsumoPdfPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410F42C72566D06200FD3797 /* DetailConsumoPdfPresenter.swift */; };
 		411BEB97255C47B200FCD8DB /* ResponseFacDetailData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411BEB96255C47B000FCD8DB /* ResponseFacDetailData.swift */; };
 		411BEB99255C497900FCD8DB /* FacturaDetailService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411BEB98255C497800FCD8DB /* FacturaDetailService.swift */; };
 		41217D2D255D846800605A1C /* HomeFirstDetailInfoViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41217D2B255D846600605A1C /* HomeFirstDetailInfoViewCell.swift */; };
@@ -40,6 +52,11 @@
 		4144519F254B35A300760038 /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 41445193254B35A000760038 /* Roboto-Black.ttf */; };
 		414451A0254B35A300760038 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 41445194254B35A100760038 /* Roboto-Medium.ttf */; };
 		414451A1254B35A300760038 /* Roboto-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 41445195254B35A100760038 /* Roboto-BoldItalic.ttf */; };
+		415405A3256EA9C40033CCD8 /* MenuFooterGestion.xib in Resources */ = {isa = PBXBuildFile; fileRef = 415405A1256EA9C00033CCD8 /* MenuFooterGestion.xib */; };
+		415405A4256EA9C40033CCD8 /* MenuFooterGestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415405A2256EA9C40033CCD8 /* MenuFooterGestion.swift */; };
+		415405A6256F1FE40033CCD8 /* ChangeLoginLinkPassword.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 415405A5256F1FE40033CCD8 /* ChangeLoginLinkPassword.storyboard */; };
+		415405AA256F20430033CCD8 /* ChangeLoginLinkPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415405A8256F20400033CCD8 /* ChangeLoginLinkPasswordView.swift */; };
+		415405AB256F20430033CCD8 /* ChangeLoginLinkPasswordPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415405A9256F20430033CCD8 /* ChangeLoginLinkPasswordPresenter.swift */; };
 		415EFBE725432992003D57AE /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415EFBE625432991003D57AE /* SplashView.swift */; };
 		415EFBF0254329F3003D57AE /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415EFBE8254329EE003D57AE /* String.swift */; };
 		415EFBF1254329F3003D57AE /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415EFBE9254329EF003D57AE /* UIViewController.swift */; };
@@ -72,6 +89,7 @@
 		415EFC2B25434A37003D57AE /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415EFC2A25434A36003D57AE /* HomeService.swift */; };
 		415EFC2D25434C49003D57AE /* DoctorInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415EFC2C25434C49003D57AE /* DoctorInfo.swift */; };
 		415EFC2F25434CCD003D57AE /* PreferenceInfoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415EFC2E25434CCD003D57AE /* PreferenceInfoData.swift */; };
+		4164FCD0256C1FEB001B4615 /* EventDetailService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4164FCCF256C1FEA001B4615 /* EventDetailService.swift */; };
 		416C5D4B2542440800C1B012 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416C5D4A2542440800C1B012 /* AppDelegate.swift */; };
 		416C5D4D2542440800C1B012 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416C5D4C2542440800C1B012 /* SceneDelegate.swift */; };
 		416C5D4F2542440800C1B012 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416C5D4E2542440800C1B012 /* ViewController.swift */; };
@@ -80,8 +98,23 @@
 		416C5D572542441400C1B012 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 416C5D552542441400C1B012 /* LaunchScreen.storyboard */; };
 		416C5D622542441400C1B012 /* CaliddaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416C5D612542441400C1B012 /* CaliddaTests.swift */; };
 		416C5D6D2542441500C1B012 /* CaliddaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416C5D6C2542441500C1B012 /* CaliddaUITests.swift */; };
+		41857B4625716196005303B6 /* String+AES.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41857B4525716196005303B6 /* String+AES.swift */; };
+		4190C269256744A700EF1BD5 /* ResponseEventData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4190C268256744A700EF1BD5 /* ResponseEventData.swift */; };
+		4190C26B2567468100EF1BD5 /* EventService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4190C26A2567468100EF1BD5 /* EventService.swift */; };
+		4190C26E25675C7F00EF1BD5 /* HomeListaImgViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4190C26C25675C7D00EF1BD5 /* HomeListaImgViewCell.swift */; };
+		4190C26F25675C7F00EF1BD5 /* HomeListaImgViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4190C26D25675C7F00EF1BD5 /* HomeListaImgViewCell.xib */; };
+		4190C2752567FC0C00EF1BD5 /* CalendarPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4190C2712567FC0600EF1BD5 /* CalendarPickerViewController.swift */; };
+		4190C2762567FC0C00EF1BD5 /* CalendarPickerFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4190C2722567FC0700EF1BD5 /* CalendarPickerFooterView.swift */; };
+		4190C2772567FC0C00EF1BD5 /* CalendarPickerHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4190C2732567FC0A00EF1BD5 /* CalendarPickerHeaderView.swift */; };
+		4190C2782567FC0C00EF1BD5 /* CalendarDateCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4190C2742567FC0B00EF1BD5 /* CalendarDateCollectionViewCell.swift */; };
+		4190C27D2567FD2200EF1BD5 /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4190C27A2567FD1E00EF1BD5 /* Day.swift */; };
+		4190C27E2567FD2200EF1BD5 /* MonthMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4190C27B2567FD2000EF1BD5 /* MonthMetadata.swift */; };
+		4190C27F2567FD2200EF1BD5 /* ChecklistItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4190C27C2567FD2200EF1BD5 /* ChecklistItem.swift */; };
 		41950E182548BB8A00C6C196 /* OldPassword.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41950E172548BB8900C6C196 /* OldPassword.storyboard */; };
 		41950E1A2548C82C00C6C196 /* ChangePassword.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41950E192548C82B00C6C196 /* ChangePassword.storyboard */; };
+		41A3BAE7257197A400DD3F4C /* Constan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A3BAE6257197A400DD3F4C /* Constan.swift */; };
+		41B59328257692B2002A8F27 /* OldPasswordService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B59327257692B1002A8F27 /* OldPasswordService.swift */; };
+		41B5932A25769BD8002A8F27 /* ResponseOldPasswordData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B5932925769BD8002A8F27 /* ResponseOldPasswordData.swift */; };
 		41B84F972559D29800A4E0FB /* ResponseFacturaData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B84F962559D29600A4E0FB /* ResponseFacturaData.swift */; };
 		41B84F992559D31B00A4E0FB /* FacturaService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B84F982559D31B00A4E0FB /* FacturaService.swift */; };
 		41B84F9D255B0EA500A4E0FB /* PopUpCloseErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B84F9B255B0EA300A4E0FB /* PopUpCloseErrorView.swift */; };
@@ -89,6 +122,10 @@
 		41D423572554E060004FCC16 /* ResponseUserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D423562554E05C004FCC16 /* ResponseUserData.swift */; };
 		41D423592554F050004FCC16 /* loginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D423582554F04F004FCC16 /* loginService.swift */; };
 		41D4235B25556818004FCC16 /* ResponseResuData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D4235A25556815004FCC16 /* ResponseResuData.swift */; };
+		41D6B8F3256E083C00AC5A6F /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D6B8F0256E083900AC5A6F /* View.swift */; };
+		41D6B8F4256E083C00AC5A6F /* TabBarItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D6B8F1256E083B00AC5A6F /* TabBarItemView.swift */; };
+		41D6B8F7256E08B400AC5A6F /* Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D6B8F6256E08B300AC5A6F /* Layout.swift */; };
+		41D6B8F9256E0B4200AC5A6F /* TabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D6B8F8256E0B4200AC5A6F /* TabbarViewController.swift */; };
 		41F1247B254C8FCE0042877D /* Factura.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41F1247A254C8FCE0042877D /* Factura.storyboard */; };
 		41F1247E254C90040042877D /* FacturaPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F1247C254C90010042877D /* FacturaPresenter.swift */; };
 		41F1247F254C90040042877D /* FacturaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F1247D254C90040042877D /* FacturaView.swift */; };
@@ -155,7 +192,19 @@
 
 /* Begin PBXFileReference section */
 		1A33E83D0A5FAD9289EB9B50 /* Pods-Calidda.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Calidda.release.xcconfig"; path = "Target Support Files/Pods-Calidda/Pods-Calidda.release.xcconfig"; sourceTree = "<group>"; };
+		41004852256C1D980041D7BC /* ResponseEventDetailData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseEventDetailData.swift; sourceTree = "<group>"; };
 		41099279254744B600DF6527 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		410F42B1256438D200FD3797 /* ResponseFacturadoMes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseFacturadoMes.swift; sourceTree = "<group>"; };
+		410F42B325643A0400FD3797 /* ConsumoFacMesService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsumoFacMesService.swift; sourceTree = "<group>"; };
+		410F42B625659E2300FD3797 /* Gif+Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Gif+Image.swift"; sourceTree = "<group>"; };
+		410F42B825659E4E00FD3797 /* CustomLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomLoader.swift; sourceTree = "<group>"; };
+		410F42BA25659E8700FD3797 /* demo.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = demo.gif; sourceTree = "<group>"; };
+		410F42BC2565B3CE00FD3797 /* DetailHomePdf.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DetailHomePdf.storyboard; sourceTree = "<group>"; };
+		410F42BF2565B54400FD3797 /* DetailPdfPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailPdfPresenter.swift; sourceTree = "<group>"; };
+		410F42C02565B54600FD3797 /* DetailPdfView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailPdfView.swift; sourceTree = "<group>"; };
+		410F42C32566CFD900FD3797 /* DetailConsumoPdf.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DetailConsumoPdf.storyboard; sourceTree = "<group>"; };
+		410F42C62566D03F00FD3797 /* DetailConsumoPdfView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailConsumoPdfView.swift; path = "Calidda/Source/Feature/Consumo/New Group/DetailConsumoPdfView.swift"; sourceTree = SOURCE_ROOT; };
+		410F42C72566D06200FD3797 /* DetailConsumoPdfPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailConsumoPdfPresenter.swift; sourceTree = "<group>"; };
 		411BEB96255C47B000FCD8DB /* ResponseFacDetailData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseFacDetailData.swift; sourceTree = "<group>"; };
 		411BEB98255C497800FCD8DB /* FacturaDetailService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacturaDetailService.swift; sourceTree = "<group>"; };
 		41217D2B255D846600605A1C /* HomeFirstDetailInfoViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeFirstDetailInfoViewCell.swift; sourceTree = "<group>"; };
@@ -188,6 +237,12 @@
 		41445193254B35A000760038 /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
 		41445194254B35A100760038 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		41445195254B35A100760038 /* Roboto-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-BoldItalic.ttf"; sourceTree = "<group>"; };
+		415405A1256EA9C00033CCD8 /* MenuFooterGestion.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuFooterGestion.xib; sourceTree = "<group>"; };
+		415405A2256EA9C40033CCD8 /* MenuFooterGestion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuFooterGestion.swift; sourceTree = "<group>"; };
+		415405A5256F1FE40033CCD8 /* ChangeLoginLinkPassword.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ChangeLoginLinkPassword.storyboard; sourceTree = "<group>"; };
+		415405A8256F20400033CCD8 /* ChangeLoginLinkPasswordView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeLoginLinkPasswordView.swift; sourceTree = "<group>"; };
+		415405A9256F20430033CCD8 /* ChangeLoginLinkPasswordPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeLoginLinkPasswordPresenter.swift; sourceTree = "<group>"; };
+		415405AC256F34BA0033CCD8 /* Calidda.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Calidda.entitlements; sourceTree = "<group>"; };
 		415EFBE625432991003D57AE /* SplashView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		415EFBE8254329EE003D57AE /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		415EFBE9254329EF003D57AE /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
@@ -220,6 +275,7 @@
 		415EFC2A25434A36003D57AE /* HomeService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeService.swift; sourceTree = "<group>"; };
 		415EFC2C25434C49003D57AE /* DoctorInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoctorInfo.swift; sourceTree = "<group>"; };
 		415EFC2E25434CCD003D57AE /* PreferenceInfoData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferenceInfoData.swift; sourceTree = "<group>"; };
+		4164FCCF256C1FEA001B4615 /* EventDetailService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDetailService.swift; sourceTree = "<group>"; };
 		416C5D472542440800C1B012 /* Calidda.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calidda.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		416C5D4A2542440800C1B012 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		416C5D4C2542440800C1B012 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -234,8 +290,23 @@
 		416C5D682542441500C1B012 /* CaliddaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CaliddaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		416C5D6C2542441500C1B012 /* CaliddaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaliddaUITests.swift; sourceTree = "<group>"; };
 		416C5D6E2542441500C1B012 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		41857B4525716196005303B6 /* String+AES.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+AES.swift"; sourceTree = "<group>"; };
+		4190C268256744A700EF1BD5 /* ResponseEventData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseEventData.swift; sourceTree = "<group>"; };
+		4190C26A2567468100EF1BD5 /* EventService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventService.swift; sourceTree = "<group>"; };
+		4190C26C25675C7D00EF1BD5 /* HomeListaImgViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeListaImgViewCell.swift; sourceTree = "<group>"; };
+		4190C26D25675C7F00EF1BD5 /* HomeListaImgViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeListaImgViewCell.xib; sourceTree = "<group>"; };
+		4190C2712567FC0600EF1BD5 /* CalendarPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarPickerViewController.swift; sourceTree = "<group>"; };
+		4190C2722567FC0700EF1BD5 /* CalendarPickerFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarPickerFooterView.swift; sourceTree = "<group>"; };
+		4190C2732567FC0A00EF1BD5 /* CalendarPickerHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarPickerHeaderView.swift; sourceTree = "<group>"; };
+		4190C2742567FC0B00EF1BD5 /* CalendarDateCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarDateCollectionViewCell.swift; sourceTree = "<group>"; };
+		4190C27A2567FD1E00EF1BD5 /* Day.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
+		4190C27B2567FD2000EF1BD5 /* MonthMetadata.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonthMetadata.swift; sourceTree = "<group>"; };
+		4190C27C2567FD2200EF1BD5 /* ChecklistItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChecklistItem.swift; sourceTree = "<group>"; };
 		41950E172548BB8900C6C196 /* OldPassword.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = OldPassword.storyboard; sourceTree = "<group>"; };
 		41950E192548C82B00C6C196 /* ChangePassword.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ChangePassword.storyboard; sourceTree = "<group>"; };
+		41A3BAE6257197A400DD3F4C /* Constan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constan.swift; sourceTree = "<group>"; };
+		41B59327257692B1002A8F27 /* OldPasswordService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OldPasswordService.swift; sourceTree = "<group>"; };
+		41B5932925769BD8002A8F27 /* ResponseOldPasswordData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseOldPasswordData.swift; sourceTree = "<group>"; };
 		41B84F962559D29600A4E0FB /* ResponseFacturaData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseFacturaData.swift; sourceTree = "<group>"; };
 		41B84F982559D31B00A4E0FB /* FacturaService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacturaService.swift; sourceTree = "<group>"; };
 		41B84F9B255B0EA300A4E0FB /* PopUpCloseErrorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PopUpCloseErrorView.swift; path = "Calidda/Source/res/Elements/New Group/PopUpCloseErrorView.swift"; sourceTree = SOURCE_ROOT; };
@@ -243,6 +314,12 @@
 		41D423562554E05C004FCC16 /* ResponseUserData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseUserData.swift; sourceTree = "<group>"; };
 		41D423582554F04F004FCC16 /* loginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginService.swift; sourceTree = "<group>"; };
 		41D4235A25556815004FCC16 /* ResponseResuData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseResuData.swift; sourceTree = "<group>"; };
+		41D6B8F0256E083900AC5A6F /* View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		41D6B8F1256E083B00AC5A6F /* TabBarItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarItemView.swift; sourceTree = "<group>"; };
+		41D6B8F6256E08B300AC5A6F /* Layout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Layout.swift; sourceTree = "<group>"; };
+		41D6B8F8256E0B4200AC5A6F /* TabbarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabbarViewController.swift; sourceTree = "<group>"; };
+		41D6B8FA256E0D0E00AC5A6F /* ResponsiveTabbarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResponsiveTabbarViewController.h; sourceTree = "<group>"; };
+		41D6B8FD256E237900AC5A6F /* TabbarViewController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TabbarViewController.framework; path = ../../Temp/TabbarViewController.framework; sourceTree = "<group>"; };
 		41F1247A254C8FCE0042877D /* Factura.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Factura.storyboard; sourceTree = "<group>"; };
 		41F1247C254C90010042877D /* FacturaPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacturaPresenter.swift; sourceTree = "<group>"; };
 		41F1247D254C90040042877D /* FacturaView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacturaView.swift; sourceTree = "<group>"; };
@@ -323,6 +400,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		410F42B525659DEA00FD3797 /* GIF Class */ = {
+			isa = PBXGroup;
+			children = (
+				410F42B625659E2300FD3797 /* Gif+Image.swift */,
+			);
+			path = "GIF Class";
+			sourceTree = "<group>";
+		};
+		410F42BE2565B50000FD3797 /* DetailPdf */ = {
+			isa = PBXGroup;
+			children = (
+				410F42BF2565B54400FD3797 /* DetailPdfPresenter.swift */,
+				410F42C02565B54600FD3797 /* DetailPdfView.swift */,
+			);
+			path = DetailPdf;
+			sourceTree = "<group>";
+		};
+		410F42C52566D02100FD3797 /* DetailConsumo */ = {
+			isa = PBXGroup;
+			children = (
+				410F42C72566D06200FD3797 /* DetailConsumoPdfPresenter.swift */,
+				410F42C62566D03F00FD3797 /* DetailConsumoPdfView.swift */,
+			);
+			path = DetailConsumo;
+			sourceTree = "<group>";
+		};
 		414451772548D30A00760038 /* OldPassword */ = {
 			isa = PBXGroup;
 			children = (
@@ -348,10 +451,21 @@
 				41217D2C255D846700605A1C /* HomeFirstDetailInfoViewCell.xib */,
 				41445187254A19FA00760038 /* HomeListaViewCell.swift */,
 				41445186254A19F900760038 /* HomeListaViewCell.xib */,
+				4190C26C25675C7D00EF1BD5 /* HomeListaImgViewCell.swift */,
+				4190C26D25675C7F00EF1BD5 /* HomeListaImgViewCell.xib */,
 				41445182254A0D7500760038 /* HomeInfoViewCell.swift */,
 				41445183254A0D7500760038 /* HomeInfoViewCell.xib */,
 			);
 			path = ViewCell;
+			sourceTree = "<group>";
+		};
+		415405A7256F202F0033CCD8 /* ChangeLoginLinkPassword */ = {
+			isa = PBXGroup;
+			children = (
+				415405A9256F20430033CCD8 /* ChangeLoginLinkPasswordPresenter.swift */,
+				415405A8256F20400033CCD8 /* ChangeLoginLinkPasswordView.swift */,
+			);
+			path = ChangeLoginLinkPassword;
 			sourceTree = "<group>";
 		};
 		415EFBD4254268EC003D57AE /* Source */ = {
@@ -392,6 +506,9 @@
 		415EFBD7254269A7003D57AE /* Extensiones */ = {
 			isa = PBXGroup;
 			children = (
+				41D6B8ED256E07F300AC5A6F /* Source */,
+				4190C2702567FBE800EF1BD5 /* CalendarPicker */,
+				410F42B525659DEA00FD3797 /* GIF Class */,
 				41F1249C254CCA720042877D /* UIViewExtension.swift */,
 				41F1249A254CC9DB0042877D /* UINotificationExtension.swift */,
 				41F12498254CC9020042877D /* UIImageExtension.swift */,
@@ -402,7 +519,9 @@
 				415EFBEF254329F3003D57AE /* UIDevice.swift */,
 				415EFBEA254329EF003D57AE /* UITextFieldExtension.swift */,
 				415EFBEE254329F2003D57AE /* UIView.swift */,
+				410F42B825659E4E00FD3797 /* CustomLoader.swift */,
 				415EFBE9254329EF003D57AE /* UIViewController.swift */,
+				41857B4525716196005303B6 /* String+AES.swift */,
 			);
 			path = Extensiones;
 			sourceTree = "<group>";
@@ -429,6 +548,7 @@
 		415EFBD9254269B8003D57AE /* values */ = {
 			isa = PBXGroup;
 			children = (
+				41A3BAE6257197A400DD3F4C /* Constan.swift */,
 				415EFBF925432A76003D57AE /* CaliddaColors.swift */,
 				415EFBF825432A75003D57AE /* CaliddaFont.swift */,
 				415EFBFA25432A76003D57AE /* CaliddaImage.swift */,
@@ -451,6 +571,7 @@
 		415EFBDB25426D56003D57AE /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				415405A7256F202F0033CCD8 /* ChangeLoginLinkPassword */,
 				41F124C42551138C0042877D /* Gestion */,
 				41F124C3255113820042877D /* Mantenimiento */,
 				41F124BC2550B9FF0042877D /* Consumo */,
@@ -475,6 +596,8 @@
 				41F12485254CA5C00042877D /* HTabBar */,
 				41FD6534254B5B6200FDEF34 /* MenuFooter.swift */,
 				41FD6536254B5B7000FDEF34 /* MenuFooter.xib */,
+				415405A2256EA9C40033CCD8 /* MenuFooterGestion.swift */,
+				415405A1256EA9C00033CCD8 /* MenuFooterGestion.xib */,
 			);
 			path = CustomComponents;
 			sourceTree = "<group>";
@@ -482,6 +605,11 @@
 		415EFBDD25426DE7003D57AE /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				41004852256C1D980041D7BC /* ResponseEventDetailData.swift */,
+				4190C2792567FCFA00EF1BD5 /* ModelCalendar */,
+				4190C268256744A700EF1BD5 /* ResponseEventData.swift */,
+				41B5932925769BD8002A8F27 /* ResponseOldPasswordData.swift */,
+				410F42B1256438D200FD3797 /* ResponseFacturadoMes.swift */,
 				41217D30255DEB8F00605A1C /* ResponseFacturadoDiario.swift */,
 				41217D2F255DEB8C00605A1C /* ResponseReferencialDiario.swift */,
 				41217D32255DEB9500605A1C /* ResponseReferencialHorario.swift */,
@@ -501,6 +629,10 @@
 		415EFBDE25426DED003D57AE /* DataSource */ = {
 			isa = PBXGroup;
 			children = (
+				41B59327257692B1002A8F27 /* OldPasswordService.swift */,
+				4164FCCF256C1FEA001B4615 /* EventDetailService.swift */,
+				4190C26A2567468100EF1BD5 /* EventService.swift */,
+				410F42B325643A0400FD3797 /* ConsumoFacMesService.swift */,
 				41217D39255DEF0300605A1C /* ConsumoFacDiarioService.swift */,
 				41217D3A255DEF0600605A1C /* ConsumoRefDiarioService.swift */,
 				41217D38255DEF0000605A1C /* ConsumoRefHoraService.swift */,
@@ -541,6 +673,7 @@
 		415EFBE2254328BA003D57AE /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				410F42BE2565B50000FD3797 /* DetailPdf */,
 				41FD6538254BCEBE00FDEF34 /* DetailNovedades */,
 				41445181254A0CD900760038 /* ViewCell */,
 				415EFC0725433877003D57AE /* HomePresenter.swift */,
@@ -553,6 +686,7 @@
 		415EFBE4254328E7003D57AE /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				415405A5256F1FE40033CCD8 /* ChangeLoginLinkPassword.storyboard */,
 				41F124CF2551162C0042877D /* Gestion.storyboard */,
 				41F124CD255114930042877D /* Mantenimiento.storyboard */,
 				41F124C12550BE1D0042877D /* Consumo.storyboard */,
@@ -564,6 +698,8 @@
 				41FD653D254BCEE500FDEF34 /* DetailNovedades.storyboard */,
 				415EFC0225433428003D57AE /* Auth.storyboard */,
 				415EFC0025432DF8003D57AE /* Splash.storyboard */,
+				410F42BC2565B3CE00FD3797 /* DetailHomePdf.storyboard */,
+				410F42C32566CFD900FD3797 /* DetailConsumoPdf.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -634,6 +770,7 @@
 		416C5D492542440800C1B012 /* Calidda */ = {
 			isa = PBXGroup;
 			children = (
+				415405AC256F34BA0033CCD8 /* Calidda.entitlements */,
 				415EFBD4254268EC003D57AE /* Source */,
 				416C5D4A2542440800C1B012 /* AppDelegate.swift */,
 				416C5D4C2542440800C1B012 /* SceneDelegate.swift */,
@@ -641,6 +778,7 @@
 				416C5D502542440900C1B012 /* Main.storyboard */,
 				416C5D532542441400C1B012 /* Assets.xcassets */,
 				416C5D552542441400C1B012 /* LaunchScreen.storyboard */,
+				410F42BA25659E8700FD3797 /* demo.gif */,
 				416C5D582542441400C1B012 /* Info.plist */,
 			);
 			path = Calidda;
@@ -664,6 +802,27 @@
 			path = CaliddaUITests;
 			sourceTree = "<group>";
 		};
+		4190C2702567FBE800EF1BD5 /* CalendarPicker */ = {
+			isa = PBXGroup;
+			children = (
+				4190C2742567FC0B00EF1BD5 /* CalendarDateCollectionViewCell.swift */,
+				4190C2722567FC0700EF1BD5 /* CalendarPickerFooterView.swift */,
+				4190C2732567FC0A00EF1BD5 /* CalendarPickerHeaderView.swift */,
+				4190C2712567FC0600EF1BD5 /* CalendarPickerViewController.swift */,
+			);
+			path = CalendarPicker;
+			sourceTree = "<group>";
+		};
+		4190C2792567FCFA00EF1BD5 /* ModelCalendar */ = {
+			isa = PBXGroup;
+			children = (
+				4190C27C2567FD2200EF1BD5 /* ChecklistItem.swift */,
+				4190C27A2567FD1E00EF1BD5 /* Day.swift */,
+				4190C27B2567FD2000EF1BD5 /* MonthMetadata.swift */,
+			);
+			path = ModelCalendar;
+			sourceTree = "<group>";
+		};
 		41B84F9A255B0E9500A4E0FB /* PopUpCloseErrorView */ = {
 			isa = PBXGroup;
 			children = (
@@ -671,6 +830,34 @@
 				41B84F9C255B0EA400A4E0FB /* PopUpCloseErrorView.xib */,
 			);
 			path = PopUpCloseErrorView;
+			sourceTree = "<group>";
+		};
+		41D6B8ED256E07F300AC5A6F /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				41D6B8FA256E0D0E00AC5A6F /* ResponsiveTabbarViewController.h */,
+				41D6B8F8256E0B4200AC5A6F /* TabbarViewController.swift */,
+				41D6B8F5256E087600AC5A6F /* Utils */,
+				41D6B8EE256E080200AC5A6F /* View */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		41D6B8EE256E080200AC5A6F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				41D6B8F1256E083B00AC5A6F /* TabBarItemView.swift */,
+				41D6B8F0256E083900AC5A6F /* View.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		41D6B8F5256E087600AC5A6F /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				41D6B8F6256E08B300AC5A6F /* Layout.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		41F12479254C8F750042877D /* Factura */ = {
@@ -756,6 +943,7 @@
 		41F124BC2550B9FF0042877D /* Consumo */ = {
 			isa = PBXGroup;
 			children = (
+				410F42C52566D02100FD3797 /* DetailConsumo */,
 				41F124BD2550BDE60042877D /* ConsumoPresenter.swift */,
 				41F124BE2550BDE90042877D /* ConsumoView.swift */,
 			);
@@ -805,6 +993,7 @@
 		E99E268E497700B35B561102 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				41D6B8FD256E237900AC5A6F /* TabbarViewController.framework */,
 				F22F53D70DABDCB03937B4F4 /* Pods_Calidda.framework */,
 				A70504ED93619AF0B3C3D173 /* Pods_Calidda_CaliddaUITests.framework */,
 				4EEAC0B53E79376256DC01E5 /* Pods_CaliddaTests.framework */,
@@ -934,20 +1123,26 @@
 				41445197254B35A300760038 /* Roboto-Light.ttf in Resources */,
 				41F124AB254D34D40042877D /* FacturaDetailInfoViewCell.xib in Resources */,
 				41FD6537254B5B7000FDEF34 /* MenuFooter.xib in Resources */,
+				410F42BB25659E8800FD3797 /* demo.gif in Resources */,
+				415405A3256EA9C40033CCD8 /* MenuFooterGestion.xib in Resources */,
 				41950E1A2548C82C00C6C196 /* ChangePassword.storyboard in Resources */,
 				4144519C254B35A300760038 /* Roboto-BlackItalic.ttf in Resources */,
 				414451A0254B35A300760038 /* Roboto-Medium.ttf in Resources */,
+				4190C26F25675C7F00EF1BD5 /* HomeListaImgViewCell.xib in Resources */,
 				4144519B254B35A300760038 /* Roboto-Thin.ttf in Resources */,
 				41F1247B254C8FCE0042877D /* Factura.storyboard in Resources */,
 				41F12484254C91170042877D /* FacturaListaViewCell.xib in Resources */,
 				416C5D542542441400C1B012 /* Assets.xcassets in Resources */,
+				410F42BD2565B3D000FD3797 /* DetailHomePdf.storyboard in Resources */,
 				41445198254B35A300760038 /* Roboto-Italic.ttf in Resources */,
+				415405A6256F1FE40033CCD8 /* ChangeLoginLinkPassword.storyboard in Resources */,
 				415EFC0325433428003D57AE /* Auth.storyboard in Resources */,
 				4144519E254B35A300760038 /* Roboto-Bold.ttf in Resources */,
 				415EFC2225434665003D57AE /* ErrorView.xib in Resources */,
 				41F124CE255114930042877D /* Mantenimiento.storyboard in Resources */,
 				414451A1254B35A300760038 /* Roboto-BoldItalic.ttf in Resources */,
 				416C5D522542440900C1B012 /* Main.storyboard in Resources */,
+				410F42C42566CFDA00FD3797 /* DetailConsumoPdf.storyboard in Resources */,
 				41F124B2255057810042877D /* DetailFactura.storyboard in Resources */,
 				415EFC0125432DF8003D57AE /* Splash.storyboard in Resources */,
 				41F124C22550BE1E0042877D /* Consumo.storyboard in Resources */,
@@ -1087,37 +1282,53 @@
 			buildActionMask = 2147483647;
 			files = (
 				415EFBFD25432A77003D57AE /* CaliddaColors.swift in Sources */,
+				415405AB256F20430033CCD8 /* ChangeLoginLinkPasswordPresenter.swift in Sources */,
+				4190C269256744A700EF1BD5 /* ResponseEventData.swift in Sources */,
 				416C5D4F2542440800C1B012 /* ViewController.swift in Sources */,
 				41F12499254CC9030042877D /* UIImageExtension.swift in Sources */,
+				4190C2752567FC0C00EF1BD5 /* CalendarPickerViewController.swift in Sources */,
 				41F12491254CC4650042877D /* Analytics.swift in Sources */,
 				41445189254A19FA00760038 /* HomeListaViewCell.swift in Sources */,
 				41217D2D255D846800605A1C /* HomeFirstDetailInfoViewCell.swift in Sources */,
+				410F42C22565B54600FD3797 /* DetailPdfView.swift in Sources */,
+				410F42B725659E2400FD3797 /* Gif+Image.swift in Sources */,
 				41B84F9D255B0EA500A4E0FB /* PopUpCloseErrorView.swift in Sources */,
 				41F12492254CC4650042877D /* ProgressView.swift in Sources */,
 				41FD653B254BCECC00FDEF34 /* DetailNovedadesPresenter.swift in Sources */,
+				4190C2772567FC0C00EF1BD5 /* CalendarPickerHeaderView.swift in Sources */,
 				41F124C7255113E20042877D /* MantenimientoPresenter.swift in Sources */,
 				415EFBE725432992003D57AE /* SplashView.swift in Sources */,
 				411BEB97255C47B200FCD8DB /* ResponseFacDetailData.swift in Sources */,
 				415EFBF6254329F3003D57AE /* UIView.swift in Sources */,
+				4190C27D2567FD2200EF1BD5 /* Day.swift in Sources */,
 				41F124B525506F0D0042877D /* FacturaListaFirstDetailInfoViewCell.swift in Sources */,
 				41F1248D254CA5E10042877D /* HHTabBarView.swift in Sources */,
 				415EFC2D25434C49003D57AE /* DoctorInfo.swift in Sources */,
 				4144517F2548D4CB00760038 /* ChangePasswordPresenter.swift in Sources */,
 				41B84F992559D31B00A4E0FB /* FacturaService.swift in Sources */,
 				41F124AC254D34D40042877D /* FacturaDetailInfoViewCell.swift in Sources */,
+				410F42B425643A0400FD3797 /* ConsumoFacMesService.swift in Sources */,
 				41D4235B25556818004FCC16 /* ResponseResuData.swift in Sources */,
 				41F1248B254CA5E10042877D /* HHTabButton.swift in Sources */,
 				415EFBF2254329F3003D57AE /* UITextFieldExtension.swift in Sources */,
 				41D423592554F050004FCC16 /* loginService.swift in Sources */,
+				41A3BAE7257197A400DD3F4C /* Constan.swift in Sources */,
 				41F1249B254CC9DB0042877D /* UINotificationExtension.swift in Sources */,
 				415EFBF3254329F3003D57AE /* Date.swift in Sources */,
 				41F124BA2550AEAB0042877D /* FacturaDetailInfoViewCell2.swift in Sources */,
+				4164FCD0256C1FEB001B4615 /* EventDetailService.swift in Sources */,
 				415EFBFC25432A77003D57AE /* CaliddaFont.swift in Sources */,
 				41FD653C254BCECC00FDEF34 /* DetailNovedadesView.swift in Sources */,
 				41217D36255DEB9500605A1C /* ResponseReferencialHorario.swift in Sources */,
+				4190C26E25675C7F00EF1BD5 /* HomeListaImgViewCell.swift in Sources */,
 				415EFBFE25432A77003D57AE /* CaliddaImage.swift in Sources */,
+				415405A4256EA9C40033CCD8 /* MenuFooterGestion.swift in Sources */,
 				41F124AF254D35120042877D /* FacturaListaDetailInfoViewCell.swift in Sources */,
+				4190C2762567FC0C00EF1BD5 /* CalendarPickerFooterView.swift in Sources */,
+				41D6B8F7256E08B400AC5A6F /* Layout.swift in Sources */,
+				410F42B2256438D300FD3797 /* ResponseFacturadoMes.swift in Sources */,
 				41217D3B255DEF0600605A1C /* ConsumoRefMesService.swift in Sources */,
+				41B5932A25769BD8002A8F27 /* ResponseOldPasswordData.swift in Sources */,
 				415EFC0F25433B33003D57AE /* LogInView.swift in Sources */,
 				41F1247E254C90040042877D /* FacturaPresenter.swift in Sources */,
 				415EFBF1254329F3003D57AE /* UIViewController.swift in Sources */,
@@ -1125,11 +1336,16 @@
 				41F124CB255114360042877D /* GestionView.swift in Sources */,
 				415EFBF0254329F3003D57AE /* String.swift in Sources */,
 				41217D3C255DEF0600605A1C /* ConsumoRefHoraService.swift in Sources */,
+				4190C27F2567FD2200EF1BD5 /* ChecklistItem.swift in Sources */,
+				41857B4625716196005303B6 /* String+AES.swift in Sources */,
 				415EFC2125434665003D57AE /* ErrorView.swift in Sources */,
 				41F12497254CC4D00042877D /* CaliddaTabBarController.swift in Sources */,
+				41B59328257692B2002A8F27 /* OldPasswordService.swift in Sources */,
 				41F124A1254CDBC00042877D /* UIBorderlessNavigationBar.swift in Sources */,
 				41F1248A254CA5E10042877D /* HHTabLabel.swift in Sources */,
 				415EFC2B25434A37003D57AE /* HomeService.swift in Sources */,
+				410F42C12565B54600FD3797 /* DetailPdfPresenter.swift in Sources */,
+				410F42B925659E5200FD3797 /* CustomLoader.swift in Sources */,
 				411BEB99255C497900FCD8DB /* FacturaDetailService.swift in Sources */,
 				415EFC18254345D3003D57AE /* PopUpErrorView.swift in Sources */,
 				415EFC0525433591003D57AE /* Router.swift in Sources */,
@@ -1139,10 +1355,14 @@
 				415EFBF7254329F3003D57AE /* UIDevice.swift in Sources */,
 				41F124A6254D341C0042877D /* FacturaDetailPresenter.swift in Sources */,
 				41F124CC255114360042877D /* GestionPresenter.swift in Sources */,
+				41004853256C1D980041D7BC /* ResponseEventDetailData.swift in Sources */,
 				41F12483254C91170042877D /* FacturaListaViewCell.swift in Sources */,
 				415EFBFF25432A77003D57AE /* Styles.swift in Sources */,
+				41D6B8F4256E083C00AC5A6F /* TabBarItemView.swift in Sources */,
 				415EFC0B25433878003D57AE /* HomeView.swift in Sources */,
+				410F42C82566D06200FD3797 /* DetailConsumoPdfView.swift in Sources */,
 				41F124C8255113E20042877D /* MantenimientoView.swift in Sources */,
+				41D6B8F3256E083C00AC5A6F /* View.swift in Sources */,
 				415EFC0925433878003D57AE /* ServicesTableView.swift in Sources */,
 				415EFC0A25433878003D57AE /* HomePresenter.swift in Sources */,
 				41217D33255DEB9500605A1C /* ResponseReferencialDiario.swift in Sources */,
@@ -1154,20 +1374,26 @@
 				416C5D4B2542440800C1B012 /* AppDelegate.swift in Sources */,
 				415EFC1325434502003D57AE /* UserData.swift in Sources */,
 				415EFC2F25434CCD003D57AE /* PreferenceInfoData.swift in Sources */,
+				410F42C92566D06200FD3797 /* DetailConsumoPdfPresenter.swift in Sources */,
 				415EFC0E25433B33003D57AE /* LogInPresenter.swift in Sources */,
+				4190C2782567FC0C00EF1BD5 /* CalendarDateCollectionViewCell.swift in Sources */,
 				416C5D4D2542440800C1B012 /* SceneDelegate.swift in Sources */,
 				415EFBF5254329F3003D57AE /* Double.swift in Sources */,
 				41217D3D255DEF0600605A1C /* ConsumoFacDiarioService.swift in Sources */,
+				41D6B8F9256E0B4200AC5A6F /* TabbarViewController.swift in Sources */,
 				415EFBF4254329F3003D57AE /* UIButton.swift in Sources */,
 				41F124A7254D341C0042877D /* FacturaDetailView.swift in Sources */,
 				4144517B2548D39100760038 /* OldPasswordView.swift in Sources */,
+				4190C26B2567468100EF1BD5 /* EventService.swift in Sources */,
 				41F1248C254CA5E10042877D /* HHButton+Extension.swift in Sources */,
 				415EFC1D2543462D003D57AE /* BaseAlert.swift in Sources */,
 				41445184254A0D7600760038 /* HomeInfoViewCell.swift in Sources */,
 				41217D35255DEB9500605A1C /* ResponseReferencialMensual.swift in Sources */,
+				415405AA256F20430033CCD8 /* ChangeLoginLinkPasswordView.swift in Sources */,
 				415EFC1125433CA4003D57AE /* AuthenticationService.swift in Sources */,
 				41217D34255DEB9500605A1C /* ResponseFacturadoDiario.swift in Sources */,
 				4144517C2548D39100760038 /* OldPasswordPresenter.swift in Sources */,
+				4190C27E2567FD2200EF1BD5 /* MonthMetadata.swift in Sources */,
 				41F124C02550BDE90042877D /* ConsumoView.swift in Sources */,
 				41F124A2254CDBC00042877D /* BaseDialogViewController.swift in Sources */,
 			);
@@ -1343,13 +1569,15 @@
 			baseConfigurationReference = E63533CF6F74F2F234F445F9 /* Pods-Calidda.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Calidda/Calidda.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GPX8QXW249;
 				INFOPLIST_FILE = Calidda/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.avancesTecnologicos.Calidda;
+				PRODUCT_BUNDLE_IDENTIFIER = com.calidda.grandesClientes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1361,13 +1589,15 @@
 			baseConfigurationReference = 1A33E83D0A5FAD9289EB9B50 /* Pods-Calidda.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Calidda/Calidda.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GPX8QXW249;
 				INFOPLIST_FILE = Calidda/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.avancesTecnologicos.Calidda;
+				PRODUCT_BUNDLE_IDENTIFIER = com.calidda.grandesClientes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

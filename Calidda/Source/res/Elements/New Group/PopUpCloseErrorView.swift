@@ -7,11 +7,15 @@
 //
 
 import UIKit
-  
+   
 enum PopUpCloseErrorType {
     case error
+    case warningVacio
     case warning
     case connection
+    case changePass
+    case oldPass
+    case downloadFile
 }
  
 protocol PopUpCloseErrorViewDelegate: class {
@@ -40,9 +44,27 @@ class PopUpCloseErrorView: BaseAlert {
         static let titleError = "¡Lo sentimos!"
         static let buttonTitleError = "Aceptar"
         
+        static let descriptionProblemVacio = "Complete los datos."
+        static let titleProblemVacio = "¡Faltan Datos!"
+        static let buttonTitleProblemVacio = "Aceptar"
+        
         static let descriptionProblem = "Desea salir de la aplicación."
         static let titleProblem = "¡Cerrar Sesión!"
         static let buttonTitleProblem = "Aceptar"
+        
+        static let descriptionFile = "Se descargo el reporte correctamente."
+        static let titleFile = "¡Descarga exitosa!"
+        static let buttonTitleFile = "Aceptar"
+        
+        
+        static let descriptionChangePass = "Se cambio su nueva contraseña."
+        static let titleChangePass = "¡Cambio exitoso!"
+        static let buttonTitleChangePass = "Aceptar"
+        
+        
+        static let descriptionOldPass = "Se envío los pasos a su email."
+        static let titleOldPass = "¡Cambio exitoso!"
+        static let buttonTitleOldPass = "Aceptar"
         
         static let descriptionConnection = "Por favor, verifica tu conexión e intenta de nuevo en unos minutos."
         static let titleConnection = "Error de conexión"
@@ -119,6 +141,56 @@ class PopUpCloseErrorView: BaseAlert {
             labelDescription.text = DefaultText.descriptionProblem
             imageView.image = CaliddaImage.getImage(named: .iconWarning)
             buttonAccept.setTitle(DefaultText.buttonTitleProblem, for: .normal)
+            
+            
+        case .oldPass:
+            let tapGesture = UITapGestureRecognizer(target: self, action: #selector(onClosePopup))
+            // viewClose.addGestureRecognizer(tapGesture)
+            imageViewClose.image = CaliddaImage.getImage(named: .iconClose)
+            imageViewClose.contentMode = .scaleAspectFit
+            
+            labelTitle.text = DefaultText.titleOldPass
+            labelDescription.text = DefaultText.descriptionOldPass
+            imageView.image = CaliddaImage.getImage(named: .iconWarning)
+            buttonAccept.setTitle(DefaultText.buttonTitleOldPass, for: .normal)
+                
+        case .changePass:
+                 let tapGesture = UITapGestureRecognizer(target: self, action: #selector(onClosePopup))
+                     // viewClose.addGestureRecognizer(tapGesture)
+                      
+                imageViewClose.image = CaliddaImage.getImage(named: .iconClose)
+                imageViewClose.contentMode = .scaleAspectFit
+                      
+                labelTitle.text = DefaultText.titleChangePass
+                labelDescription.text = DefaultText.descriptionChangePass
+                imageView.image = CaliddaImage.getImage(named: .iconWarning)
+                buttonAccept.setTitle(DefaultText.buttonTitleChangePass, for: .normal)
+            
+        case .downloadFile:
+                let tapGesture = UITapGestureRecognizer(target: self, action: #selector(onClosePopup))
+                              // viewClose.addGestureRecognizer(tapGesture)
+                               
+                imageViewClose.image = CaliddaImage.getImage(named: .iconClose)
+                imageViewClose.contentMode = .scaleAspectFit
+                               
+                labelTitle.text = DefaultText.titleFile
+                labelDescription.text = DefaultText.descriptionFile
+                imageView.image = CaliddaImage.getImage(named: .iconWarning)
+                buttonAccept.setTitle(DefaultText.buttonTitleFile, for: .normal)
+                     
+            
+            
+        case .warningVacio:
+               let tapGesture = UITapGestureRecognizer(target: self, action: #selector(onClosePopup))
+              // viewClose.addGestureRecognizer(tapGesture)
+               
+               imageViewClose.image = CaliddaImage.getImage(named: .iconClose)
+               imageViewClose.contentMode = .scaleAspectFit
+               
+               labelTitle.text = DefaultText.titleProblemVacio
+               labelDescription.text = DefaultText.descriptionProblemVacio
+               imageView.image = CaliddaImage.getImage(named: .iconWarning)
+               buttonAccept.setTitle(DefaultText.buttonTitleProblemVacio, for: .normal)
         case .connection:
             let tapGesture = UITapGestureRecognizer(target: self, action: #selector(onClosePopup))
             viewClose.addGestureRecognizer(tapGesture)
@@ -137,7 +209,7 @@ class PopUpCloseErrorView: BaseAlert {
     
     @IBAction func onClickAccept(_ sender: UIButton) {
         if let delegateError = delegateError {
-            delegateError.onClose(type: type)
+            delegateError.onAceppt(type: type)
         }
         super.onClickButton(view: self)
     }

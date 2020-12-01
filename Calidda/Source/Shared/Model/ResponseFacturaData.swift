@@ -18,4 +18,7 @@ struct ResponseFacturaData: Codable {
     var Anio:Int!
     var ImporteTotal:Double!
     var FechaVencimiento:String!
-}
+    var AlertaVencimiento:Bool!
+    var CuentaContrato:String!
+    var IdEstado:String!
+} 

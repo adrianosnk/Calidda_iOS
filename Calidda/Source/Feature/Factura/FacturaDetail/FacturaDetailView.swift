@@ -52,24 +52,25 @@ class FacturaDetailView: UIViewController {
         
         var FechaVencimiento:String = ""
         var Estado:String = ""
-        var VolumenConsumoLectura:Double = 0.0
+        var volumenConsumoLectura:String = ""
         var FactorCorreccionVolumen:Double = 0.0
-        var VolumenFacturado:Double = 0.0
+        var volumenFacturado:String = ""
         var CategoriaTarifaria:String = ""
         
-        var PrecioMedioGasNatural:Double = 0.0
+        var precioMedioGasNatural:String = ""
         var CostoMedioTransporte:Double = 0.0
-        var CostoFijoComercializacion:Double = 0.0
+        var costoFijoComercializacion:String = ""
         var CostoFijoDistribucion:Double = 0.0
         var CostoVariableDistribucion:Double = 0.0
-        var TotalConceptoGasNatural:Double = 0.0
-        var TotalServicioTransporte:Double = 0.0
-        var TotalCostoFijoDistribucion:Double = 0.0
-        var TotalCostoVariableDistribucion:Double = 0.0
-        var TotalCostoFijoComercializacion:Double = 0.0
-        
     
-        var TotalIGV:Double = 0.0
+        var totalConceptoGasNatural:String = ""
+        var totalServicioTransporte:String = ""
+        var TotalCostoFijoDistribucion:Double = 0.0
+        var totalCostoVariableDistribucion:String = ""
+        var TotalCostoFijoComercializacion:Double = 0.0
+         
+    
+        var totalIGV:String = ""
         var IdReciboPDF:String = ""
     
     
@@ -205,23 +206,23 @@ class FacturaDetailView: UIViewController {
             self.ImporteTotal = info.ImporteTotal
             self.FechaVencimiento = info.FechaVencimiento
             self.Estado = info.Estado
-            self.VolumenConsumoLectura = info.VolumenConsumoLectura
+            self.volumenConsumoLectura = info.VolumenConsumoLectura.convertToString(withSymbol: false)
             self.FactorCorreccionVolumen = info.FactorCorreccionVolumen
-            self.VolumenFacturado = info.VolumenFacturado
+            self.volumenFacturado = info.VolumenFacturado.convertToString(withSymbol: false)
             self.CategoriaTarifaria = info.CategoriaTarifaria
-            self.PrecioMedioGasNatural = info.PrecioMedioGasNatural
+            self.precioMedioGasNatural = info.PrecioMedioGasNatural.convertToString(withSymbol: false)
             self.CostoMedioTransporte = info.CostoMedioTransporte
-            self.CostoFijoComercializacion = info.CostoFijoComercializacion
+            self.costoFijoComercializacion = info.CostoFijoComercializacion.convertToString(withSymbol: false)
             self.CostoFijoDistribucion = info.CostoFijoDistribucion
             self.CostoVariableDistribucion = info.CostoVariableDistribucion
-            self.TotalConceptoGasNatural = info.TotalConceptoGasNatural
-            self.TotalServicioTransporte = info.TotalServicioTransporte
+            self.totalConceptoGasNatural = info.TotalConceptoGasNatural.convertToString(withSymbol: false)
+            self.totalServicioTransporte = info.TotalServicioTransporte.convertToString(withSymbol: false)
             self.TotalCostoFijoDistribucion = info.TotalCostoFijoDistribucion
-            self.TotalCostoVariableDistribucion = info.TotalCostoVariableDistribucion
+            self.totalCostoVariableDistribucion = info.TotalCostoVariableDistribucion.convertToString(withSymbol: false)
             self.TotalCostoFijoComercializacion = info.TotalCostoFijoComercializacion
                    
                
-            self.TotalIGV = info.TotalIGV
+            self.totalIGV = info.TotalIGV.convertToString(withSymbol: false)
             self.IdReciboPDF = info.IdReciboPDF
                
             self.Nombre = info.OtrosConceptos[0].Nombre
@@ -385,23 +386,23 @@ extension FacturaDetailView: UITableViewDataSource {
              //   cell.importeTotalLabel.text = "\(self.ImporteTotal)"
              //   cell.fechaVencimientoLabel.text = "\(self.FechaVencimiento)"
              //   cell.estadoLabel.text = "\(self.Estado)"
-                cell.volumenConsumoLecturaLabel.text = "\(self.VolumenConsumoLectura)"
+                cell.volumenConsumoLecturaLabel.text = self.volumenConsumoLectura
                 cell.factorCorreccionVolumenLabel.text = "\(self.FactorCorreccionVolumen)"
-                cell.volumenFacturadoLabel.text = "\(self.VolumenFacturado)"
+                cell.volumenFacturadoLabel.text = self.volumenFacturado
                 
                 //cell.categoriaTarifariaLabel.text = "\(self.CategoriaTarifaria)"
                 
-                cell.precioMedioGasNaturalLabel.text = "\(self.PrecioMedioGasNatural)"
+                cell.precioMedioGasNaturalLabel.text = self.precioMedioGasNatural
                 cell.costoMedioTransporteLabel.text = "\(self.CostoMedioTransporte)"
-                cell.costoFijoComercializacionLabel.text = "\(self.CostoFijoComercializacion)"
+                cell.costoFijoComercializacionLabel.text = self.costoFijoComercializacion
                 
                // cell.costoFijoDistribucionLabel.text = "\(self.CostoFijoDistribucion)"
                 cell.costoVariableDistribucionLabel.text = "\(self.CostoVariableDistribucion)"
-                cell.totalConceptoGasNaturalLabel.text = "\(self.TotalConceptoGasNatural)"
+                cell.totalConceptoGasNaturalLabel.text = self.totalConceptoGasNatural
                 
-                cell.totalServicioTransporteLabel.text = "\(self.TotalServicioTransporte)"
+                cell.totalServicioTransporteLabel.text = self.totalServicioTransporte
                 //cell.totalCostoFijoDistribucionLabel.text = "\(self.TotalCostoFijoDistribucion)"
-                cell.totalCostoVariableDistribucionLabel.text = "\(self.TotalCostoVariableDistribucion)"
+                cell.totalCostoVariableDistribucionLabel.text = self.totalCostoVariableDistribucion
                 //cell.totalCostoFijoComercializacionLabel.text = "\(self.TotalCostoFijoComercializacion)"
                 
                 
@@ -409,7 +410,7 @@ extension FacturaDetailView: UITableViewDataSource {
                 cell.otrosConceptosNombreLabel.text = "\(self.Nombre)"
                 cell.otrosConceptosTotalLabel.text = "\(self.Total)"
                 
-                cell.totalIGVLabel.text = "\(self.TotalIGV)"
+                cell.totalIGVLabel.text = self.totalIGV
                // cell.idReciboPDFLabel.text = "\(self.IdReciboPDF)"
                    
                             

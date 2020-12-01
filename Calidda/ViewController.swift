@@ -10,7 +10,7 @@ import UIKit
 
 
 class ViewController: UIViewController {
-    
+   
     private let button:UIButton = {
         let button = UIButton(frame:CGRect(x:0, y:0, width:200, height:52))
         button.setTitle("Login In", for: .normal)
@@ -64,6 +64,7 @@ class ViewController: UIViewController {
         present(tabBarVC, animated: true)
     }
 }
+/*
 class FirstViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -106,4 +107,4 @@ class FiveViewController: UIViewController {
 
 
 
-
+*/

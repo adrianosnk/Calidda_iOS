@@ -18,10 +18,10 @@ struct FacturaPresenter {
         return service.getUser()
     }
 */
-    func getInfoFactura(token:String) -> Observable<[ResponseFacturaData]>{
+    func getInfoFactura(token:String,cuentaContrato:String) -> Observable<[ResponseFacturaData]>{
         return Observable<[ResponseFacturaData]>.create { observer in
             //consumimos el servicio como tal
-            self.service.getInfoFactura(token){ responseFacturaDatas, error in
+            self.service.getInfoFactura(token,cuentaContrato){ responseFacturaDatas, error in
                 
                 guard let result:[ResponseFacturaData] = responseFacturaDatas else {
                     observer.onError(error!)

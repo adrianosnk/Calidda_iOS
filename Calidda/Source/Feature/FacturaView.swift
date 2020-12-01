@@ -43,6 +43,8 @@ class FacturaView: UIViewController {
     
     fileprivate var reponseFacturaModel: ResponseFacturaData?
     
+    var refreshControl = UIRefreshControl()
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,9 +57,19 @@ class FacturaView: UIViewController {
         loadData()
         
          tableView.reloadData()
+        
+        refreshControl.attributedTitle = NSAttributedString(string: "")
+        refreshControl.addTarget(self, action: #selector(self.refresh(_:)), for: .valueChanged)
+        tableView.addSubview(refreshControl) // not required when using UITableViewController
+
+        
     }
     
-  
+      @objc func refresh(_ sender: AnyObject) {
+         // Code to refresh table view
+        loadData()
+        refreshControl.endRefreshing()
+      }
     
     // MARK: - Setup
     func setupUI(){
@@ -90,26 +102,23 @@ class FacturaView: UIViewController {
     
     @IBAction func goToBack(){
         router.pop(sender: self)
-    }
+    } 
     func loadData(){
         //let userProperties = presenter.getMyUser().TokenAcceso!
         
         let userProperties =  UserDefaults.standard.string(forKey: "KeyToken")!
-        presenter.getInfoFactura(token: userProperties)
+        let cuentaContrato =  UserDefaults.standard.string(forKey: "KeyCuentaContrato")!
+        presenter.getInfoFactura(token: userProperties,cuentaContrato: cuentaContrato)
             .subscribeOn(MainScheduler.asyncInstance)
             .subscribe(onNext: {result in
-                
                 //self.fillInfoTop(result.data)
                 self.fillInfoTop(result)
             },
                        onError: {error in
-                        
             },
                        onCompleted: {},
                        onDisposed: {})
             .disposed(by: self.disposeBag)
-        
-        
         registerCell()
     }
     // MARK: Helpers
@@ -230,7 +239,7 @@ extension FacturaView: UITableViewDataSource {
                 default:
                      return self.newGroupSections.count
           }
-    }
+    } 
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
@@ -292,7 +301,7 @@ extension FacturaView: UITableViewDataSource {
         //tableViewCell!.loadWith(services: categoryValue)
         print("categoryValue.FechaVencimiento::>>",categoryValue.FechaVencimiento)
         tableViewCell!.titleServiceLabel.text = categoryValue.FechaVencimiento
-        tableViewCell!.importeLabel.text = "S/ \(categoryValue.ImporteTotal ?? 0.0)"
+        tableViewCell!.importeLabel.text = categoryValue.ImporteTotal.convertToString(withSymbol: true)
         tableViewCell!.anioLabel.text = "\(categoryValue.Anio ?? 0)"
         var reciboMes:String = ""
         reciboMes = "\(categoryValue.Mes ?? 0)"
@@ -335,6 +344,36 @@ extension FacturaView: UITableViewDataSource {
         }
         
         tableViewCell!.mesLabel.text = reciboMes
+         
+        let dateFormatter = DateFormatter()
+             dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
+             let date = dateFormatter.date(from: categoryValue.FechaVencimiento)
+             dateFormatter.dateFormat = "dd/MM"
+             dateFormatter.timeZone = NSTimeZone.local
+             let timeStamp = dateFormatter.string(from: date!)
+        
+        if categoryValue.IdEstado == "1"{
+            tableViewCell!.viwContentFecha.isHidden = true
+        }else if categoryValue.IdEstado == "2" {
+
+            tableViewCell!.fechVenLabel2.text = timeStamp
+            tableViewCell!.fechVenLabel2.textColor = CaliddaColors.white
+            tableViewCell!.viwContentFecha.isHidden = false
+            
+            if categoryValue.AlertaVencimiento == true{
+                
+                tableViewCell!.viwContentFecha.backgroundColor = CaliddaColors.red
+            }else if categoryValue.AlertaVencimiento == false {
+                
+                tableViewCell!.viwContentFecha.backgroundColor = CaliddaColors.skyblue
+                
+            }
+        }
+        
+     
+        
+        
+        tableViewCell!.fechVenLabel.text = timeStamp
         
         return tableViewCell!
         

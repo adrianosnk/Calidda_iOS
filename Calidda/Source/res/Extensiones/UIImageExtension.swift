@@ -97,7 +97,7 @@ extension UIImage {
         
         return gifImageWithData(imageData)
     }
-    
+    /*
     class func delayForImageAtIndex(_ index: Int, source: CGImageSource!) -> Double {
         var delay = 0.1
         
@@ -215,6 +215,7 @@ extension UIImage {
         
         return animation
     }
+    */
 }
     
 

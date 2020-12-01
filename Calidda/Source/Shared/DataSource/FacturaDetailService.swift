@@ -29,10 +29,10 @@ class FacturaDetailService:AuthenticationService {
         return doctorInfo
     }
     */
-     
+     //Diner club 
     func getInfoDetailFactura(_ token:String,_ completionHandler: @escaping (_ result: ResponseFacDetailData?, _ error: Error?) -> Void){
         
-        var request = createConnection(endPoint: "/api/detallefacturacion?Id=IdRecibo")
+        var request = createConnection(endPoint: "/api/clientes/facturacion/detalle?Id=IdRecibo")
         request.addValue("token \(token)", forHTTPHeaderField: "Authorization")
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         request.httpMethod = "GET"

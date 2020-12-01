@@ -11,14 +11,23 @@ import Foundation
 
 class ConsumoFacDiarioService:AuthenticationService {
     //unarchivedObjectOfClass:fromData:error: instead
-
-    func getConsumoFacDiario(_ token:String,_ completionHandler: @escaping (_ result: [ResponseFacturadoDiario]?, _ error: Error?) -> Void){
+ 
+    
+    func getConsumoFacDiario(_ token:String,_ codEmp:String,_ mes:Int,_ anio:Int,_ completionHandler: @escaping (_ result: [ResponseFacturadoDiario]?, _ error: Error?) -> Void){
         
        
-        var request = createConnection(endPoint: "/api/clientes/consumo/facturado/diario?Id=IdCliente")
-        request.addValue("token \(token)", forHTTPHeaderField: "Authorization")
+        
+        //let criptUser = RequestDia.init(CodigoEmr:codEmp, Mes:mes, Anio:anio)
+        let criptUser = RequestFacDia.init(cuentaContrato: codEmp, mes: mes, anio: anio)
+
+        let jsonEncoder = JSONEncoder()
+        let postData = try! jsonEncoder.encode([criptUser])
+        
+        var request = createConnection(endPoint: "/api/clientes/consumo/facturado/diario")
+        request.addValue("\(token)", forHTTPHeaderField: "Authorization")
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.httpMethod = "GET"
+        request.httpMethod = "POST"
+        request.httpBody = postData
         
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
             guard let data = data else {
@@ -60,4 +69,17 @@ class ConsumoFacDiarioService:AuthenticationService {
         task.resume()
     }
     
+}
+
+struct RequestFacDia : Codable{
+    var CuentaContrato: String
+    var Mes: Int
+    var Anio: Int
+    init(cuentaContrato:String,
+         mes:Int,
+         anio:Int) {
+        self.CuentaContrato = cuentaContrato
+        self.Mes = mes
+        self.Anio = anio
+    }
 }

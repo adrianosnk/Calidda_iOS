@@ -16,6 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let navigator = Router()
     var window: UIWindow?
 
+   
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
@@ -23,16 +24,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         IQKeyboardManager.shared.enable = true
         IQKeyboardManager.shared.goNext()
         IQKeyboardManager.shared.toolbarTintColor = .black
+        
+      
+            
+        /*
         let navigatiorView = UINavigationController()
         navigatiorView.isNavigationBarHidden = true
         window?.rootViewController = navigatiorView
         window?.makeKeyAndVisible()
         navigator.show(view: .splash, sender: navigatiorView)
         window?.tintColor = .black
-        
+        */
         return true
     }
 
+  
     // MARK: UISceneSession Lifecycle
 
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {

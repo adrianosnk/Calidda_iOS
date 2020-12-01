@@ -31,12 +31,10 @@ class FacturaService:AuthenticationService {
         return doctorInfo
     }
     
-    func getInfoFactura(_ token:String,_ completionHandler: @escaping (_ result: [ResponseFacturaData]?, _ error: Error?) -> Void){
-        
-        let semaphore = DispatchSemaphore (value: 0)
-        
-        var request = createConnection(endPoint: "/api/facturacion?Id=IdCliente")
-        request.addValue("token \(token)", forHTTPHeaderField: "Authorization")
+    func getInfoFactura(_ token:String,_ cuentaContrato:String,_ completionHandler: @escaping (_ result: [ResponseFacturaData]?, _ error: Error?) -> Void){
+     
+        var request = createConnection(endPoint: "/api/clientes/facturacion?CuentaContrato=\(cuentaContrato)")
+        request.addValue("\(token)", forHTTPHeaderField: "Authorization")
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         request.httpMethod = "GET"
         

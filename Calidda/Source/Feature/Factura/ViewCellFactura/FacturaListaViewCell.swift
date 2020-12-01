@@ -27,10 +27,14 @@ final class FacturaListaViewCell: UITableViewCell {
     @IBOutlet weak var fechVenLabel:UILabel!
     @IBOutlet var viwBackContent:UIView!
     
+    @IBOutlet weak var fechVenLabel2:UILabel!
+    @IBOutlet var viwContentFecha:UIView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
         
+        self.viwContentFecha.layer.cornerRadius = 5
         
         self.viwBackContent.layer.cornerRadius = 10
         self.viwBackContent.layer.borderWidth = 2

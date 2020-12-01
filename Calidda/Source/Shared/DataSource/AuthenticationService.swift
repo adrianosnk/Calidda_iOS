@@ -9,10 +9,17 @@
 import Foundation
 import Firebase
  
+struct UserLogin: Codable {
+             var Password: String
+             var Cuenta: String
+             var Externo: Bool
+}
+
 class AuthenticationService {
   //  let URL_BASE:String = "https://devapi.smartdoctor.pe/v1"
    // let URL_BASE:String = "https://64ef6ff3-71e0-4823-9ef8-1635d2400e38.mock.pstmn.io"
-    let URL_BASE:String = "http://127.0.0.1:3001"
+   // let URL_BASE:String = "http://127.0.0.1:3001"
+    let URL_BASE:String = "http://portalextranet.eastus.cloudapp.azure.com:100"
     let OS:String = "iOS"
     func createConnection(endPoint:String) -> URLRequest {
         print("url:","\(URL_BASE)\(endPoint)")
@@ -20,22 +27,12 @@ class AuthenticationService {
         return request
     }
     func auth(_ email:String,_ password:String,_ completionHandler: @escaping (_ result: ResponseUserData?, _ error: Error?) -> Void){
-        
-        //        let semaphore = DispatchSemaphore (value: 0)
-        let parameters = ["Cuenta": email,
-                          "Password": password] as [String : Any]
-        
-        /*
 
-         let parameters = ["email": email,
-                           "password": password,
-                           "is_app_doctor": true,
-                           "is_doctor":true,
-                           "application":"sd",
-                           "platform":OS] as [String : Any]
-         */
-        let postData = parameters.toJsonData()!
-        
+        let criptUser = CriptUser.init(password: password, cuenta: email, extern: true)
+
+        let jsonEncoder = JSONEncoder()
+        let postData = try! jsonEncoder.encode([criptUser])
+         
         //var request = createConnection(endPoint: "/api/login/clientes")
         var request = createConnection(endPoint: "/api/login")
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
@@ -83,6 +80,7 @@ class AuthenticationService {
         task.resume()
         //        semaphore.wait()
     }
+    
     func createAccount(){
         
     }
@@ -99,12 +97,25 @@ extension Dictionary {
         do {
             let jsonData = try JSONSerialization.data(withJSONObject: self, options: [])
             //            let jsonString = String(data: jsonData, encoding: String.Encoding.utf8)!
-            //            print (jsonString)
+                print (jsonData)
             return jsonData
             
         } catch {
             print(error.localizedDescription)
         }
         return nil
+    }
+}
+ 
+struct CriptUser : Codable{
+    var Password: String
+    var Cuenta: String
+    var Externo: Bool
+    init(password:String,
+         cuenta:String,
+         extern:Bool) {
+        self.Password = password.cryptoSwiftAESEncrypt(key: Constan.key, iv: Constan.iv)!
+        self.Cuenta = cuenta.cryptoSwiftAESEncrypt(key: Constan.key, iv: Constan.iv)!
+        self.Externo = extern
     }
 }

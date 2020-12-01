@@ -13,13 +13,23 @@ class ConsumoRefHoraService:AuthenticationService {
     //unarchivedObjectOfClass:fromData:error: instead
   
   
-    
-    func getConsumoRefHora(_ token:String,_ completionHandler: @escaping (_ result: [ResponseReferencialHorario]?, _ error: Error?) -> Void){
+    func getConsumoRefHora(_ token:String,_ userEmp:String,_ hora:String,_ completionHandler: @escaping (_ result: [ResponseReferencialHorario]?, _ error: Error?) -> Void){
    
-        var request = createConnection(endPoint: "/api/clientes/consumo/referencial/horario?Id=IdCliente")
-        request.addValue("token \(token)", forHTTPHeaderField: "Authorization")
+        
+      
+        
+        let criptUser = RequestHora.init(codigoEmr: userEmp, fechaConsumo: hora)
+
+        
+        let jsonEncoder = JSONEncoder()
+        let postData = try! jsonEncoder.encode([criptUser])
+            
+        
+        var request = createConnection(endPoint: "/api/clientes/consumo/referencial/horario")
+        request.addValue("\(token)", forHTTPHeaderField: "Authorization")
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.httpMethod = "GET"
+        request.httpMethod = "POST"
+        request.httpBody = postData
         
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
             guard let data = data else {
@@ -52,4 +62,15 @@ class ConsumoRefHoraService:AuthenticationService {
         task.resume()
     }
     
+}
+
+
+struct RequestHora : Codable{
+    var CodigoEmr: String
+    var FechaConsumo: String
+    init(codigoEmr:String,
+         fechaConsumo:String) {
+        self.CodigoEmr = codigoEmr
+        self.FechaConsumo = fechaConsumo
+    }
 }

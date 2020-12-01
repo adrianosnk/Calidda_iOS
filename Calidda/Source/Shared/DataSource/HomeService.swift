@@ -28,12 +28,13 @@ class HomeService:AuthenticationService {
         let doctorInfo = try! JSONDecoder().decode(DoctorInfo.self, from: data)
         return doctorInfo
     }
-    
-    func getInfoDoctor(_ token:String,_ completionHandler: @escaping (_ result: ResponseResuData?, _ error: Error?) -> Void){
+     
+    func getInfoDoctor(_ token:String,_ idUser:String,_ completionHandler: @escaping (_ result: ResponseResuData?, _ error: Error?) -> Void){
         
      //   var request = createConnection(endPoint: "/api/cliente/resumen?Id=IdCliente")
-        var request = createConnection(endPoint: "/api/clientes/resumen?Id=IdCliente")
-        request.addValue("token \(token)", forHTTPHeaderField: "Authorization")
+        var request = createConnection(endPoint: "/api/clientes/resumen?Id=\(idUser)")
+       // request.addValue("token \(token)", forHTTPHeaderField: "Authorization")
+        request.addValue("\(token)", forHTTPHeaderField: "Authorization")
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         request.httpMethod = "GET"
         
@@ -44,15 +45,16 @@ class HomeService:AuthenticationService {
                 completionHandler(nil,error!)
                 
                 return
-            }
+            } 
             let jsonString = String(data: data, encoding: String.Encoding.utf8)!
             print (jsonString)
-           // let userData = try! JSONDecoder().decode(DoctorInfo.self, from: data)
+            //let userData = try! JSONDecoder().decode(DoctorInfo.self, from: data)
             
+            print("ResponseResuData:>>>",ResponseResuData.self)
             typealias ResponseResuDatas = [ResponseResuData]
-                      let userDatas = try! JSONDecoder().decode(ResponseResuDatas.self, from: data)
+            let userDatas = try! JSONDecoder().decode(ResponseResuDatas.self, from: data)
                       
-                      print("userData::>>",userDatas.first!)
+            print("userData::>>",userDatas.first!)
             
             
             
