@@ -445,6 +445,7 @@ class ConsumoView: UIViewController , ChartViewDelegate{
             let demanda = "\(userItem.DemandaMax!)"
            
            // if (finalName == resultSum){
+            //PRUEBA DATE
             if finalName.contains(resultSumStr){
                 print("EntrooooDiario::",userItem.CodigoEmr!)
                 let dateFormatter = DateFormatter()
