@@ -36,14 +36,13 @@ struct HomePresenter {
         }
     }
     
-    func getEventos(token:String) -> Observable<[ResponseEventData]>{
-        
+    
+    func getEventos(token:String,idUser:String,top:Int,pagina:Int) -> Observable<[ResponseEventData]>{
         
        // CustomLoader.instance.showLoaderView()
-      
         return Observable<[ResponseEventData]>.create { observer in
             //consumimos el servicio como tal
-            self.serviceEventos.getEventos(token){ responseEventData, error in
+            self.serviceEventos.getEventos(token,idUser,top,pagina){ responseEventData, error in
                 guard let result:[ResponseEventData] = responseEventData else {
                     observer.onError(error!)
                     return

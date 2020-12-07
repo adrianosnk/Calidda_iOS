@@ -86,9 +86,10 @@ class DetailNovedadesView: UIViewController {
         
         
         let stringFecha =  UserDefaults.standard.string(forKey: "KeyFecha")!
-        
+        print("stringFecha:>>:>:>:",stringFecha)
+        /*
         let dateFormatter = DateFormatter()
-                              dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
+                              dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.'Z'"
            let date = dateFormatter.date(from: stringFecha)
                            
              // change to a readable time format and change to local time zone
@@ -99,7 +100,10 @@ class DetailNovedadesView: UIViewController {
         var resultPorcentage:String = ""
           resultPorcentage = timeStamp.replacingOccurrences(of: "/", with: "de")
           resultPorcentage = resultPorcentage.replacingOccurrences(of: "-", with: "del")
-        self.titleDateLabel.text = resultPorcentage
+        */
+        
+        //self.titleDateLabel.text = resultPorcentage
+        self.titleDateLabel.text = stringFecha
                             
         
     }
@@ -108,7 +112,8 @@ class DetailNovedadesView: UIViewController {
         //let userProperties = presenter.getMyUser().TokenAcceso!
         
         let userProperties =  UserDefaults.standard.string(forKey: "KeyToken")!
-        presenter.getDetailEventos(token: userProperties)
+        let idEvento =  UserDefaults.standard.string(forKey: "KeyIdEvento")!
+        presenter.getDetailEventos(token: userProperties,idEvento:idEvento)
             .subscribeOn(MainScheduler.asyncInstance)
             .subscribe(onNext: {result in
                 

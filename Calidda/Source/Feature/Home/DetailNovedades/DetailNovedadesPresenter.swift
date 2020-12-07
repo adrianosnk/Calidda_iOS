@@ -16,13 +16,13 @@ struct DetailNovedadesPresenter {
     }
   
         
-    func getDetailEventos(token:String) -> Observable<[ResponseEventDetailData]>{
+    func getDetailEventos(token:String,idEvento:String) -> Observable<[ResponseEventDetailData]>{
         
        // CustomLoader.instance.showLoaderView()
       
         return Observable<[ResponseEventDetailData]>.create { observer in
             //consumimos el servicio como tal
-            self.serviceEventDetail.getDetailEventos(token){ responseEventDetailData, error in
+            self.serviceEventDetail.getDetailEventos(token,idEvento){ responseEventDetailData, error in
                 guard let result:[ResponseEventDetailData] = responseEventDetailData else {
                     observer.onError(error!)
                     return

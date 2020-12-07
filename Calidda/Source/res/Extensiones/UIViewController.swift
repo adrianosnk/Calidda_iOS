@@ -12,6 +12,8 @@ extension UIViewController : UIGestureRecognizerDelegate {
     
     private struct ViewConstants {
         static let barButtonSize: CGFloat = 30.0
+        static let barButtonSizeLogo: CGFloat = 120.0
+        static let barButtonSizeLogoWhite: CGFloat = 440.0
     }
     
     func loadNavigationBar(hideNavigation : Bool, title : String) {
@@ -29,8 +31,8 @@ extension UIViewController : UIGestureRecognizerDelegate {
         navigationController.navigationBar.isTranslucent = false
         navigationController.interactivePopGestureRecognizer?.delegate = self
         
-        navigationController.navigationBar.barTintColor = CaliddaColors.purple
-        navigationController.navigationBar.backgroundColor = CaliddaColors.purple
+        navigationController.navigationBar.barTintColor = CaliddaColors.white
+        navigationController.navigationBar.backgroundColor = CaliddaColors.white
         
         let image = UIImage()
         navigationController.navigationBar.shadowImage = image
@@ -51,6 +53,13 @@ extension UIViewController : UIGestureRecognizerDelegate {
         self.navigationItem.leftBarButtonItem = leftOption
     }
     
+    func addNavigationLeftLogoOption(target: Any?, selector: Selector, icon: UIImage?) {
+        guard let leftOption = addNavigationLogoOption(target: target, selector: selector, icon: icon) else {
+            return
+        }
+        self.navigationItem.leftBarButtonItem = leftOption
+    }
+    
     private func addNavigationOption(target: Any?, selector: Selector, icon: UIImage?) -> UIBarButtonItem? {
         guard let target = target, let icon = icon else {
             return nil
@@ -62,6 +71,18 @@ extension UIViewController : UIGestureRecognizerDelegate {
         
         return UIBarButtonItem(customView: view)
     }
+    private func addNavigationLogoOption(target: Any?, selector: Selector, icon: UIImage?) -> UIBarButtonItem? {
+        guard let target = target, let icon = icon else {
+            return nil
+        }
+        let tapGesture = UITapGestureRecognizer(target: target, action: selector)
+        let view = UIView(frame: CGRect(x: 0, y: 0, width: ViewConstants.barButtonSize, height: ViewConstants.barButtonSize))
+        view.addGestureRecognizer(tapGesture)
+        addImageLogoView(view: view, image: icon)
+        
+        return UIBarButtonItem(customView: view)
+    }
+    
     
     private func addImageView(view: UIView, image: UIImage) {
         let imageView = UIImageView(image: image)
@@ -80,7 +101,22 @@ extension UIViewController : UIGestureRecognizerDelegate {
             view.heightAnchor.constraint(equalToConstant: ViewConstants.barButtonSize)
         ])
     }
-    
+    private func addImageLogoView(view: UIView, image: UIImage) {
+        let imageView = UIImageView(image: image)
+        imageView.contentMode = .scaleAspectFit
+        view.addSubViewWithLayout(view: imageView)
+        
+        NSLayoutConstraint.activate([
+            imageView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 5),
+            imageView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -5),
+            imageView.topAnchor.constraint(equalTo: view.topAnchor, constant: 5),
+            imageView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -5)
+        ])
+        NSLayoutConstraint.activate([
+            view.widthAnchor.constraint(equalToConstant: ViewConstants.barButtonSizeLogo),
+            view.heightAnchor.constraint(equalToConstant: ViewConstants.barButtonSizeLogoWhite)
+        ])
+    }
     public func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
         return true
     }

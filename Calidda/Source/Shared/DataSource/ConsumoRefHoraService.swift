@@ -16,11 +16,9 @@ class ConsumoRefHoraService:AuthenticationService {
     func getConsumoRefHora(_ token:String,_ userEmp:String,_ hora:String,_ completionHandler: @escaping (_ result: [ResponseReferencialHorario]?, _ error: Error?) -> Void){
    
         
-      
+       
         
         let criptUser = RequestHora.init(codigoEmr: userEmp, fechaConsumo: hora)
-
-        
         let jsonEncoder = JSONEncoder()
         let postData = try! jsonEncoder.encode([criptUser])
             
@@ -63,7 +61,7 @@ class ConsumoRefHoraService:AuthenticationService {
     }
     
 }
-
+ 
 
 struct RequestHora : Codable{
     var CodigoEmr: String

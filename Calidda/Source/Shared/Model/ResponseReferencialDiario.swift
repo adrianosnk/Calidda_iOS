@@ -10,11 +10,11 @@ import UIKit
  
 
 struct ResponseReferencialDiario: Codable {
-    var CodigoEmr:String!
-    var FechaConsumo:String!
-    var Demanda:Double!
-    var PresionPromedio:Double!
-    var DemandaMax:Double!
-    var HoraDemandaMax:Int!
+    var CodigoEmr:String?
+    var FechaConsumo:String?
+    var Demanda:Double?
+    var PresionPromedio:Double?
+    var DemandaMax:Double?
+    var HoraDemandaMax:Int?
 }
 

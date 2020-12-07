@@ -59,12 +59,12 @@ class ChangeLoginLinkPasswordView: UIViewController {
         if self.passActualTexfield.text == ""{
         DispatchQueue.main.async {
                let view = PopUpCloseErrorView()
-               view.setupView(type: .warningVacio)
+               view.setupView(type: .warningVacio, messagin: "")
                AlertComponent.shared.setupAlert(controller: self, messasge: nil, externalView: view)
           }
         }else{
             let view = PopUpCloseErrorView()
-                     view.setupView(type: .changePass)
+                     view.setupView(type: .changePass, messagin: "")
                      view.delegateError = self
                      AlertComponent.shared.setupAlert(controller: self, messasge: nil, externalView: view)
             

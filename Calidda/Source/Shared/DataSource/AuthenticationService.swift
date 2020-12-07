@@ -14,11 +14,11 @@ struct UserLogin: Codable {
              var Cuenta: String
              var Externo: Bool
 }
-
+  
 class AuthenticationService {
   //  let URL_BASE:String = "https://devapi.smartdoctor.pe/v1"
    // let URL_BASE:String = "https://64ef6ff3-71e0-4823-9ef8-1635d2400e38.mock.pstmn.io"
-   // let URL_BASE:String = "http://127.0.0.1:3001"
+    //let URL_BASE:String = "http://127.0.0.1:3001"
     let URL_BASE:String = "http://portalextranet.eastus.cloudapp.azure.com:100"
     let OS:String = "iOS"
     func createConnection(endPoint:String) -> URLRequest {
@@ -36,7 +36,7 @@ class AuthenticationService {
         //var request = createConnection(endPoint: "/api/login/clientes")
         var request = createConnection(endPoint: "/api/login")
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        
+         
         request.httpMethod = "POST"
         request.httpBody = postData
         
@@ -53,26 +53,36 @@ class AuthenticationService {
             typealias ResponseUserDatas = [ResponseUserData]
            
             if let httpresponse = response as? HTTPURLResponse{
-                
+
+                print("errorRRR::>>",error)
+                print("httpresponseRRR::>>",httpresponse)
+                print("responseRRR::>>",response)
                 if httpresponse.statusCode == 429{
                     completionHandler(nil,error)
                     
-                }else if httpresponse.statusCode == 200 {
+                }else if httpresponse.statusCode == 200   {
+                    print(String(data: data, encoding: .utf8)!)
                     let userDatas = try! JSONDecoder().decode(ResponseUserDatas.self, from: data)
-                    
-                      
-                     // print("userData::>>",userDatas.first!)
-                     // self.authFirebase(email, password)
-                      
+
                           let encodedData = NSKeyedArchiver.archivedData(withRootObject: data)
                           UserDefaults.standard.set(encodedData, forKey: "users")
                           UserDefaults.standard.synchronize()
                           let userData = userDatas.first!
-                      
                           completionHandler(userData,nil)
-                }
+                    
+                }else if  httpresponse.statusCode == 400  {
+                    print(String(data: data, encoding: .utf8)!)
+                    let userErrorBody = try! JSONDecoder().decode(ResponseUserData.self, from: data)
+
+                          let encodedData = NSKeyedArchiver.archivedData(withRootObject: data)
+                          UserDefaults.standard.set(encodedData, forKey: "users")
+                          UserDefaults.standard.synchronize()
+                          
+                          completionHandler(userErrorBody,nil)
+                    
+                } 
             }
-            
+ 
             print(String(data: data, encoding: .utf8)!)
             //            semaphore.signal()
         }
@@ -97,7 +107,7 @@ extension Dictionary {
         do {
             let jsonData = try JSONSerialization.data(withJSONObject: self, options: [])
             //            let jsonString = String(data: jsonData, encoding: String.Encoding.utf8)!
-                print (jsonData)
+                print ("printJsoond:",jsonData)
             return jsonData
             
         } catch {

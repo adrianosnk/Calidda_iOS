@@ -13,11 +13,11 @@ import Foundation
 class EventDetailService:AuthenticationService {
     //unarchivedObjectOfClass:fromData:error: instead
  
-    func getDetailEventos(_ token:String,_ completionHandler: @escaping (_ result: [ResponseEventDetailData]?, _ error: Error?) -> Void){
+    func getDetailEventos(_ token:String,_ idEvento:String,_ completionHandler: @escaping (_ result: [ResponseEventDetailData]?, _ error: Error?) -> Void){
         
        
-        var request = createConnection(endPoint: "/api/clientes/eventos/detalle?Id=IdEvento")
-        request.addValue("token \(token)", forHTTPHeaderField: "Authorization")
+        var request = createConnection(endPoint: "/api/clientes/eventos/detalle?Id=\(idEvento)")
+        request.addValue("\(token)", forHTTPHeaderField: "Authorization")
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         request.httpMethod = "GET"
         

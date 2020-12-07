@@ -12,6 +12,7 @@ enum PopUpCloseErrorType {
     case error
     case warningVacio
     case warning
+    case messagin
     case connection
     case changePass
     case oldPass
@@ -116,7 +117,7 @@ class PopUpCloseErrorView: BaseAlert {
     
     // MARK: - SetupView
     
-    func setupView(type: PopUpCloseErrorType) {
+    func setupView(type: PopUpCloseErrorType,messagin: String) {
         self.type = type
         switch type {
         case .error:
@@ -142,6 +143,19 @@ class PopUpCloseErrorView: BaseAlert {
             imageView.image = CaliddaImage.getImage(named: .iconWarning)
             buttonAccept.setTitle(DefaultText.buttonTitleProblem, for: .normal)
             
+ 
+        case .messagin:
+            let tapGesture = UITapGestureRecognizer(target: self, action: #selector(onClosePopup))
+            viewClose.addGestureRecognizer(tapGesture)
+               
+            imageViewClose.image = CaliddaImage.getImage(named: .iconClose)
+            imageViewClose.contentMode = .scaleAspectFit
+               
+            //labelTitle.text = DefaultText.titleProblem
+            labelTitle.text = "Alerta!"
+            labelDescription.text = messagin
+            imageView.image = CaliddaImage.getImage(named: .iconWarning)
+            buttonAccept.setTitle(DefaultText.buttonTitleProblem, for: .normal)
             
         case .oldPass:
             let tapGesture = UITapGestureRecognizer(target: self, action: #selector(onClosePopup))

@@ -48,22 +48,30 @@ class FacturaView: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         // Do any additional setup after loading the view.
-        
         //self.didTapButton()
-        
         setupUI()
         loadData()
-        
-         tableView.reloadData()
-        
+        tableView.reloadData()
         refreshControl.attributedTitle = NSAttributedString(string: "")
         refreshControl.addTarget(self, action: #selector(self.refresh(_:)), for: .valueChanged)
         tableView.addSubview(refreshControl) // not required when using UITableViewController
-
-        
-    }
+        setupNavigationBar()
+     }  
+     // MARK: - Setup
+     func setupNavigationBar(){
+            self.navigationController?.navigationBar.isHidden = false
+            loadNavigationBar(hideNavigation: false, title: "Home")
+            addNavigationLeftLogoOption(target: self, selector: #selector(goBack), icon: CaliddaImage.getImage(named: .icon_LogoCalidda))
+            addNavigationRightOption(target: self, selector: #selector(goNotification), icon: CaliddaImage.getImage(named: .icon_AlertaBlue))
+      }
+      // MARK: - Actions
+       @IBAction func goBack() {
+           // router.pop(sender: self)
+       }
+       @IBAction func goNotification() {
+            // router.pop(sender: self)
+       }
     
       @objc func refresh(_ sender: AnyObject) {
          // Code to refresh table view
@@ -184,7 +192,7 @@ class FacturaView: UIViewController {
         }
     }
     override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.navigationBar.isHidden = true
+        self.navigationController?.navigationBar.isHidden = false
     }
     override var preferredStatusBarStyle: UIStatusBarStyle {
           return .lightContent

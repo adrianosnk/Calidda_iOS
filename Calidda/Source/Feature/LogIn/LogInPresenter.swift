@@ -37,9 +37,11 @@ struct LogInPresenter {
             //consumimos el servicio como tal
             CustomLoader.instance.hideLoaderView()
             self.service.auth(email, password){ usuarioData, error in
-                
+
+               // print("error1!::=>>",error!)
                 guard let result:ResponseUserData = usuarioData else {
                   //  ProgressView.shared.hideProgressView()
+                  print("error2!::=>>",error!)
                     observer.onError(error!)
                     return
                 }
@@ -47,6 +49,7 @@ struct LogInPresenter {
                 observer.onNext(result)
                 observer.onCompleted()
             }
+            
             return Disposables.create()
         }
     }

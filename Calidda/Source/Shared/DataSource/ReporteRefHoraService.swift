@@ -6,20 +6,31 @@
 //  Copyright © 2020 Calidda. All rights reserved.
 //
 
-
 import UIKit
 import Foundation
 
-class EventService:AuthenticationService {
-    //unarchivedObjectOfClass:fromData:error: instead
- 
-    func getEventos(_ token:String,_ idUser:String,_ top:Int,_ pagina:Int,_ completionHandler: @escaping (_ result: [ResponseEventData]?, _ error: Error?) -> Void){
+class ReporteRefHoraService:AuthenticationService {
+   
+    func getReporteRefHora(_ token:String,_ codEmp:String,_ hora:String,_ completionHandler: @escaping (_ result: [ResponseReporteRefHora]?, _ error: Error?) -> Void){
         
-       
-        var request = createConnection(endPoint: "/api/clientes/eventos?Id=\(idUser)&top=\(top)&pagina=\(pagina)")
+         
+        let date = NSDate()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.sssZ"
+        let dateString = dateFormatter.string(from: date as Date)
+        
+        //let hora =  "2020-11-30T15:09:21.88Z"
+        let hora =  dateString
+        
+        let criptUser = RequestReporteHora.init(codigoEmr: codEmp, fechaConsumo: hora)
+        let jsonEncoder = JSONEncoder()
+        let postData = try! jsonEncoder.encode([criptUser])
+             
+        var request = createConnection(endPoint: "/api/clientes/reporte/consumo/referencial/horario")
         request.addValue("\(token)", forHTTPHeaderField: "Authorization")
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.httpMethod = "GET"
+        request.httpMethod = "POST"
+        request.httpBody = postData
         
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
             guard let data = data else {
@@ -29,27 +40,17 @@ class EventService:AuthenticationService {
                 
                 return
             }
-            print(">>ZZ>>:",String(data: data, encoding: .utf8)!)
-            //semaphore.signal()
-            
-            
             let jsonString = String(data: data, encoding: String.Encoding.utf8)!
             print (jsonString)
            // let userData = try! JSONDecoder().decode(ResponseFacturaDatas.self, from: data)
-             
-            typealias ResponseEventos = [ResponseEventData]
-            let userDatas = try! JSONDecoder().decode(ResponseEventos.self, from: data)
+              
+            typealias ResponseReferencialMensuals = [ResponseReporteRefHora]
+            let userDatas = try! JSONDecoder().decode(ResponseReferencialMensuals.self, from: data)
                       
             
-                           
-            
-           // print("userData::>>",userDatas.first!)
             print("userDataA::>>",userDatas)
             
-           // var responseFactura = ResponseFacturaData()
- 
- 
-           
+            
             let encodedData = NSKeyedArchiver.archivedData(withRootObject: data)
             UserDefaults.standard.set(encodedData, forKey: "KeyFactura")
             UserDefaults.standard.synchronize()
@@ -60,8 +61,17 @@ class EventService:AuthenticationService {
             print(String(data: data, encoding: .utf8)!)
         }
         
-        //semaphore.wait()
         task.resume()
     }
     
+}
+
+struct RequestReporteHora : Codable{
+    var CodigoEmr: String
+    var FechaConsumo: String
+    init(codigoEmr:String,
+         fechaConsumo:String) {
+        self.CodigoEmr = codigoEmr
+        self.FechaConsumo = fechaConsumo
+    }
 }

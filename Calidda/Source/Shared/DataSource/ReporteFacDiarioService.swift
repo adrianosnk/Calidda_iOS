@@ -6,17 +6,14 @@
 //  Copyright © 2020 Calidda. All rights reserved.
 //
 
-
 import UIKit
 import Foundation
 
-class EventService:AuthenticationService {
-    //unarchivedObjectOfClass:fromData:error: instead
- 
-    func getEventos(_ token:String,_ idUser:String,_ top:Int,_ pagina:Int,_ completionHandler: @escaping (_ result: [ResponseEventData]?, _ error: Error?) -> Void){
+class ReporteFacDiarioService:AuthenticationService {
+   
+    func getConsumoRefMes(_ token:String,_ codEmp:String,_ completionHandler: @escaping (_ result: [ResponseReferencialMensual]?, _ error: Error?) -> Void){
         
-       
-        var request = createConnection(endPoint: "/api/clientes/eventos?Id=\(idUser)&top=\(top)&pagina=\(pagina)")
+        var request = createConnection(endPoint: "/api/clientes/consumo/referencial/mensual?CodigoEmr=\(codEmp)")
         request.addValue("\(token)", forHTTPHeaderField: "Authorization")
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         request.httpMethod = "GET"
@@ -29,27 +26,17 @@ class EventService:AuthenticationService {
                 
                 return
             }
-            print(">>ZZ>>:",String(data: data, encoding: .utf8)!)
-            //semaphore.signal()
-            
-            
             let jsonString = String(data: data, encoding: String.Encoding.utf8)!
             print (jsonString)
            // let userData = try! JSONDecoder().decode(ResponseFacturaDatas.self, from: data)
              
-            typealias ResponseEventos = [ResponseEventData]
-            let userDatas = try! JSONDecoder().decode(ResponseEventos.self, from: data)
+            typealias ResponseReferencialMensuals = [ResponseReferencialMensual]
+            let userDatas = try! JSONDecoder().decode(ResponseReferencialMensuals.self, from: data)
                       
             
-                           
-            
-           // print("userData::>>",userDatas.first!)
             print("userDataA::>>",userDatas)
             
-           // var responseFactura = ResponseFacturaData()
- 
- 
-           
+            
             let encodedData = NSKeyedArchiver.archivedData(withRootObject: data)
             UserDefaults.standard.set(encodedData, forKey: "KeyFactura")
             UserDefaults.standard.synchronize()
@@ -60,7 +47,6 @@ class EventService:AuthenticationService {
             print(String(data: data, encoding: .utf8)!)
         }
         
-        //semaphore.wait()
         task.resume()
     }
     

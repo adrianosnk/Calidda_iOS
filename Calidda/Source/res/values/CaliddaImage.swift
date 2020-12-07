@@ -30,6 +30,8 @@ class CaliddaImage {
         
         case icon_ConsumoBlue = "icon_ConsumoBlue"
         
+        case icon_LogoCalidda = "LogoCalidda"
+        case icon_AlertaBlue = "icon_AlertaBlue"
     }
     
     

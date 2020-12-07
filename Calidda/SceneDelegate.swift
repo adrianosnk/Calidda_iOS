@@ -142,6 +142,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
            let navigatiorView = UINavigationController()
            navigatiorView.isNavigationBarHidden = true
            window?.rootViewController = navigatiorView
+           
            //window?.rootViewController = referenceUITabBarController
         
         

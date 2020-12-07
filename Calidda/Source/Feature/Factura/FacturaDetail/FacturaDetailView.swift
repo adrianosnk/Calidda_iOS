@@ -83,16 +83,27 @@ class FacturaDetailView: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         // Do any additional setup after loading the view.
-        
-        //self.didTapButton()
-        
         setupUI()
         loadData()
-        
-         tableView.reloadData()
+        tableView.reloadData()
+    
+        setupNavigationBar()
     }
+    // MARK: - Setup
+    func setupNavigationBar(){
+               self.navigationController?.navigationBar.isHidden = false
+               loadNavigationBar(hideNavigation: false, title: "Detalle")
+               addNavigationLeftOption(target: self, selector: #selector(goBack), icon: CaliddaImage.getImage(named: .icon_LogoCalidda))
+               addNavigationRightOption(target: self, selector: #selector(goNotification), icon: CaliddaImage.getImage(named: .icon_AlertaBlue))
+     }
+         // MARK: - Actions
+     @IBAction func goBack() {
+         router.pop(sender: self)
+     }
+     @IBAction func goNotification() {
+         //router.pop(sender: self)
+     }
     
   
     
@@ -199,7 +210,7 @@ class FacturaDetailView: UIViewController {
             self.viewEstado.layer.cornerRadius = 5
             self.viewEstado.backgroundColor = CaliddaColors.purple
             
-            
+             
             self.IdRecibo = info.IdRecibo!
             self.Mes = info.Mes
             self.Anio = info.Anio

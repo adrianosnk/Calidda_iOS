@@ -15,56 +15,45 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mae-gp-JzB">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="96"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ico_LogCalidda" translatesAutoresizingMaskIntoConstraints="NO" id="ca3-su-tR4">
-                                        <rect key="frame" x="20" y="43" width="145" height="51"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                            </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="temp_Mante" translatesAutoresizingMaskIntoConstraints="NO" id="6LZ-A1-9Hh">
-                                <rect key="frame" x="0.0" y="104" width="414" height="395"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="444"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZgK-6p-ydL" customClass="MenuFooter" customModule="Calidda" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="806" width="414" height="90"/>
+                                <rect key="frame" x="0.0" y="715" width="414" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UWe-zt-ren">
-                                <rect key="frame" x="0.0" y="806" width="83" height="90"/>
+                                <rect key="frame" x="0.0" y="715" width="83" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <action selector="btnConsumo:" destination="Vgb-uR-elD" eventType="touchUpInside" id="6Z4-rY-6XQ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="puD-Ui-a1Z">
-                                <rect key="frame" x="90" y="806" width="73" height="90"/>
+                                <rect key="frame" x="90" y="715" width="73" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <action selector="btnFactura:" destination="Vgb-uR-elD" eventType="touchUpInside" id="ogw-Eb-Rwt"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OtR-vI-p8Q">
-                                <rect key="frame" x="170" y="806" width="73" height="90"/>
+                                <rect key="frame" x="170" y="715" width="73" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <action selector="btnMenu:" destination="Vgb-uR-elD" eventType="touchUpInside" id="vlZ-8Y-Qtg"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VeF-Y4-73e">
-                                <rect key="frame" x="260" y="806" width="73" height="90"/>
+                                <rect key="frame" x="260" y="715" width="73" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <action selector="btnMante:" destination="Vgb-uR-elD" eventType="touchUpInside" id="kzb-2A-opZ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aYu-3s-HM1">
-                                <rect key="frame" x="340" y="806" width="73" height="90"/>
+                                <rect key="frame" x="340" y="715" width="73" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <action selector="btnGestion:" destination="Vgb-uR-elD" eventType="touchUpInside" id="IfX-kk-pnO"/>
@@ -81,7 +70,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="ico_LogCalidda" width="175" height="60"/>
         <image name="temp_Mante" width="314" height="292"/>
     </resources>
 </document>

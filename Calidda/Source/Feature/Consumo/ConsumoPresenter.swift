@@ -14,16 +14,28 @@ struct ConsumoPresenter {
      private var service:ConsumoRefHoraService!
      private var serviceRefDiario:ConsumoRefDiarioService!
      private var serviceRefMes:ConsumoRefMesService!
-    
+     
      private var serviceFacDiario:ConsumoFacDiarioService!
      private var serviceFacMes:ConsumoFacMesService!
     
-    init(consumoService:ConsumoRefHoraService,consumoRefDiarService:ConsumoRefDiarioService,consumoRefMesService:ConsumoRefMesService,consumoFacDiarioService:ConsumoFacDiarioService,consumoFacMesService:ConsumoFacMesService) {
+     private var serviceReportRefHora:ReporteRefHoraService!
+     private var serviceReportRefDia:ReporteRefDiarioService!
+     private var serviceReportRefMes:ReporteRefMesService!
+     private var serviceReportFacDia:ReporteFacDiarioService!
+     private var serviceReportFacMes:ReporteFacMesService!
+    
+    init(consumoService:ConsumoRefHoraService,consumoRefDiarService:ConsumoRefDiarioService,consumoRefMesService:ConsumoRefMesService,consumoFacDiarioService:ConsumoFacDiarioService,consumoFacMesService:ConsumoFacMesService,reporteRefHoraService:ReporteRefHoraService,reporteRefDiarioService:ReporteRefDiarioService,reporteRefMesService:ReporteRefMesService,reporteFacDiarioService:ReporteFacDiarioService,reporteFacMesService:ReporteFacMesService) {
             service = consumoService
             serviceRefDiario = consumoRefDiarService
             serviceRefMes = consumoRefMesService
             serviceFacDiario = consumoFacDiarioService
             serviceFacMes = consumoFacMesService
+        
+            serviceReportRefHora = reporteRefHoraService
+            serviceReportRefDia = reporteRefDiarioService
+            serviceReportRefMes = reporteRefMesService
+            serviceReportFacDia = reporteFacDiarioService
+            serviceReportFacMes = reporteFacMesService
         }
     
      func getConsumoRefHora(token:String,userEmp:String,hora:String) -> Observable<[ResponseReferencialHorario]>{
@@ -41,6 +53,23 @@ struct ConsumoPresenter {
                 return Disposables.create()
             }
      }
+      
+    func getReporteRefHora(token:String,userEmp:String,hora:String) -> Observable<[ResponseReporteRefHora]>{
+            return Observable<[ResponseReporteRefHora]>.create { observer in
+                //consumimos el servicio como tal
+                self.serviceReportRefHora.getReporteRefHora(token,userEmp,hora){ responseReporteRefHora, error in
+                    
+                    guard let result:[ResponseReporteRefHora] = responseReporteRefHora else {
+                        observer.onError(error!)
+                        return
+                    }
+                    observer.onNext(result)
+                    observer.onCompleted()
+                }
+                return Disposables.create()
+            }
+     }
+    
  
    
     func getConsumoRefDiario(token:String,codEmp:String,mes:Int,anio:Int) -> Observable<[ResponseReferencialDiario]>{

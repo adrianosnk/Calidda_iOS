@@ -43,7 +43,7 @@ class OldPasswordView: UIViewController {
            if self.emailTexfield.text == ""{
            DispatchQueue.main.async {
                   let view = PopUpCloseErrorView()
-                  view.setupView(type: .warningVacio)
+            view.setupView(type: .warningVacio, messagin: "")
                   AlertComponent.shared.setupAlert(controller: self, messasge: nil, externalView: view)
              }
            }else{
@@ -65,7 +65,7 @@ class OldPasswordView: UIViewController {
                                   onError: {error in
                                  DispatchQueue.main.async {
                                    let view = PopUpCloseErrorView()
-                                          view.setupView(type: .error)
+                                          view.setupView(type: .error, messagin: "")
                                           view.delegateError = self
                                           AlertComponent.shared.setupAlert(controller: self, messasge: nil, externalView: view)
                                }
@@ -76,7 +76,7 @@ class OldPasswordView: UIViewController {
             
             
                let view = PopUpCloseErrorView()
-                        view.setupView(type: .oldPass)
+                        view.setupView(type: .oldPass, messagin: "")
                         view.delegateError = self
                         AlertComponent.shared.setupAlert(controller: self, messasge: nil, externalView: view)
                

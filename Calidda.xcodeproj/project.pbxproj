@@ -115,6 +115,16 @@
 		41A3BAE7257197A400DD3F4C /* Constan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A3BAE6257197A400DD3F4C /* Constan.swift */; };
 		41B59328257692B2002A8F27 /* OldPasswordService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B59327257692B1002A8F27 /* OldPasswordService.swift */; };
 		41B5932A25769BD8002A8F27 /* ResponseOldPasswordData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B5932925769BD8002A8F27 /* ResponseOldPasswordData.swift */; };
+		41B5932C25775329002A8F27 /* ResponseReporteRefHora.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B5932B25775328002A8F27 /* ResponseReporteRefHora.swift */; };
+		41B5932E257753FF002A8F27 /* ResponseReporteRefDiario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B5932D257753FE002A8F27 /* ResponseReporteRefDiario.swift */; };
+		41B59330257754BB002A8F27 /* ResponseReporteRefMensual.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B5932F257754B9002A8F27 /* ResponseReporteRefMensual.swift */; };
+		41B59333257755BD002A8F27 /* ResponseReporteFacDiario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B59331257755B5002A8F27 /* ResponseReporteFacDiario.swift */; };
+		41B59334257755BD002A8F27 /* ResponseReporteFacMes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B59332257755BC002A8F27 /* ResponseReporteFacMes.swift */; };
+		41B5933A25775A28002A8F27 /* ReporteRefMesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B5933525775A26002A8F27 /* ReporteRefMesService.swift */; };
+		41B5933B25775A28002A8F27 /* ReporteFacDiarioService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B5933625775A26002A8F27 /* ReporteFacDiarioService.swift */; };
+		41B5933C25775A28002A8F27 /* ReporteFacMesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B5933725775A27002A8F27 /* ReporteFacMesService.swift */; };
+		41B5933D25775A28002A8F27 /* ReporteRefDiarioService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B5933825775A27002A8F27 /* ReporteRefDiarioService.swift */; };
+		41B5933E25775A28002A8F27 /* ReporteRefHoraService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B5933925775A28002A8F27 /* ReporteRefHoraService.swift */; };
 		41B84F972559D29800A4E0FB /* ResponseFacturaData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B84F962559D29600A4E0FB /* ResponseFacturaData.swift */; };
 		41B84F992559D31B00A4E0FB /* FacturaService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B84F982559D31B00A4E0FB /* FacturaService.swift */; };
 		41B84F9D255B0EA500A4E0FB /* PopUpCloseErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B84F9B255B0EA300A4E0FB /* PopUpCloseErrorView.swift */; };
@@ -126,6 +136,7 @@
 		41D6B8F4256E083C00AC5A6F /* TabBarItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D6B8F1256E083B00AC5A6F /* TabBarItemView.swift */; };
 		41D6B8F7256E08B400AC5A6F /* Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D6B8F6256E08B300AC5A6F /* Layout.swift */; };
 		41D6B8F9256E0B4200AC5A6F /* TabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D6B8F8256E0B4200AC5A6F /* TabbarViewController.swift */; };
+		41EFC9D8257999E80076ECB9 /* ResponseErrorData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41EFC9D7257999E70076ECB9 /* ResponseErrorData.swift */; };
 		41F1247B254C8FCE0042877D /* Factura.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41F1247A254C8FCE0042877D /* Factura.storyboard */; };
 		41F1247E254C90040042877D /* FacturaPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F1247C254C90010042877D /* FacturaPresenter.swift */; };
 		41F1247F254C90040042877D /* FacturaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F1247D254C90040042877D /* FacturaView.swift */; };
@@ -307,6 +318,16 @@
 		41A3BAE6257197A400DD3F4C /* Constan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constan.swift; sourceTree = "<group>"; };
 		41B59327257692B1002A8F27 /* OldPasswordService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OldPasswordService.swift; sourceTree = "<group>"; };
 		41B5932925769BD8002A8F27 /* ResponseOldPasswordData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseOldPasswordData.swift; sourceTree = "<group>"; };
+		41B5932B25775328002A8F27 /* ResponseReporteRefHora.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseReporteRefHora.swift; sourceTree = "<group>"; };
+		41B5932D257753FE002A8F27 /* ResponseReporteRefDiario.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseReporteRefDiario.swift; sourceTree = "<group>"; };
+		41B5932F257754B9002A8F27 /* ResponseReporteRefMensual.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseReporteRefMensual.swift; sourceTree = "<group>"; };
+		41B59331257755B5002A8F27 /* ResponseReporteFacDiario.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseReporteFacDiario.swift; sourceTree = "<group>"; };
+		41B59332257755BC002A8F27 /* ResponseReporteFacMes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseReporteFacMes.swift; sourceTree = "<group>"; };
+		41B5933525775A26002A8F27 /* ReporteRefMesService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReporteRefMesService.swift; sourceTree = "<group>"; };
+		41B5933625775A26002A8F27 /* ReporteFacDiarioService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReporteFacDiarioService.swift; sourceTree = "<group>"; };
+		41B5933725775A27002A8F27 /* ReporteFacMesService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReporteFacMesService.swift; sourceTree = "<group>"; };
+		41B5933825775A27002A8F27 /* ReporteRefDiarioService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReporteRefDiarioService.swift; sourceTree = "<group>"; };
+		41B5933925775A28002A8F27 /* ReporteRefHoraService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReporteRefHoraService.swift; sourceTree = "<group>"; };
 		41B84F962559D29600A4E0FB /* ResponseFacturaData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseFacturaData.swift; sourceTree = "<group>"; };
 		41B84F982559D31B00A4E0FB /* FacturaService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacturaService.swift; sourceTree = "<group>"; };
 		41B84F9B255B0EA300A4E0FB /* PopUpCloseErrorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PopUpCloseErrorView.swift; path = "Calidda/Source/res/Elements/New Group/PopUpCloseErrorView.swift"; sourceTree = SOURCE_ROOT; };
@@ -320,6 +341,7 @@
 		41D6B8F8256E0B4200AC5A6F /* TabbarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabbarViewController.swift; sourceTree = "<group>"; };
 		41D6B8FA256E0D0E00AC5A6F /* ResponsiveTabbarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResponsiveTabbarViewController.h; sourceTree = "<group>"; };
 		41D6B8FD256E237900AC5A6F /* TabbarViewController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TabbarViewController.framework; path = ../../Temp/TabbarViewController.framework; sourceTree = "<group>"; };
+		41EFC9D7257999E70076ECB9 /* ResponseErrorData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseErrorData.swift; sourceTree = "<group>"; };
 		41F1247A254C8FCE0042877D /* Factura.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Factura.storyboard; sourceTree = "<group>"; };
 		41F1247C254C90010042877D /* FacturaPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacturaPresenter.swift; sourceTree = "<group>"; };
 		41F1247D254C90040042877D /* FacturaView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacturaView.swift; sourceTree = "<group>"; };
@@ -606,6 +628,7 @@
 			isa = PBXGroup;
 			children = (
 				41004852256C1D980041D7BC /* ResponseEventDetailData.swift */,
+				41EFC9D7257999E70076ECB9 /* ResponseErrorData.swift */,
 				4190C2792567FCFA00EF1BD5 /* ModelCalendar */,
 				4190C268256744A700EF1BD5 /* ResponseEventData.swift */,
 				41B5932925769BD8002A8F27 /* ResponseOldPasswordData.swift */,
@@ -613,6 +636,11 @@
 				41217D30255DEB8F00605A1C /* ResponseFacturadoDiario.swift */,
 				41217D2F255DEB8C00605A1C /* ResponseReferencialDiario.swift */,
 				41217D32255DEB9500605A1C /* ResponseReferencialHorario.swift */,
+				41B5932B25775328002A8F27 /* ResponseReporteRefHora.swift */,
+				41B5932D257753FE002A8F27 /* ResponseReporteRefDiario.swift */,
+				41B5932F257754B9002A8F27 /* ResponseReporteRefMensual.swift */,
+				41B59331257755B5002A8F27 /* ResponseReporteFacDiario.swift */,
+				41B59332257755BC002A8F27 /* ResponseReporteFacMes.swift */,
 				41217D31255DEB9200605A1C /* ResponseReferencialMensual.swift */,
 				411BEB96255C47B000FCD8DB /* ResponseFacDetailData.swift */,
 				41B84F962559D29600A4E0FB /* ResponseFacturaData.swift */,
@@ -637,6 +665,11 @@
 				41217D3A255DEF0600605A1C /* ConsumoRefDiarioService.swift */,
 				41217D38255DEF0000605A1C /* ConsumoRefHoraService.swift */,
 				41217D37255DEEFE00605A1C /* ConsumoRefMesService.swift */,
+				41B5933625775A26002A8F27 /* ReporteFacDiarioService.swift */,
+				41B5933725775A27002A8F27 /* ReporteFacMesService.swift */,
+				41B5933825775A27002A8F27 /* ReporteRefDiarioService.swift */,
+				41B5933925775A28002A8F27 /* ReporteRefHoraService.swift */,
+				41B5933525775A26002A8F27 /* ReporteRefMesService.swift */,
 				411BEB98255C497800FCD8DB /* FacturaDetailService.swift */,
 				41B84F982559D31B00A4E0FB /* FacturaService.swift */,
 				415EFC2A25434A36003D57AE /* HomeService.swift */,
@@ -1287,10 +1320,12 @@
 				416C5D4F2542440800C1B012 /* ViewController.swift in Sources */,
 				41F12499254CC9030042877D /* UIImageExtension.swift in Sources */,
 				4190C2752567FC0C00EF1BD5 /* CalendarPickerViewController.swift in Sources */,
+				41B5933C25775A28002A8F27 /* ReporteFacMesService.swift in Sources */,
 				41F12491254CC4650042877D /* Analytics.swift in Sources */,
 				41445189254A19FA00760038 /* HomeListaViewCell.swift in Sources */,
 				41217D2D255D846800605A1C /* HomeFirstDetailInfoViewCell.swift in Sources */,
 				410F42C22565B54600FD3797 /* DetailPdfView.swift in Sources */,
+				41B5932E257753FF002A8F27 /* ResponseReporteRefDiario.swift in Sources */,
 				410F42B725659E2400FD3797 /* Gif+Image.swift in Sources */,
 				41B84F9D255B0EA500A4E0FB /* PopUpCloseErrorView.swift in Sources */,
 				41F12492254CC4650042877D /* ProgressView.swift in Sources */,
@@ -1299,6 +1334,7 @@
 				41F124C7255113E20042877D /* MantenimientoPresenter.swift in Sources */,
 				415EFBE725432992003D57AE /* SplashView.swift in Sources */,
 				411BEB97255C47B200FCD8DB /* ResponseFacDetailData.swift in Sources */,
+				41B5932C25775329002A8F27 /* ResponseReporteRefHora.swift in Sources */,
 				415EFBF6254329F3003D57AE /* UIView.swift in Sources */,
 				4190C27D2567FD2200EF1BD5 /* Day.swift in Sources */,
 				41F124B525506F0D0042877D /* FacturaListaFirstDetailInfoViewCell.swift in Sources */,
@@ -1307,6 +1343,7 @@
 				4144517F2548D4CB00760038 /* ChangePasswordPresenter.swift in Sources */,
 				41B84F992559D31B00A4E0FB /* FacturaService.swift in Sources */,
 				41F124AC254D34D40042877D /* FacturaDetailInfoViewCell.swift in Sources */,
+				41B59333257755BD002A8F27 /* ResponseReporteFacDiario.swift in Sources */,
 				410F42B425643A0400FD3797 /* ConsumoFacMesService.swift in Sources */,
 				41D4235B25556818004FCC16 /* ResponseResuData.swift in Sources */,
 				41F1248B254CA5E10042877D /* HHTabButton.swift in Sources */,
@@ -1343,6 +1380,8 @@
 				41B59328257692B2002A8F27 /* OldPasswordService.swift in Sources */,
 				41F124A1254CDBC00042877D /* UIBorderlessNavigationBar.swift in Sources */,
 				41F1248A254CA5E10042877D /* HHTabLabel.swift in Sources */,
+				41B5933A25775A28002A8F27 /* ReporteRefMesService.swift in Sources */,
+				41B5933E25775A28002A8F27 /* ReporteRefHoraService.swift in Sources */,
 				415EFC2B25434A37003D57AE /* HomeService.swift in Sources */,
 				410F42C12565B54600FD3797 /* DetailPdfPresenter.swift in Sources */,
 				410F42B925659E5200FD3797 /* CustomLoader.swift in Sources */,
@@ -1351,6 +1390,7 @@
 				415EFC0525433591003D57AE /* Router.swift in Sources */,
 				41F124BF2550BDE90042877D /* ConsumoPresenter.swift in Sources */,
 				41B84F972559D29800A4E0FB /* ResponseFacturaData.swift in Sources */,
+				41B5933D25775A28002A8F27 /* ReporteRefDiarioService.swift in Sources */,
 				41D423572554E060004FCC16 /* ResponseUserData.swift in Sources */,
 				415EFBF7254329F3003D57AE /* UIDevice.swift in Sources */,
 				41F124A6254D341C0042877D /* FacturaDetailPresenter.swift in Sources */,
@@ -1371,6 +1411,7 @@
 				41217D3E255DEF0600605A1C /* ConsumoRefDiarioService.swift in Sources */,
 				41FD6535254B5B6200FDEF34 /* MenuFooter.swift in Sources */,
 				41F1247F254C90040042877D /* FacturaView.swift in Sources */,
+				41B5933B25775A28002A8F27 /* ReporteFacDiarioService.swift in Sources */,
 				416C5D4B2542440800C1B012 /* AppDelegate.swift in Sources */,
 				415EFC1325434502003D57AE /* UserData.swift in Sources */,
 				415EFC2F25434CCD003D57AE /* PreferenceInfoData.swift in Sources */,
@@ -1379,12 +1420,14 @@
 				4190C2782567FC0C00EF1BD5 /* CalendarDateCollectionViewCell.swift in Sources */,
 				416C5D4D2542440800C1B012 /* SceneDelegate.swift in Sources */,
 				415EFBF5254329F3003D57AE /* Double.swift in Sources */,
+				41B59334257755BD002A8F27 /* ResponseReporteFacMes.swift in Sources */,
 				41217D3D255DEF0600605A1C /* ConsumoFacDiarioService.swift in Sources */,
 				41D6B8F9256E0B4200AC5A6F /* TabbarViewController.swift in Sources */,
 				415EFBF4254329F3003D57AE /* UIButton.swift in Sources */,
 				41F124A7254D341C0042877D /* FacturaDetailView.swift in Sources */,
 				4144517B2548D39100760038 /* OldPasswordView.swift in Sources */,
 				4190C26B2567468100EF1BD5 /* EventService.swift in Sources */,
+				41EFC9D8257999E80076ECB9 /* ResponseErrorData.swift in Sources */,
 				41F1248C254CA5E10042877D /* HHButton+Extension.swift in Sources */,
 				415EFC1D2543462D003D57AE /* BaseAlert.swift in Sources */,
 				41445184254A0D7600760038 /* HomeInfoViewCell.swift in Sources */,
@@ -1393,6 +1436,7 @@
 				415EFC1125433CA4003D57AE /* AuthenticationService.swift in Sources */,
 				41217D34255DEB9500605A1C /* ResponseFacturadoDiario.swift in Sources */,
 				4144517C2548D39100760038 /* OldPasswordPresenter.swift in Sources */,
+				41B59330257754BB002A8F27 /* ResponseReporteRefMensual.swift in Sources */,
 				4190C27E2567FD2200EF1BD5 /* MonthMetadata.swift in Sources */,
 				41F124C02550BDE90042877D /* ConsumoView.swift in Sources */,
 				41F124A2254CDBC00042877D /* BaseDialogViewController.swift in Sources */,

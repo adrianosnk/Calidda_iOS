@@ -32,11 +32,24 @@ class GestionView: UIViewController , ChartViewDelegate{
     private let presenter = GestionPresenter(loginService: AuthenticationService())
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         barChart.delegate = self
-        
         setupUI()
-    }
+        setupNavigationBar()
+     }
+      // MARK: - Setup
+      func setupNavigationBar(){
+                  self.navigationController?.navigationBar.isHidden = false
+                  loadNavigationBar(hideNavigation: false, title: "Gestion")
+                  addNavigationLeftLogoOption(target: self, selector: #selector(goBack), icon: CaliddaImage.getImage(named: .icon_LogoCalidda))
+                  addNavigationRightOption(target: self, selector: #selector(goNotification), icon: CaliddaImage.getImage(named: .icon_AlertaBlue))
+       }
+       // MARK: - Actions
+       @IBAction func goBack() {
+         // router.pop(sender: self)
+       }
+       @IBAction func goNotification() {
+         // router.pop(sender: self)
+       }
     func setupUI(){
         
 

@@ -151,8 +151,6 @@ class LogInView: UIViewController {
         //passwordTexfield.text = "Ed\$123456"
         print("login")
         setupUI()
-        
-       
         let spinner = JLActivityIndicator(on: view, mode: .image)
               spinner.image = UIImage(named: "icon_ConsumoBlue")
               spinner.start()
@@ -204,45 +202,50 @@ class LogInView: UIViewController {
         presenter.auth(email: emailTexfield.text!, password: passwordTexfield.text!)
             .subscribeOn(MainScheduler.asyncInstance)
             .subscribe(onNext: {result in
-                 
- 
-                ProgressView.shared.hideProgressView()
-                print("result.Id!::>>",result.Id!)
-                UserDefaults.standard.set(result.TokenAcceso!, forKey: "KeyToken")
-                UserDefaults.standard.set(result.Id!, forKey: "KeyIdLogin")
-                UserDefaults.standard.set(result.RazonSocial!, forKey: "KeyRazon")
-                UserDefaults.standard.set(result.CuentaContrato!, forKey: "KeyAcountCon") //setObject
-                
-                //login succes
-                
-                UserDefaults.standard.set("1", forKey: "KeyLogin")
-                /* 
-                 UserDefaults.standard.string(forKey: "KeyToken")
-                             UserDefaults.standard.string(forKey: "KeyRazon")
-                             UserDefaults.standard.string(forKey: "KeyAcountCon")
-                 */
-                //print("PrimerNOmbre: " + result.data.first_name!)
-                print("Id: " + result.Id!)
-                print("PrimerRazonSocial: " + result.RazonSocial!)
-                print("CuentaContrato: " + result.CuentaContrato!)
-                print("TokenAcceso: " + result.TokenAcceso!)
-               self.goToHome()
-            },
-                       onError: {error in
-                        
-                      DispatchQueue.main.async {
+                  ProgressView.shared.hideProgressView()
+                let responseUserData:ResponseUserData = result
+                if responseUserData.TokenAcceso != nil {
+                    print("result.Id!::>>",result.Id!)
+                                   UserDefaults.standard.set(result.TokenAcceso!, forKey: "KeyToken")
+                                   UserDefaults.standard.set(result.Id!, forKey: "KeyIdLogin")
+                                   UserDefaults.standard.set(result.RazonSocial!, forKey: "KeyRazon")
+                                   UserDefaults.standard.set(result.CuentaContrato!, forKey: "KeyAcountCon") //setObject
+                                   
+                                   //login succes
+                                   
+                                   UserDefaults.standard.set("1", forKey: "KeyLogin")
+                                   /*
+                                    UserDefaults.standard.string(forKey: "KeyToken")
+                                                UserDefaults.standard.string(forKey: "KeyRazon")
+                                                UserDefaults.standard.string(forKey: "KeyAcountCon")
+                                    */
+                                   //print("PrimerNOmbre: " + result.data.first_name!)
+                                   print("Id: " + result.Id!)
+                                   print("PrimerRazonSocial: " + result.RazonSocial!)
+                                   print("CuentaContrato: " + result.CuentaContrato!)
+                                   print("TokenAcceso: " + result.TokenAcceso!)
+                                  self.goToHome()
+                }else{ 
+                    DispatchQueue.main.async { 
                        /* let view = PopUpErrorView()
                         view.setupView(type: .warning)
                         AlertComponent.shared.setupAlert(controller: self, messasge: nil, externalView: view)*/
-                        
-                        
+                         print("responseUserData.Mensaje!::>>", responseUserData.Mensaje!)
+                          
                         let view = PopUpCloseErrorView()
-                               view.setupView(type: .error)
+                        view.setupView(type: .messagin, messagin: responseUserData.Mensaje!)
                                view.delegateError = self
                                AlertComponent.shared.setupAlert(controller: self, messasge: nil, externalView: view)
                         
                         
-                    }          
+                    }
+                }
+               
+               
+            },
+                       onError: {error in
+                        
+                              
             },
                        onCompleted: {},
                        onDisposed: {})
@@ -305,6 +308,14 @@ class LogInView: UIViewController {
     @IBAction func checkTerms(_ sender:DLRadioButton){
 
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.isHidden = true
+    }
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+          return .lightContent
+    }
+    
 }
 
 // MARK: - PopUpErrorView Delegate

@@ -22,6 +22,21 @@ class MantenimientoView: UIViewController {
         super.viewDidLoad()
         
         setupUI()
+        setupNavigationBar()
+     }
+     // MARK: - Setup
+     func setupNavigationBar(){
+           self.navigationController?.navigationBar.isHidden = false
+           loadNavigationBar(hideNavigation: false, title: "Home")
+           addNavigationLeftLogoOption(target: self, selector: #selector(goBack), icon: CaliddaImage.getImage(named: .icon_LogoCalidda))
+           addNavigationRightOption(target: self, selector: #selector(goNotification), icon: CaliddaImage.getImage(named: .icon_AlertaBlue))
+     }
+     // MARK: - Actions
+     @IBAction func goBack() {
+          // router.pop(sender: self)
+     }
+    @IBAction func goNotification() {
+         // router.pop(sender: self)
     }
     func setupUI(){
         

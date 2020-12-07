@@ -117,8 +117,29 @@ class HomeView: UIViewController {
         loadData()
         
          tableView.reloadData()
+         setupNavigationBar()
     }
-    
+    // MARK: - Setup
+    func setupNavigationBar(){
+        self.navigationController?.navigationBar.isHidden = false
+        loadNavigationBar(hideNavigation: false, title: "Home")
+         
+        addNavigationLeftLogoOption(target: self, selector: #selector(goBack), icon: CaliddaImage.getImage(named: .icon_LogoCalidda))
+        
+        
+        addNavigationRightOption(target: self, selector: #selector(goNotification), icon: CaliddaImage.getImage(named: .icon_AlertaBlue))
+        
+    }
+    // MARK: - Actions
+      @IBAction func goBack() {
+          
+         // router.pop(sender: self)
+      }
+
+    @IBAction func goNotification() {
+        
+       // router.pop(sender: self)
+    }
    @objc func didTapButton(){
         
         let tabBarVC = UITabBarController()
@@ -194,24 +215,20 @@ class HomeView: UIViewController {
        // router.pop(sender: self)
         DispatchQueue.main.async {
             let view = PopUpCloseErrorView()
-            view.setupView(type: .warning)
+            view.setupView(type: .warning, messagin: "")
             AlertComponent.shared.setupAlert(controller: self, messasge: nil, externalView: view)
        }
     }
     func loadData(){
         
-         
-               // setLoadingScreen(myMsg: "Loading...")
-                 
+       // setLoadingScreen(myMsg: "Loading...")
        // ProgressView.shared.showProgressView()
                 //let userProperties = presenter.getMyUser().TokenAcceso!
                 let userProperties =  UserDefaults.standard.string(forKey: "KeyToken")!
                 let idUser =  UserDefaults.standard.string(forKey: "KeyIdLogin")!
- 
        // if let idUser =  UserDefaults.standard.string(forKey: "KeyIdLogin"){
                // let idUser:String = ""
                 
-         
                 self.presenter.getInfoDoctor(token: userProperties,idUser: idUser)
                     .subscribeOn(MainScheduler.asyncInstance)
                     .subscribe(onNext: {result in
@@ -220,7 +237,7 @@ class HomeView: UIViewController {
                         self.fillInfoTop(result)
                         
                         //call Evento Adri
-                       // self.loadDataEvento()
+                        self.loadDataEvento()
                         
                        // self.spinner.stopAnimating()
                        // self.activityIndicator.stopAnimating()
@@ -242,12 +259,15 @@ class HomeView: UIViewController {
     }
     
  
-    
+     
     func loadDataEvento(){
            //let userProperties = presenter.getMyUser().TokenAcceso!
-           
+
+        
+        
            let userProperties =  UserDefaults.standard.string(forKey: "KeyToken")!
-           presenter.getEventos(token: userProperties)
+           let idLogin =  UserDefaults.standard.string(forKey: "KeyIdLogin")!
+           presenter.getEventos(token: userProperties,idUser: idLogin,top: 1,pagina: 10)
                .subscribeOn(MainScheduler.asyncInstance)
                .subscribe(onNext: {result in
                    
@@ -569,9 +589,9 @@ class HomeView: UIViewController {
          //   self.router.show(view: .SubDetailAttentionRegister, sender: self)
             
         }
-    }
+    } 
     override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.navigationBar.isHidden = true
+        self.navigationController?.navigationBar.isHidden = false
     }
     override var preferredStatusBarStyle: UIStatusBarStyle {
           return .lightContent
@@ -928,7 +948,7 @@ extension HomeView: UITableViewDelegate {
               case 0:
                   DispatchQueue.main.async {
                      let view = PopUpCloseErrorView()
-                     view.setupView(type: .warning)
+                     view.setupView(type: .warning, messagin: "")
 
                      view.delegateError = self
                      AlertComponent.shared.setupAlert(controller: self, messasge: nil, externalView: view)
@@ -945,6 +965,10 @@ extension HomeView: UITableViewDelegate {
                 UserDefaults.standard.set(categoryValue.Titulo!, forKey: "KeyTitulo")
                 UserDefaults.standard.set(categoryValue.FechaInicioVigencia!, forKey: "KeyFecha")
                 UserDefaults.standard.set(categoryValue.Resumen!, forKey: "KeyResumen")
+                UserDefaults.standard.set(categoryValue.Id!, forKey: "KeyIdEvento")
+                
+                
+                
                 if categoryValue.RutaImagen == "" || categoryValue.RutaImagen == nil{
                     UserDefaults.standard.set("", forKey: "KeyRutaImagen")
                 }else{

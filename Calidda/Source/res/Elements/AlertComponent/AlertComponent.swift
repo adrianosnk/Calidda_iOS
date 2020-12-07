@@ -62,7 +62,7 @@ class AlertComponent {
             process()
         }
     }
-    
+     
     func closeAllAlters() {
         alerts.removeAll()
         if let tempVC = currentViewController {
